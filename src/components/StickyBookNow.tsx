@@ -7,7 +7,7 @@ const StickyBookNow = () => {
   return (
     <Link
       to="/contact"
-      className="fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-primary text-primary-foreground text-xs font-semibold tracking-wider uppercase px-3 py-6 rounded-l-md shadow-lg hover:bg-brand-green-dark transition-colors"
+      className="fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-brand-green-dark text-primary-foreground text-xs font-semibold tracking-wider uppercase px-3 py-6 rounded-l-md shadow-lg hover:brightness-110 transition-all"
       style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
     >
       {t('nav.bookNow')}

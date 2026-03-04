@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { useI18n } from '@/lib/i18n';
 import logoColor from '@/assets/logo-color.svg';
@@ -8,6 +8,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { lang, setLang, t } = useI18n();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { label: t('nav.home'), to: '/' },
@@ -17,13 +18,23 @@ const Header = () => {
     { label: t('nav.contact'), to: '/contact' },
   ];
 
+  const scrollToTeam = () => {
+    const el = document.getElementById('our-team');
+    if (el) {
+      const headerOffset = 80;
+      const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   const handleNavClick = (to: string) => {
     setMobileOpen(false);
-    if (to.includes('#')) {
-      const [path, hash] = to.split('#');
-      if (location.pathname === path || (path === '/' && location.pathname === '/')) {
-        const el = document.getElementById(hash);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (to === '/#our-team') {
+      if (location.pathname === '/') {
+        scrollToTeam();
+      } else {
+        navigate('/');
+        setTimeout(scrollToTeam, 300);
       }
     }
   };
@@ -53,16 +64,28 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-7">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => handleNavClick(item.to)}
-                className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary transition-colors uppercase"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (item.to === '/#our-team') {
+                return (
+                  <button
+                    key={item.to}
+                    onClick={() => handleNavClick(item.to)}
+                    className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary transition-colors uppercase"
+                  >
+                    {item.label}
+                  </button>
+                );
+              }
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary transition-colors uppercase"
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <button
               onClick={toggleLang}
               className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary transition-colors uppercase"
@@ -85,16 +108,29 @@ const Header = () => {
         {mobileOpen && (
           <div className="lg:hidden bg-background border-t border-border">
             <nav className="container-site py-4 flex flex-col gap-3">
-              {navItems.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => handleNavClick(item.to)}
-                  className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary py-2 uppercase"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                if (item.to === '/#our-team') {
+                  return (
+                    <button
+                      key={item.to}
+                      onClick={() => handleNavClick(item.to)}
+                      className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary py-2 uppercase text-left"
+                    >
+                      {item.label}
+                    </button>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary py-2 uppercase"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <button
                 onClick={() => { toggleLang(); setMobileOpen(false); }}
                 className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary py-2 text-left uppercase"

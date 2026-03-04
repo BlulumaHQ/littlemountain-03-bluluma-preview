@@ -2,43 +2,49 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
 import PageHeader from '@/components/PageHeader';
+import implantsImg from '@/assets/services/implants.jpg';
+import orthodonticsImg from '@/assets/services/orthodontics.jpg';
+import pediatricImg from '@/assets/services/pediatric.jpg';
+import estheticsImg from '@/assets/services/esthetics.jpg';
+import restorativesImg from '@/assets/services/restoratives.jpg';
+import maintenanceImg from '@/assets/services/maintenance.jpg';
 
 const serviceData = [
   {
     id: 'implants',
     titleKey: 'services.implants',
     descKey: 'service.implants.desc',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80',
+    image: implantsImg,
   },
   {
     id: 'orthodontics',
     titleKey: 'services.orthodontics',
     descKey: 'service.orthodontics.desc',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80',
+    image: orthodonticsImg,
   },
   {
     id: 'pediatric',
     titleKey: 'services.pediatric',
     descKey: 'service.pediatric.desc',
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80',
+    image: pediatricImg,
   },
   {
     id: 'esthetics',
     titleKey: 'services.esthetics',
     descKey: 'service.esthetics.desc',
-    image: 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=800&q=80',
+    image: estheticsImg,
   },
   {
     id: 'restoratives',
     titleKey: 'services.restoratives',
     descKey: 'service.restoratives.desc',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80',
+    image: restorativesImg,
   },
   {
     id: 'maintenance',
     titleKey: 'services.maintenance',
     descKey: 'service.maintenance.desc',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80',
+    image: maintenanceImg,
   },
 ];
 

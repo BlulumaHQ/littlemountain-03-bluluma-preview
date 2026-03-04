@@ -68,20 +68,21 @@ const TeamSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {dentists.map((d, i) => (
+          {dentists.map((d) => (
             <div
               key={d.name}
-              className={`bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow ${
-                i >= 3 ? 'md:col-start-auto' : ''
-              }`}
+              className="bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={d.photo}
-                  alt={d.name}
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
+              {/* White frame around photo */}
+              <div className="p-6 bg-white border-b" style={{ borderColor: '#e5e5e5' }}>
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={d.photo}
+                    alt={d.name}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
               </div>
               <div className="p-5">
                 <h3 className="font-heading text-xl font-semibold text-foreground">{d.name}</h3>

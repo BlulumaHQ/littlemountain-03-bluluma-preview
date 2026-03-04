@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
 import logoWhite from '@/assets/logo-white.svg';
 import drWuLogo from '@/assets/dr-wu-logo.png';
 
 const Footer = () => {
   const { t } = useI18n();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const services = [
     { label: t('services.implants'), href: '/services#implants' },
@@ -15,52 +17,80 @@ const Footer = () => {
     { label: t('services.maintenance'), href: '/services#maintenance' },
   ];
 
+  const handleTeamClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const scrollToTeam = () => {
+      const el = document.getElementById('our-team');
+      if (el) {
+        const headerOffset = 80;
+        const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    };
+    if (location.pathname === '/') {
+      scrollToTeam();
+    } else {
+      navigate('/');
+      setTimeout(scrollToTeam, 300);
+    }
+  };
+
   const links = [
-    { label: t('nav.office'), to: '/office' },
-    { label: t('nav.team'), to: '/#our-team' },
-    { label: t('nav.services'), to: '/services' },
+    { label: t('nav.office'), to: '/office', onClick: undefined },
+    { label: t('nav.team'), to: '/#our-team', onClick: handleTeamClick },
+    { label: t('nav.services'), to: '/services', onClick: undefined },
   ];
 
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-site py-12 md:py-16">
-        {/* Logo & tagline */}
-        <div className="mb-8">
-          <img src={logoWhite} alt="Little Mountain Dental Centre" className="h-10 mb-4" />
-          <p className="text-primary-foreground/80 text-sm max-w-md leading-relaxed">
-            {t('footer.tagline')}
-          </p>
-          <p className="text-primary-foreground/70 text-sm mt-3">
-            {t('footer.richmond')}{' '}
-            <a
-              href="https://friendlydental.ca/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-primary-foreground transition-colors"
-            >
-              {t('footer.friendlyDental')}
-            </a>
-          </p>
-        </div>
+        {/* Single row layout */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto_auto] gap-8 md:gap-0">
+          {/* Logo column */}
+          <div className="md:pr-[75px]">
+            <img src={logoWhite} alt="Little Mountain Dental Centre" className="h-10 mb-4" />
+            <p className="text-primary-foreground/80 text-sm max-w-sm leading-relaxed">
+              {t('footer.tagline')}
+            </p>
+            <p className="text-primary-foreground/70 text-sm mt-3">
+              {t('footer.richmond')}{' '}
+              <a
+                href="https://friendlydental.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-primary-foreground transition-colors"
+              >
+                {t('footer.friendlyDental')}
+              </a>
+            </p>
+          </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 lg:gap-24">
           {/* Links */}
-          <div>
+          <div className="md:px-8">
             <h4 className="font-heading text-lg font-semibold mb-4">{t('footer.links')}</h4>
             <ul className="space-y-2">
               {links.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to} className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                    {link.label}
-                  </Link>
+                  {link.onClick ? (
+                    <a
+                      href={link.to}
+                      onClick={link.onClick}
+                      className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors cursor-pointer"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link to={link.to} className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Services */}
-          <div>
+          <div className="md:px-8">
             <h4 className="font-heading text-lg font-semibold mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2">
               {services.map((s) => (
@@ -74,7 +104,7 @@ const Footer = () => {
           </div>
 
           {/* Office Hours */}
-          <div>
+          <div className="md:pl-8">
             <h4 className="font-heading text-lg font-semibold mb-4">{t('footer.officeHours')}</h4>
             <div className="text-sm text-primary-foreground/80 space-y-1.5">
               <div className="flex justify-between max-w-[220px]">
