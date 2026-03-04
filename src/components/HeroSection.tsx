@@ -23,7 +23,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
-        <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-semibold text-background max-w-3xl leading-tight mb-8">
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-background max-w-4xl leading-[1.1] mb-8 uppercase tracking-wide">
           {t('hero.title')}
         </h1>
         <div className="flex flex-col sm:flex-row gap-4">
