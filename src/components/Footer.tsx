@@ -63,6 +63,17 @@ const Footer = () => {
                 {t('footer.friendlyDental')}
               </a>
             </p>
+            <p className="text-primary-foreground/70 text-sm mt-2">
+              {t('footer.richmondWelcome')}{' '}
+              <a
+                href="https://friendlydental.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-primary-foreground transition-colors"
+              >
+                {t('footer.friendlyDental')}
+              </a>
+            </p>
           </div>
 
           {/* Links */}
@@ -141,7 +152,14 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2">
               <img src={drWuLogo} alt="Dr. Wu" className="h-5 w-5 object-contain" />
-              <span className="text-xs text-primary-foreground/80">Dr. Patrick Wu</span>
+              <a
+                href="https://www.drpatrickwu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                Dr. Patrick Wu
+              </a>
             </div>
             <div className="w-[200px]" />
           </div>
@@ -156,7 +174,14 @@ const Footer = () => {
             </p>
             <div className="flex items-center justify-center gap-2 pt-1">
               <img src={drWuLogo} alt="Dr. Wu" className="h-5 w-5 object-contain" />
-              <span className="text-xs text-primary-foreground/80">Dr. Patrick Wu</span>
+              <a
+                href="https://www.drpatrickwu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                Dr. Patrick Wu
+              </a>
             </div>
           </div>
         </div>

@@ -16,6 +16,13 @@ const translations: Record<string, Record<Lang, string>> = {
   'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的舒適和護理' },
   'hero.cta1': { en: 'Book Now', zh: '立即預約' },
   'hero.cta2': { en: 'Our Services', zh: '我們的服務' },
+  'hero.cta.line1': { en: 'New Patients Welcome', zh: '歡迎新病患' },
+  'hero.cta.line2': { en: 'Modern family dental care in Vancouver', zh: '溫哥華現代家庭牙科照護' },
+  'hero.cta.line3': { en: 'Book your visit today', zh: '立即預約看診' },
+
+  // Insurance
+  'insurance.title': { en: 'We Accept Most Dental Insurance Plans', zh: '接受大部分牙科保險' },
+  'insurance.subtitle': { en: 'Direct Billing Available', zh: '可協助直接向保險公司申請理賠' },
 
   // Welcome
   'welcome.title': { en: 'Welcome to Little Mountain Dental Centre', zh: '歡迎來到小山牙科中心' },
@@ -33,6 +40,24 @@ const translations: Record<string, Record<Lang, string>> = {
   'services.esthetics': { en: 'Esthetics', zh: '美容牙科' },
   'services.restoratives': { en: 'Restoratives', zh: '修復牙科' },
   'services.maintenance': { en: 'Maintenance', zh: '牙齒維護' },
+
+  // Service short descriptions
+  'services.implants.short': { en: 'Stable, secure tooth replacement', zh: '穩定安全的牙齒替換方案' },
+  'services.orthodontics.short': { en: 'Align your smile beautifully', zh: '打造整齊美麗的笑容' },
+  'services.pediatric.short': { en: 'Gentle care for young smiles', zh: '為孩子提供溫柔的牙科護理' },
+  'services.esthetics.short': { en: 'Enhance your smile\'s appearance', zh: '提升您的笑容美感' },
+  'services.restoratives.short': { en: 'Repair and restore your teeth', zh: '修復您的牙齒健康' },
+  'services.maintenance.short': { en: 'Keep your oral health on track', zh: '維持您的口腔健康' },
+
+  // Reviews
+  'reviews.title': { en: 'What Our Patients Say', zh: '患者的評價' },
+  'reviews.subtitle': { en: 'Read reviews from our valued patients', zh: '閱讀我們尊貴患者的評價' },
+  'reviews.review1': { en: 'My first experience at Little Mountain Dental Centre was excellent. From the initial phone consultation, the staff explained everything clearly and helped arrange the appointment smoothly. Dr. Wu was very professional and the treatment process was painless. I felt completely comfortable during the visit.', zh: '我第一次到 Little Mountain Dental Centre 的體驗非常好。從電話諮詢開始，櫃檯人員就很仔細地解釋並協助安排預約。Dr. Wu 非常專業，整個治療過程幾乎沒有任何不適。整個看診過程讓人非常安心。' },
+  'reviews.review2': { en: 'Great first visit on a family recommendation. The front desk made insurance easy, and the hygienist Irene was excellent during the cleaning. After the final check from the doctor, I felt very well taken care of.', zh: '透過家人推薦第一次來這裡看診。櫃檯人員讓保險流程非常順利，洗牙的 Irene 也非常專業。醫生最後檢查後讓我感到非常安心。' },
+  'reviews.review3': { en: 'My daughter has been seeing Dr. Wu since she was very young. She is usually anxious about dental procedures, but the hygienist Anise was extremely patient and calming. The team truly cares about their patients.', zh: '我女兒從小就由 Dr. Wu 看診。她平常對牙科治療會有些緊張，但牙科衛生師 Anise 非常有耐心，也很會安撫小朋友。整個團隊都非常關心病患。' },
+  'reviews.review4': { en: 'I\'ve had a fantastic experience at Little Mountain Dental Centre. The team is professional and welcoming, and Dr. Patrick explains everything clearly so the visit feels stress-free. The clinic is modern, clean, and very well organized.', zh: '我在 Little Mountain Dental Centre 的看診體驗非常好。整個團隊非常專業又親切，Dr. Patrick 會清楚解釋每個步驟，讓人完全不緊張。診所環境現代、乾淨，而且管理得非常好。' },
+  'reviews.review5': { en: 'Our family doctor recommended this clinic and it has been a wonderful experience. The staff are friendly and professional, and the clinic environment is elegant and welcoming.', zh: '這間牙醫診所是家庭醫師推薦的。整個團隊非常友善且專業，診所環境也很優雅舒適。' },
+  'reviews.review6': { en: 'Dr. Patrick is incredibly patient and kind. He always explains everything clearly and makes sure you feel comfortable. The staff are also very friendly and never pressure patients with unnecessary treatments.', zh: 'Dr. Patrick 非常有耐心也很親切。他會清楚解釋每一個治療步驟，讓人感到很放心。診所團隊也非常友善，不會強迫推銷不必要的治療。' },
 
   // Why Trust
   'trust.title': { en: 'Why Trust Little Mountain Dental Centre?', zh: '為什麼信任小山牙科中心？' },
@@ -52,6 +77,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'footer.tagline': { en: 'Providing exceptional dental care in a warm and welcoming environment.', zh: '在溫馨友好的環境中提供卓越的牙科護理。' },
   'footer.richmond': { en: 'Also you are welcome to visit our Richmond Office –', zh: '歡迎您也前來我們的列治文診所 –' },
   'footer.friendlyDental': { en: 'Friendly Dental Centre', zh: 'Friendly Dental Centre' },
+  'footer.richmondWelcome': { en: 'We also welcome patients at our Richmond clinic,', zh: '我們亦歡迎病患預約列治文診所' },
   'footer.links': { en: 'Links', zh: '連結' },
   'footer.services': { en: 'Services', zh: '服務' },
   'footer.officeHours': { en: 'Office Hours', zh: '診所時間' },

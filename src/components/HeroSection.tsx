@@ -1,31 +1,56 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
 import heroVideo from '@/assets/hero-video.mp4';
+import heroMobile from '@/assets/hero-mobile.jpg';
+import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
   const { t } = useI18n();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   return (
     <section className="relative h-[60vh] md:h-[85vh] overflow-hidden">
-      {/* Video background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      {/* Video background (desktop) / Image fallback (mobile) */}
+      {isMobile ? (
+        <img
+          src={heroMobile}
+          alt="Little Mountain Dental Centre"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      )}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-foreground/25" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-background max-w-4xl leading-[1.1] mb-8 uppercase tracking-wide">
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-background max-w-4xl leading-[1.1] mb-6 uppercase tracking-wide">
           {t('hero.title')}
         </h1>
+        <p className="text-background/90 text-base md:text-lg max-w-xl leading-relaxed mb-8">
+          {t('hero.cta.line1')}
+          <br />
+          {t('hero.cta.line2')}
+          <br />
+          {t('hero.cta.line3')}
+        </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             to="/contact"
