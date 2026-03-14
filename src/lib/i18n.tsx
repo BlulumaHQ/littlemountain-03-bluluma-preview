@@ -13,7 +13,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'nav.bookNow': { en: 'Book Now', zh: '立即預約' },
 
   // Hero
-  'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的舒適和護理' },
+  'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的\n舒適和護理' },
   'hero.cta1': { en: 'Book Now', zh: '立即預約' },
   'hero.cta2': { en: 'Our Services', zh: '我們的服務' },
   'hero.cta.line1': { en: 'New Patients Welcome', zh: '歡迎新病患' },
@@ -31,26 +31,26 @@ const translations: Record<string, Record<Lang, string>> = {
   // Team
   'team.title': { en: 'Our Dedicated Dentists', zh: '我們的專業牙醫' },
 
-  // Doctor bios (Chinese translations)
+  // Doctor bios
   'team.drwu.bio': {
-    en: 'Dr. Patrick Wu, an honour graduate from the esteemed University of Pennsylvania, practiced dentistry in New Jersey for four years before returning to his hometown of Vancouver in 2012. Dr. Wu treats patients across all age groups and has profound interest in implant dentistry, orthodontics, pediatrics, and complex restorative cases.',
-    zh: 'Dr. Patrick Wu 以優異成績畢業於著名的 University of Pennsylvania，在 New Jersey 執業四年後，於2012年回到家鄉溫哥華。Dr. Wu 為各年齡層的患者提供治療，對種植牙、矯正牙科、兒童牙科及複雜修復案例有深厚的興趣。'
+    en: 'Dr. Patrick Wu graduated with honours from the University of Pennsylvania School of Dental Medicine. After practicing dentistry in New Jersey for four years, he returned to his hometown of Vancouver in 2012. Dr. Wu provides comprehensive dental care for patients of all ages and has special interests in implant dentistry, orthodontics, pediatric dentistry, and complex restorative treatments.',
+    zh: 'Dr. Patrick Wu 以優異成績畢業於 University of Pennsylvania School of Dental Medicine。在 New Jersey 執業四年後，於2012年回到家鄉溫哥華。Dr. Wu 為各年齡層的患者提供全面的牙科護理，並對種植牙、矯正牙科、兒童牙科及複雜修復治療有特別的興趣。'
   },
   'team.drogura.bio': {
-    en: "Dr. Yukari Ogura obtained her degree in dentistry from Nihon University in Japan and later completed her Ph.D degree in dental materials and adhesives. She has special interest in restorative dentistry, aesthetics and root canal treatment. Before moving to Vancouver, Dr. Ogura engaged her professional development practicing children's dentistry in Tokyo, Japan, where she was very appreciated by children and their parents. Dr. Ogura is skillful, knowledgeable, and warm-hearted. We welcome you to meet her.",
-    zh: "Dr. Yukari Ogura 在日本日本大學取得牙科學位，並隨後完成了牙科材料與黏合劑的博士學位。她對修復牙科、美學牙科及根管治療有特別的興趣。在移居溫哥華之前，Dr. Ogura 在東京從事兒童牙科，深受孩子們和家長的喜愛。Dr. Ogura 技術精湛、學識淵博且待人親切。歡迎您來認識她。"
+    en: 'Dr. Yukari Ogura received her dental degree and Ph.D. from Nihon University in Japan, specializing in dental materials and adhesives. Before relocating to Vancouver, she practiced pediatric dentistry in Tokyo and was highly appreciated by children and their families. Dr. Ogura focuses on restorative dentistry, aesthetics, and endodontic treatment while providing attentive and compassionate care.',
+    zh: 'Dr. Yukari Ogura 在日本 Nihon University 取得牙科學位和博士學位，專攻牙科材料與黏合劑。在移居溫哥華之前，她在東京從事兒童牙科，深受孩子們和家長的喜愛。Dr. Ogura 專注於修復牙科、美學牙科及根管治療，同時提供細心且富有同理心的護理。'
   },
   'team.dryip.bio': {
-    en: 'Dr. Jaqueline Yip graduated from McGill University in 2016 and had practiced in Toronto for seven years prior to returning to Vancouver. Dr. Yip has excellent clinical skills, is personable, and focuses on family dentistry. Dr. Yip is fluent in English, Cantonese and Mandarin.',
-    zh: 'Dr. Jaqueline Yip 於2016年畢業於 McGill University，在多倫多執業七年後回到溫哥華。Dr. Yip 擁有出色的臨床技術，待人親切，專注於家庭牙科。Dr. Yip 精通英語、粵語和普通話。'
+    en: 'Dr. Jacqueline Yip graduated from McGill University in 2016 and practiced dentistry in Toronto for seven years before returning to Vancouver. She is dedicated to family dentistry and is known for her approachable personality and strong clinical skills. Dr. Yip enjoys building long-term relationships with patients and helping families maintain healthy smiles. She is fluent in English, Cantonese, and Mandarin.',
+    zh: 'Dr. Jacqueline Yip 於2016年畢業於 McGill University，在多倫多執業七年後回到溫哥華。她專注於家庭牙科，以親切的性格和出色的臨床技術著稱。Dr. Yip 喜歡與患者建立長期關係，幫助家庭維持健康的笑容。她精通英語、粵語和普通話。'
   },
   'team.drhsu.bio': {
-    en: 'Dr. Ivy Hsu obtained her degree in Dentistry from Cardinal Herrera University in Valencia, Spain, in 2018. She completed her practicum at Kaohsiung Chang Gung Memorial Hospital in 2020, where she gained extensive experience in general and family dentistry. Dr. Hsu is very detail-oriented and dedicated to providing gentle, comprehensive care for patients of all ages. She is fluent in Mandarin, Spanish and English. Outside of the clinic, Dr. Hsu enjoys exploring nature and spending quality time with her family.',
-    zh: 'Dr. Ivy Hsu 於2018年在西班牙瓦倫西亞的 Cardinal Herrera University 取得牙科學位。她於2020年在高雄長庚紀念醫院完成實習，積累了豐富的全科和家庭牙科經驗。Dr. Hsu 非常注重細節，致力於為各年齡層的患者提供溫和、全面的護理。她精通中文、西班牙語和英語。在診所之外，Dr. Hsu 喜歡探索大自然並與家人共度時光。'
+    en: 'Dr. Ivy Hsu received her dental degree from Cardinal Herrera University in Valencia, Spain. She later gained valuable clinical experience at Kaohsiung Chang Gung Memorial Hospital, where she developed strong skills in general and family dentistry. Dr. Hsu is detail-oriented and dedicated to providing gentle, comprehensive care for patients of all ages. She is fluent in Mandarin, Spanish, and English.',
+    zh: 'Dr. Ivy Hsu 在西班牙瓦倫西亞的 Cardinal Herrera University 取得牙科學位。她之後在高雄長庚紀念醫院獲得寶貴的臨床經驗，在全科和家庭牙科方面培養了扎實的技能。Dr. Hsu 注重細節，致力於為各年齡層的患者提供溫和、全面的護理。她精通中文、西班牙語和英語。'
   },
   'team.drcheng.bio': {
-    en: 'Dr. Cheng has vast experience in general dentistry and has many years of experience delivering Invisalign treatment. She is committed to providing patient-centered dental care, spending time treatment planning and communicating with patients. Her calming manner and gentle touch make patients feel at ease.',
-    zh: 'Dr. Cheng 在全科牙科方面擁有豐富的經驗，並有多年提供 Invisalign 治療的經驗。她致力於提供以患者為中心的牙科護理，花時間進行治療規劃並與患者溝通。她沉穩的態度和溫柔的手法讓患者感到安心。'
+    en: 'Dr. Kathy Cheng has extensive experience in general dentistry and many years of expertise providing Invisalign treatment. She is committed to patient-centered care and takes time to carefully explain treatment options and communicate with each patient. Dr. Cheng\'s calm and gentle approach helps patients feel relaxed and confident throughout their dental visits.',
+    zh: 'Dr. Kathy Cheng 在全科牙科方面擁有豐富的經驗，並有多年提供 Invisalign 治療的專業經驗。她致力於以患者為中心的護理，花時間仔細解釋治療方案並與每位患者溝通。Dr. Cheng 沉穩溫和的方式讓患者在整個看診過程中感到放鬆和安心。'
   },
 
   // Services
@@ -87,6 +87,19 @@ const translations: Record<string, Record<Lang, string>> = {
   'trust.title': { en: 'Why Trust Little Mountain Dental Centre?', zh: '為什麼信任小山牙科中心？' },
   'trust.text': { en: 'We understand that visiting the dentist can be stressful. Our highly trained and knowledgeable team is dedicated in providing you with personalized care in a warm and inviting environment. We take time learning about your concerns and answering your questions. Let us take care of your dental needs while keeping your mind at ease.', zh: '我們理解看牙醫可能會令人緊張。我們高度訓練和知識豐富的團隊致力於在溫馨友好的環境中為您提供個性化護理。我們花時間了解您的顧慮並回答您的問題。讓我們照顧您的牙齒需求，同時讓您安心。' },
 
+  // FAQ
+  'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題' },
+  'faq.q1': { en: 'What services do you offer?', zh: '你們提供哪些服務？' },
+  'faq.a1': { en: 'We offer a comprehensive range of dental services including implants, orthodontics, pediatric dentistry, esthetic dentistry, restorative treatments, and regular maintenance and cleanings. Our team is equipped to handle everything from routine checkups to complex procedures.', zh: '我們提供全面的牙科服務，包括種植牙、矯正牙科、兒童牙科、美容牙科、修復治療以及定期維護和清潔。我們的團隊能夠處理從例行檢查到複雜手術的所有需求。' },
+  'faq.q2': { en: 'Do you accept new patients?', zh: '你們接受新病患嗎？' },
+  'faq.a2': { en: 'Yes! We warmly welcome new patients of all ages. You can book your first appointment by calling us at (604) 874-5111 or by filling out our contact form. We look forward to meeting you and your family.', zh: '是的！我們熱忱歡迎所有年齡層的新病患。您可以撥打 (604) 874-5111 或填寫我們的聯絡表單預約第一次看診。我們期待認識您和您的家人。' },
+  'faq.q3': { en: 'What are your office hours?', zh: '你們的診所營業時間是什麼？' },
+  'faq.a3': { en: 'We are open Monday to Friday from 9:00am to 5:30pm, and Saturday from 8:30am to 5:00pm. We are closed on Sundays. Please call ahead to confirm availability or to schedule an appointment.', zh: '我們的營業時間為週一至週五上午9:00至下午5:30，週六上午8:30至下午5:00。週日休息。請提前致電確認時間或預約看診。' },
+  'faq.q4': { en: 'Where are you located?', zh: '你們的診所在哪裡？' },
+  'faq.a4': { en: 'We are located at #208 – 4818 Main Street, Vancouver, BC. Our clinic is easily accessible by public transit and there is street parking available nearby.', zh: '我們位於 #208 – 4818 Main Street, Vancouver, BC。診所交通便利，附近有街邊停車位。' },
+  'faq.q5': { en: 'Do you offer emergency dental services?', zh: '你們提供緊急牙科服務嗎？' },
+  'faq.a5': { en: 'Yes, we do our best to accommodate dental emergencies during regular office hours. If you are experiencing a dental emergency, please call us at (604) 874-5111 and we will try to see you as soon as possible.', zh: '是的，我們盡力在正常營業時間內處理牙科緊急狀況。如果您遇到牙科緊急情況，請撥打 (604) 874-5111，我們會盡快為您安排看診。' },
+
   // Contact
   'contact.title': { en: 'Contact Us', zh: '聯絡我們' },
   'contact.subtitle': { en: 'Our team is happy to help you and your family achieving that perfect smile!', zh: '我們的團隊很樂意幫助您和您的家人擁有完美的笑容！' },
@@ -111,6 +124,9 @@ const translations: Record<string, Record<Lang, string>> = {
   'footer.closed': { en: 'Closed', zh: '休息' },
   'footer.copyright': { en: '© 2026 Little Mountain Dental Centre', zh: '© 2026 小山牙科中心' },
   'footer.webdesign': { en: 'Web Design by', zh: '網頁設計：' },
+
+  // Loading
+  'loading': { en: 'Loading...', zh: '載入中...' },
 
   // Office page
   'office.title': { en: 'Our Office', zh: '我們的診所' },

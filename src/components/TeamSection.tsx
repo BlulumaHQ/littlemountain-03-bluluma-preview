@@ -11,7 +11,7 @@ const dentists = [
     title: 'D.M.D.',
     credentials: [
       'University of Pennsylvania, School of Dental Medicine, 2009',
-      'Clinical assistant professor, University of British Columbia',
+      'Clinical Assistant Professor, University of British Columbia',
       'Associate Fellow, American Association of Implant Dentistry',
     ],
     bioKey: 'team.drwu.bio',
@@ -19,10 +19,10 @@ const dentists = [
   },
   {
     name: 'Dr. Yukari Ogura',
-    title: 'D.D.S., Ph.D',
+    title: 'D.D.S., Ph.D.',
     credentials: [
-      'Nihon University, D.D.S, 2008',
-      'Nihon University Operative Dentistry, Ph.D, 2012',
+      'Nihon University, D.D.S., 2008',
+      'Nihon University, Ph.D. in Dental Materials and Adhesives, 2012',
       'National Dental Examining Board of Canada, 2020',
     ],
     bioKey: 'team.drogura.bio',
@@ -30,8 +30,10 @@ const dentists = [
   },
   {
     name: 'Dr. Jacqueline Yip',
-    title: 'D.M.D',
-    credentials: [],
+    title: 'D.M.D.',
+    credentials: [
+      'McGill University, Doctor of Dental Medicine, 2016',
+    ],
     bioKey: 'team.dryip.bio',
     photo: drYip,
   },
@@ -39,7 +41,7 @@ const dentists = [
     name: 'Dr. Ivy Hsu',
     title: 'D.D.S.',
     credentials: [
-      'Cardinal Herrera University, 2014',
+      'Cardinal Herrera University, Spain, 2014',
       'National Dental Examining Board of Canada, 2018',
     ],
     bioKey: 'team.drhsu.bio',

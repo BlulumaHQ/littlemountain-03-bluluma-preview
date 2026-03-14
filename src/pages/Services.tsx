@@ -4,48 +4,18 @@ import { useI18n } from '@/lib/i18n';
 import PageHeader from '@/components/PageHeader';
 import implantsImg from '@/assets/services/implants.jpg';
 import orthodonticsImg from '@/assets/services/orthodontics.jpg';
-import pediatricImg from '@/assets/services/pediatric.jpg';
+import pediatricImg from '@/assets/services/pediatric-new.webp';
 import estheticsImg from '@/assets/services/esthetics.jpg';
 import restorativesImg from '@/assets/services/restoratives.jpg';
 import maintenanceImg from '@/assets/services/maintenance.jpg';
 
 const serviceData = [
-  {
-    id: 'implants',
-    titleKey: 'services.implants',
-    descKey: 'service.implants.desc',
-    image: implantsImg,
-  },
-  {
-    id: 'orthodontics',
-    titleKey: 'services.orthodontics',
-    descKey: 'service.orthodontics.desc',
-    image: orthodonticsImg,
-  },
-  {
-    id: 'pediatric',
-    titleKey: 'services.pediatric',
-    descKey: 'service.pediatric.desc',
-    image: pediatricImg,
-  },
-  {
-    id: 'esthetics',
-    titleKey: 'services.esthetics',
-    descKey: 'service.esthetics.desc',
-    image: estheticsImg,
-  },
-  {
-    id: 'restoratives',
-    titleKey: 'services.restoratives',
-    descKey: 'service.restoratives.desc',
-    image: restorativesImg,
-  },
-  {
-    id: 'maintenance',
-    titleKey: 'services.maintenance',
-    descKey: 'service.maintenance.desc',
-    image: maintenanceImg,
-  },
+  { id: 'implants', titleKey: 'services.implants', descKey: 'service.implants.desc', image: implantsImg },
+  { id: 'orthodontics', titleKey: 'services.orthodontics', descKey: 'service.orthodontics.desc', image: orthodonticsImg },
+  { id: 'pediatric', titleKey: 'services.pediatric', descKey: 'service.pediatric.desc', image: pediatricImg },
+  { id: 'esthetics', titleKey: 'services.esthetics', descKey: 'service.esthetics.desc', image: estheticsImg },
+  { id: 'restoratives', titleKey: 'services.restoratives', descKey: 'service.restoratives.desc', image: restorativesImg },
+  { id: 'maintenance', titleKey: 'services.maintenance', descKey: 'service.maintenance.desc', image: maintenanceImg },
 ];
 
 const Services = () => {

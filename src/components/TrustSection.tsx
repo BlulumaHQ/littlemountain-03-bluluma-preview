@@ -1,6 +1,6 @@
 import { useI18n } from '@/lib/i18n';
-import trustImg1 from '@/assets/office-trust-1.jpg';
-import trustImg2 from '@/assets/office-trust-2.jpg';
+import trustImg1 from '@/assets/trust-img-1.webp';
+import trustImg2 from '@/assets/trust-img-2.webp';
 
 const TrustSection = () => {
   const { t } = useI18n();

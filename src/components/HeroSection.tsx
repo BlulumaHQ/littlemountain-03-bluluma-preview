@@ -5,7 +5,7 @@ import heroMobile from '@/assets/hero-mobile.jpg';
 import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -15,9 +15,31 @@ const HeroSection = () => {
     return () => window.removeEventListener('resize', check);
   }, []);
 
+  const scrollToContact = () => {
+    const el = document.getElementById('contact-section');
+    if (el) {
+      const headerOffset = 80;
+      const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  // Render title with line break for Chinese
+  const renderTitle = () => {
+    const title = t('hero.title');
+    if (lang === 'zh' && title.includes('\n')) {
+      return title.split('\n').map((line, i) => (
+        <span key={i}>
+          {line}
+          {i === 0 && <br />}
+        </span>
+      ));
+    }
+    return title;
+  };
+
   return (
     <section className="relative h-[60vh] md:h-[85vh] overflow-hidden">
-      {/* Video background (desktop) / Image fallback (mobile) */}
       {isMobile ? (
         <img
           src={heroMobile}
@@ -36,13 +58,11 @@ const HeroSection = () => {
         </video>
       )}
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-foreground/25" />
 
-      {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
         <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-background max-w-4xl leading-[1.1] mb-6 uppercase tracking-wide">
-          {t('hero.title')}
+          {renderTitle()}
         </h1>
         <p className="text-background/90 text-base md:text-lg max-w-xl leading-relaxed mb-8">
           {t('hero.cta.line1')}
@@ -52,12 +72,12 @@ const HeroSection = () => {
           {t('hero.cta.line3')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            to="/contact"
+          <button
+            onClick={scrollToContact}
             className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase rounded hover:bg-brand-green-dark transition-colors"
           >
             {t('hero.cta1')}
-          </Link>
+          </button>
           <Link
             to="/services"
             className="inline-flex items-center justify-center px-8 py-3 border border-background text-background font-medium text-sm tracking-wider uppercase rounded hover:bg-background/10 transition-colors"
