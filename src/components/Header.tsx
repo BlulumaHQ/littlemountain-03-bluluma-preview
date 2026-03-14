@@ -12,7 +12,7 @@ const Header = () => {
 
   const navItems = [
     { label: t('nav.home'), to: '/' },
-    { label: t('nav.office'), to: '/office' },
+    { label: t('nav.office'), to: '/#welcome-section' },
     { label: t('nav.team'), to: '/#our-team' },
     { label: t('nav.services'), to: '/services' },
     { label: t('nav.contact'), to: '/#contact-section' },
