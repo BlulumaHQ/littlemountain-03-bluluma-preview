@@ -34,11 +34,11 @@ const ContactSection = () => {
           {t('contact.subtitle')}
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Form */}
-          <div>
+          <div className="bg-background rounded-lg p-6 md:p-8 shadow-sm">
             {submitted ? (
-              <div className="bg-background rounded-lg p-8 text-center">
+              <div className="flex items-center justify-center h-full">
                 <p className="text-brand-green font-heading text-xl font-semibold">{t('contact.success')}</p>
               </div>
             ) : (
@@ -129,7 +129,7 @@ const ContactSection = () => {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.8!2d-123.1!3d49.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDE0JzI0LjAiTiAxMjPCsDA2JzAwLjAiVw!5e0!3m2!1sen!2sca!4v1"
                 width="100%"
-                height="280"
+                height="250"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -138,33 +138,41 @@ const ContactSection = () => {
               />
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-primary mt-0.5 shrink-0" />
+            {/* Info grid: 3 columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* Address */}
+              <div className="flex items-start gap-2.5">
+                <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm font-medium text-foreground">{t('contact.address')}</p>
-                  <p className="text-sm text-muted-foreground">#208 – 4818 Main Street, Vancouver, BC</p>
+                  <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.address')}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">#208 – 4818 Main Street<br />Vancouver, BC</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <Phone size={18} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-sm font-medium text-foreground">{t('contact.phone')}</p>
-                  <a href="tel:6048745111" className="text-sm text-muted-foreground hover:text-primary transition-colors">(604) 874-5111</a>
+
+              {/* Phone + Email */}
+              <div className="space-y-3">
+                <div className="flex items-start gap-2.5">
+                  <Phone size={16} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.phone')}</p>
+                    <a href="tel:6048745111" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 874-5111</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <Mail size={16} className="text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.email')}</p>
+                    <a href="mailto:info@littlemountaindental.ca" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">info@littlemountaindental.ca</a>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <Mail size={18} className="text-primary mt-0.5 shrink-0" />
+
+              {/* Office Hours */}
+              <div className="flex items-start gap-2.5">
+                <Clock size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm font-medium text-foreground">{t('contact.email')}</p>
-                  <a href="mailto:info@littlemountaindental.ca" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@littlemountaindental.ca</a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Clock size={18} className="text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-sm font-medium text-foreground">{t('contact.officeHours')}</p>
-                  <div className="text-sm text-muted-foreground space-y-0.5">
+                  <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.officeHours')}</p>
+                  <div className="text-xs text-muted-foreground space-y-0.5 leading-relaxed">
                     <p>Mon – Fri: 9:00am – 5:30pm</p>
                     <p>Saturday: 8:30am – 5:00pm</p>
                     <p>Sunday: {t('footer.closed')}</p>

@@ -20,7 +20,7 @@ const ServicesSection = () => {
   const { t } = useI18n();
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-8 md:py-10 pb-4 md:pb-6">
       <div className="container-site text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-brand-green mb-3">
           {t('services.title')}

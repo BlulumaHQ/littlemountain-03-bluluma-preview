@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
-import officeExterior from '@/assets/office-exterior.webp';
 import officeLibrary1 from '@/assets/office-library-1.webp';
 import officeLibrary2 from '@/assets/office-library-2.webp';
 import officeTreatment from '@/assets/office-treatment.webp';
@@ -8,7 +7,6 @@ import officeWaiting1 from '@/assets/office-waiting-1.webp';
 import officeWashroom from '@/assets/office-washroom.webp';
 
 const images = [
-  { src: officeExterior, alt: 'Clinic exterior' },
   { src: officeLibrary1, alt: 'Waiting area library' },
   { src: officeLibrary2, alt: "Children's book library" },
   { src: officeWaiting1, alt: 'Bookshelf area' },
