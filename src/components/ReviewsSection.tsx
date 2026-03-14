@@ -24,7 +24,7 @@ const ReviewsSection = () => {
   const pairReviewers = [reviewers[slideIndex * 2], reviewers[slideIndex * 2 + 1]];
 
   return (
-    <section className="section-padding">
+    <section className="pt-6 md:pt-8 pb-12 md:pb-16">
       <div className="container-site">
         {/* Google Average Rating */}
         <div className="text-center mb-8">
