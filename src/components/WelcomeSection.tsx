@@ -1,30 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
-import officeImg from '@/assets/office-welcome.jpg';
 import officeExterior from '@/assets/office-exterior.webp';
 import officeLibrary1 from '@/assets/office-library-1.webp';
 import officeLibrary2 from '@/assets/office-library-2.webp';
 import officeTreatment from '@/assets/office-treatment.webp';
 import officeWaiting1 from '@/assets/office-waiting-1.webp';
 import officeWashroom from '@/assets/office-washroom.webp';
-import officeWaiting2 from '@/assets/office-waiting-2.webp';
-import officePediatric from '@/assets/office-pediatric.webp';
 
 const images = [
-  { src: officeImg, alt: 'Little Mountain Dental Centre office' },
   { src: officeExterior, alt: 'Clinic exterior' },
   { src: officeLibrary1, alt: 'Waiting area library' },
-  { src: officeLibrary2, alt: 'Children\'s book library' },
+  { src: officeLibrary2, alt: "Children's book library" },
+  { src: officeWaiting1, alt: 'Bookshelf area' },
   { src: officeTreatment, alt: 'Treatment room' },
-  { src: officeWaiting1, alt: 'Waiting area' },
   { src: officeWashroom, alt: 'Washroom' },
-  { src: officeWaiting2, alt: 'Lounge area' },
-  { src: officePediatric, alt: 'Pediatric dentistry' },
 ];
 
 const WelcomeSection = () => {
   const { t } = useI18n();
   const [activeIndex, setActiveIndex] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const resetTimer = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+  };
+
+  useEffect(() => {
+    resetTimer();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  const handleThumbClick = (i: number) => {
+    setActiveIndex(i);
+    resetTimer();
+  };
 
   return (
     <section className="section-padding">
@@ -44,7 +56,7 @@ const WelcomeSection = () => {
               <img
                 src={images[activeIndex].src}
                 alt={images[activeIndex].alt}
-                className="w-full h-auto object-cover aspect-[4/3]"
+                className="w-full h-auto object-cover aspect-video"
                 loading="lazy"
               />
             </div>
@@ -53,7 +65,7 @@ const WelcomeSection = () => {
               {images.map((img, i) => (
                 <button
                   key={i}
-                  onClick={() => setActiveIndex(i)}
+                  onClick={() => handleThumbClick(i)}
                   className={`shrink-0 w-16 h-12 rounded overflow-hidden border-2 transition-all ${
                     i === activeIndex ? 'border-primary opacity-100' : 'border-transparent opacity-60 hover:opacity-80'
                   }`}

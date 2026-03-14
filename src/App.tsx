@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyBookNow from "@/components/StickyBookNow";
 import ScrollToTopButton, { RouteScrollToTop } from "@/components/ScrollToTop";
+import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Office from "./pages/Office";
@@ -22,6 +23,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <LoadingScreen />
           <RouteScrollToTop />
           <Header />
           <main className="min-h-screen">

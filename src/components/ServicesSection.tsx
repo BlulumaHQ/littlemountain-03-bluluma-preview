@@ -20,24 +20,24 @@ const ServicesSection = () => {
   const { t } = useI18n();
 
   return (
-    <section className="section-padding">
+    <section className="py-12 md:py-16">
       <div className="container-site text-center">
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-brand-green mb-3">
           {t('services.title')}
         </h2>
-        <p className="text-muted-foreground mb-12 max-w-xl mx-auto">
+        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
           {t('services.subtitle')}
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {services.map((s) => (
             <Link
               key={s.key}
               to={`/services${s.anchor}`}
-              className="group flex flex-col items-center gap-3 p-6 rounded-lg hover:bg-brand-cream transition-colors"
+              className="group flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-brand-cream transition-colors"
             >
-              <img src={s.icon} alt={t(`services.${s.key}`)} className="w-20 h-20 md:w-24 md:h-24" />
-              <span className="font-heading text-lg font-medium text-foreground group-hover:text-primary transition-colors">
+              <img src={s.icon} alt={t(`services.${s.key}`)} className="w-16 h-16 md:w-20 md:h-20" />
+              <span className="font-heading text-base font-medium text-foreground group-hover:text-primary transition-colors">
                 {t(`services.${s.key}`)}
               </span>
               <span className="text-xs text-muted-foreground leading-snug">

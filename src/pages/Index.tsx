@@ -1,10 +1,11 @@
 import HeroSection from '@/components/HeroSection';
 import InsuranceSection from '@/components/InsuranceSection';
 import WelcomeSection from '@/components/WelcomeSection';
+import TrustSection from '@/components/TrustSection';
 import TeamSection from '@/components/TeamSection';
 import ServicesSection from '@/components/ServicesSection';
 import ReviewsSection from '@/components/ReviewsSection';
-import TrustSection from '@/components/TrustSection';
+import FaqSection from '@/components/FaqSection';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
@@ -13,10 +14,11 @@ const Index = () => {
       <HeroSection />
       <InsuranceSection />
       <WelcomeSection />
-      <TeamSection />
+      <TrustSection />
       <ServicesSection />
       <ReviewsSection />
-      <TrustSection />
+      <FaqSection />
+      <TeamSection />
       <ContactSection />
     </>
   );
