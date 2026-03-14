@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useI18n } from '@/lib/i18n';
-import { Phone, MapPin, Mail, Clock } from 'lucide-react';
+import { Phone, MapPin, Mail } from 'lucide-react';
 
 const ContactSection = () => {
   const { t } = useI18n();
