@@ -29,19 +29,18 @@ const Header = () => {
 
   const handleNavClick = (to: string) => {
     setMobileOpen(false);
-    if (to === '/#our-team') {
+    const anchorMap: Record<string, string> = {
+      '/#our-team': 'our-team',
+      '/#contact-section': 'contact-section',
+      '/#welcome-section': 'welcome-section',
+    };
+    const sectionId = anchorMap[to];
+    if (sectionId) {
       if (location.pathname === '/') {
-        scrollToSection('our-team');
+        scrollToSection(sectionId);
       } else {
         navigate('/');
-        setTimeout(() => scrollToSection('our-team'), 300);
-      }
-    } else if (to === '/#contact-section') {
-      if (location.pathname === '/') {
-        scrollToSection('contact-section');
-      } else {
-        navigate('/');
-        setTimeout(() => scrollToSection('contact-section'), 300);
+        setTimeout(() => scrollToSection(sectionId), 300);
       }
     }
   };

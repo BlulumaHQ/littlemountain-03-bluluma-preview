@@ -53,8 +53,26 @@ const Footer = () => {
     }
   };
 
+  const handleWelcomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const scrollToWelcome = () => {
+      const el = document.getElementById('welcome-section');
+      if (el) {
+        const headerOffset = 80;
+        const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    };
+    if (location.pathname === '/') {
+      scrollToWelcome();
+    } else {
+      navigate('/');
+      setTimeout(scrollToWelcome, 300);
+    }
+  };
+
   const links = [
-    { label: t('nav.office'), to: '/office', onClick: undefined },
+    { label: t('nav.office'), to: '/#welcome-section', onClick: handleWelcomeClick },
     { label: t('nav.team'), to: '/#our-team', onClick: handleTeamClick },
     { label: t('nav.services'), to: '/services', onClick: undefined },
     { label: t('nav.contact'), to: '/#contact-section', onClick: handleContactClick },
