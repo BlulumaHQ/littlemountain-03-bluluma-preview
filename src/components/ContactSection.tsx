@@ -138,8 +138,8 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Info grid: 3 columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Info: 3 equal columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-1">
               {/* Address */}
               <div className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
@@ -149,34 +149,21 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Phone + Email */}
-              <div className="space-y-3">
-                <div className="flex items-start gap-2.5">
-                  <Phone size={16} className="text-primary mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.phone')}</p>
-                    <a href="tel:6048745111" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 874-5111</a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <Mail size={16} className="text-primary mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.email')}</p>
-                    <a href="mailto:info@littlemountaindental.ca" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">info@littlemountaindental.ca</a>
-                  </div>
+              {/* Phone */}
+              <div className="flex items-start gap-2.5">
+                <Phone size={16} className="text-primary mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.phone')}</p>
+                  <a href="tel:6048745111" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 874-5111</a>
                 </div>
               </div>
 
-              {/* Office Hours */}
+              {/* Email */}
               <div className="flex items-start gap-2.5">
-                <Clock size={16} className="text-primary mt-0.5 shrink-0" />
+                <Mail size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.officeHours')}</p>
-                  <div className="text-xs text-muted-foreground space-y-0.5 leading-relaxed">
-                    <p>Mon – Fri: 9:00am – 5:30pm</p>
-                    <p>Saturday: 8:30am – 5:00pm</p>
-                    <p>Sunday: {t('footer.closed')}</p>
-                  </div>
+                  <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.email')}</p>
+                  <a href="mailto:info@littlemountaindental.ca" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">info@littlemountaindental.ca</a>
                 </div>
               </div>
             </div>
