@@ -8,7 +8,7 @@ const reviewers = ['Naomi Liao', 'Jacky Li', 'Susan Yang', 'J B', 'Yolanda Kwan'
 const ReviewsSection = () => {
   const { t } = useI18n();
   const [slideIndex, setSlideIndex] = useState(0);
-  const totalSlides = 3; // 6 reviews, 2 per slide
+  const totalSlides = 3;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,6 +26,18 @@ const ReviewsSection = () => {
   return (
     <section className="section-padding">
       <div className="container-site">
+        {/* Google Average Rating */}
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center gap-1 mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+            ))}
+            <span className="text-2xl font-bold text-foreground ml-2">5.0</span>
+          </div>
+          <p className="text-lg font-semibold text-foreground">{t('reviews.rating')}</p>
+          <p className="text-sm text-muted-foreground">{t('reviews.based')}</p>
+        </div>
+
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-brand-green text-center mb-3">
           {t('reviews.title')}
         </h2>

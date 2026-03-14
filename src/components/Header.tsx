@@ -15,11 +15,11 @@ const Header = () => {
     { label: t('nav.office'), to: '/office' },
     { label: t('nav.team'), to: '/#our-team' },
     { label: t('nav.services'), to: '/services' },
-    { label: t('nav.contact'), to: '/contact' },
+    { label: t('nav.contact'), to: '/#contact-section' },
   ];
 
-  const scrollToTeam = () => {
-    const el = document.getElementById('our-team');
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
     if (el) {
       const headerOffset = 80;
       const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
@@ -31,13 +31,22 @@ const Header = () => {
     setMobileOpen(false);
     if (to === '/#our-team') {
       if (location.pathname === '/') {
-        scrollToTeam();
+        scrollToSection('our-team');
       } else {
         navigate('/');
-        setTimeout(scrollToTeam, 300);
+        setTimeout(() => scrollToSection('our-team'), 300);
+      }
+    } else if (to === '/#contact-section') {
+      if (location.pathname === '/') {
+        scrollToSection('contact-section');
+      } else {
+        navigate('/');
+        setTimeout(() => scrollToSection('contact-section'), 300);
       }
     }
   };
+
+  const isAnchorLink = (to: string) => to === '/#our-team' || to === '/#contact-section';
 
   const toggleLang = () => setLang(lang === 'en' ? 'zh' : 'en');
 
@@ -65,7 +74,7 @@ const Header = () => {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-7">
             {navItems.map((item) => {
-              if (item.to === '/#our-team') {
+              if (isAnchorLink(item.to)) {
                 return (
                   <button
                     key={item.to}
@@ -109,7 +118,7 @@ const Header = () => {
           <div className="lg:hidden bg-background border-t border-border">
             <nav className="container-site py-4 flex flex-col gap-3">
               {navItems.map((item) => {
-                if (item.to === '/#our-team') {
+                if (isAnchorLink(item.to)) {
                   return (
                     <button
                       key={item.to}
