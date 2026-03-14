@@ -12,7 +12,7 @@ const Header = () => {
 
   const navItems = [
     { label: t('nav.home'), to: '/' },
-    { label: t('nav.office'), to: '/office' },
+    { label: t('nav.office'), to: '/#welcome-section' },
     { label: t('nav.team'), to: '/#our-team' },
     { label: t('nav.services'), to: '/services' },
     { label: t('nav.contact'), to: '/#contact-section' },
@@ -29,24 +29,23 @@ const Header = () => {
 
   const handleNavClick = (to: string) => {
     setMobileOpen(false);
-    if (to === '/#our-team') {
+    const anchorMap: Record<string, string> = {
+      '/#our-team': 'our-team',
+      '/#contact-section': 'contact-section',
+      '/#welcome-section': 'welcome-section',
+    };
+    const sectionId = anchorMap[to];
+    if (sectionId) {
       if (location.pathname === '/') {
-        scrollToSection('our-team');
+        scrollToSection(sectionId);
       } else {
         navigate('/');
-        setTimeout(() => scrollToSection('our-team'), 300);
-      }
-    } else if (to === '/#contact-section') {
-      if (location.pathname === '/') {
-        scrollToSection('contact-section');
-      } else {
-        navigate('/');
-        setTimeout(() => scrollToSection('contact-section'), 300);
+        setTimeout(() => scrollToSection(sectionId), 300);
       }
     }
   };
 
-  const isAnchorLink = (to: string) => to === '/#our-team' || to === '/#contact-section';
+  const isAnchorLink = (to: string) => to === '/#our-team' || to === '/#contact-section' || to === '/#welcome-section';
 
   const toggleLang = () => setLang(lang === 'en' ? 'zh' : 'en');
 
