@@ -35,10 +35,29 @@ const Footer = () => {
     }
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const scrollToContact = () => {
+      const el = document.getElementById('contact-section');
+      if (el) {
+        const headerOffset = 80;
+        const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    };
+    if (location.pathname === '/') {
+      scrollToContact();
+    } else {
+      navigate('/');
+      setTimeout(scrollToContact, 300);
+    }
+  };
+
   const links = [
     { label: t('nav.office'), to: '/office', onClick: undefined },
     { label: t('nav.team'), to: '/#our-team', onClick: handleTeamClick },
     { label: t('nav.services'), to: '/services', onClick: undefined },
+    { label: t('nav.contact'), to: '/#contact-section', onClick: handleContactClick },
   ];
 
   return (
@@ -54,17 +73,6 @@ const Footer = () => {
             </p>
             <p className="text-primary-foreground/70 text-sm mt-3">
               {t('footer.richmond')}{' '}
-              <a
-                href="https://friendlydental.ca/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-primary-foreground transition-colors"
-              >
-                {t('footer.friendlyDental')}
-              </a>
-            </p>
-            <p className="text-primary-foreground/70 text-sm mt-2">
-              {t('footer.richmondWelcome')}{' '}
               <a
                 href="https://friendlydental.ca/"
                 target="_blank"

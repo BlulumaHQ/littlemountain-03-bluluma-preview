@@ -10,7 +10,6 @@ import StickyBookNow from "@/components/StickyBookNow";
 import ScrollToTopButton, { RouteScrollToTop } from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Contact from "./pages/Contact";
 import Office from "./pages/Office";
 import NotFound from "./pages/NotFound";
 
@@ -29,7 +28,6 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/office" element={<Office />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
