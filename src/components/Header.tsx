@@ -46,7 +46,7 @@ const Header = () => {
     }
   };
 
-  const isAnchorLink = (to: string) => to === '/#our-team' || to === '/#contact-section';
+  const isAnchorLink = (to: string) => to === '/#our-team' || to === '/#contact-section' || to === '/#welcome-section';
 
   const toggleLang = () => setLang(lang === 'en' ? 'zh' : 'en');
 
