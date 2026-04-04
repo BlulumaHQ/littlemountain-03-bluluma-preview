@@ -54,12 +54,12 @@ const Header = () => {
       {/* Utility bar */}
       <div className="bg-primary">
         <div className="container-site flex items-center justify-end gap-4 py-1.5 text-xs text-primary-foreground">
-          <a href="tel:6048745111" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+          <a href="tel:6048795612" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
             <Phone size={12} />
-            <span>(604) 874-5111</span>
+            <span>(604) 879-5612</span>
           </a>
           <span className="opacity-60">|</span>
-          <span>#208 – 4818 Main Street, Vancouver, BC</span>
+          <span>620 East Broadway, Vancouver, BC</span>
         </div>
       </div>
 

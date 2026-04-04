@@ -127,7 +127,7 @@ const ContactSection = () => {
           <div className="flex flex-col h-full">
             <div className="rounded-lg overflow-hidden shadow-sm flex-1">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.8!2d-123.1!3d49.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDE0JzI0LjAiTiAxMjPCsDA2JzAwLjAiVw!5e0!3m2!1sen!2sca!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5!2d-123.1005!3d49.2627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d0a0b1c1c1%3A0x1!2s620+E+Broadway%2C+Vancouver%2C+BC!5e0!3m2!1sen!2sca!4v1"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '280px' }}
@@ -145,7 +145,7 @@ const ContactSection = () => {
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.address')}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">#208 – 4818 Main Street<br />Vancouver, BC</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">620 East Broadway<br />Vancouver, BC</p>
                 </div>
               </div>
 
@@ -154,7 +154,7 @@ const ContactSection = () => {
                 <Phone size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.phone')}</p>
-                  <a href="tel:6048745111" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 874-5111</a>
+                  <a href="tel:6048795612" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 879-5612</a>
                 </div>
               </div>
 
@@ -163,7 +163,7 @@ const ContactSection = () => {
                 <Mail size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.email')}</p>
-                  <a href="mailto:info@littlemountaindental.ca" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">info@littlemountaindental.ca</a>
+                  <a href="mailto:drphwu@gmail.com" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">drphwu@gmail.com</a>
                 </div>
               </div>
             </div>

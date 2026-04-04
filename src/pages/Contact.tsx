@@ -33,24 +33,24 @@ const Contact = () => {
           {/* Contact info */}
           <div>
             <div className="space-y-6">
-              <a href="tel:6048745111" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+              <a href="tel:6048795612" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                 <Phone size={20} className="text-primary" />
-                <span>(604) 874-5111</span>
+                <span>(604) 879-5612</span>
               </a>
-              <a href="mailto:info@littlemountaindental.ca" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+              <a href="mailto:drphwu@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                 <Mail size={20} className="text-primary" />
-                <span>info@littlemountaindental.ca</span>
+                <span>drphwu@gmail.com</span>
               </a>
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary mt-0.5" />
-                <span>#208 – 4818 Main Street, Vancouver, BC</span>
+                <span>620 East Broadway, Vancouver, BC</span>
               </div>
             </div>
 
             {/* Map embed */}
             <div className="mt-8 rounded-lg overflow-hidden shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.8!2d-123.1!3d49.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDE0JzI0LjAiTiAxMjPCsDA2JzAwLjAiVw!5e0!3m2!1sen!2sca!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5!2d-123.1005!3d49.2627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d0a0b1c1c1%3A0x1!2s620+E+Broadway%2C+Vancouver%2C+BC!5e0!3m2!1sen!2sca!4v1"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
