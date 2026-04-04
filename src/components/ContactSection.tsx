@@ -163,7 +163,7 @@ const ContactSection = () => {
                 <Mail size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.email')}</p>
-                  <a href="mailto:info@littlemountaindental.ca" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">info@littlemountaindental.ca</a>
+                  <a href="mailto:drphwu@gmail.com" className="text-xs text-muted-foreground hover:text-primary transition-colors break-all">drphwu@gmail.com</a>
                 </div>
               </div>
             </div>
