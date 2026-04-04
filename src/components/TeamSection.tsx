@@ -69,14 +69,14 @@ const TeamSection = () => {
           {t('team.title')}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
           {dentists.map((d) => (
             <div
               key={d.name}
               className="bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
               {/* White frame around photo */}
-              <div className="p-6 bg-white border-b" style={{ borderColor: '#e5e5e5' }}>
+              <div className="p-3 md:p-6 bg-white border-b" style={{ borderColor: '#e5e5e5' }}>
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={d.photo}
@@ -86,17 +86,17 @@ const TeamSection = () => {
                   />
                 </div>
               </div>
-              <div className="p-4">
-                <h3 className="font-heading text-base lg:text-lg font-semibold text-foreground">{d.name}</h3>
-                <p className="text-xs text-brand-green font-medium mb-2">{d.title}</p>
+              <div className="p-3 md:p-4">
+                <h3 className="font-heading text-sm md:text-base lg:text-lg font-semibold text-foreground">{d.name}</h3>
+                <p className="text-xs text-brand-green font-medium mb-1 md:mb-2">{d.title}</p>
                 {d.credentials.length > 0 && (
-                  <ul className="text-[11px] text-muted-foreground mb-2 space-y-0.5">
+                  <ul className="text-[11px] md:text-xs text-muted-foreground mb-1 md:mb-2 space-y-0.5">
                     {d.credentials.map((c) => (
                       <li key={c}>– {c}</li>
                     ))}
                   </ul>
                 )}
-                <p className="text-xs text-muted-foreground leading-relaxed">{t(d.bioKey)}</p>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t(d.bioKey)}</p>
               </div>
             </div>
           ))}
