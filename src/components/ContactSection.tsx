@@ -154,7 +154,7 @@ const ContactSection = () => {
                 <Phone size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.phone')}</p>
-                  <a href="tel:6048745111" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 874-5111</a>
+                  <a href="tel:6048795612" className="text-xs text-muted-foreground hover:text-primary transition-colors">(604) 879-5612</a>
                 </div>
               </div>
 
