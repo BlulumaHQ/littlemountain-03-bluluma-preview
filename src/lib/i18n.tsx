@@ -84,8 +84,8 @@ const translations: Record<string, Record<Lang, string>> = {
   'reviews.review6': { en: 'Dr. Patrick is incredibly patient and kind. He always explains everything clearly and makes sure you feel comfortable. The staff are also very friendly and never pressure patients with unnecessary treatments.', zh: 'Dr. Patrick 非常有耐心也很親切。他會清楚解釋每一個治療步驟，讓人感到很放心。診所團隊也非常友善，不會強迫推銷不必要的治療。' },
 
   // Why Trust
-  'trust.title': { en: 'Why Trust Little Mountain Dental Centre?', zh: '為什麼信任小山牙科中心？' },
-  'trust.text': { en: 'We understand that visiting the dentist can be stressful. Our highly trained and knowledgeable team is dedicated in providing you with personalized care in a warm and inviting environment. We take time learning about your concerns and answering your questions. Let us take care of your dental needs while keeping your mind at ease.', zh: '我們理解看牙醫可能會令人緊張。我們高度訓練和知識豐富的團隊致力於在溫馨友好的環境中為您提供個性化護理。我們花時間了解您的顧慮並回答您的問題。讓我們照顧您的牙齒需求，同時讓您安心。' },
+  'trust.title': { en: 'Why Choose Little Mountain Dental Centre?', zh: '為什麼選擇小山牙科中心？' },
+  'trust.text': { en: 'Your comfort is our priority. We take pride in offering personalized, attentive care tailored to each patient\'s needs. We combine clinical excellence with a calm, welcoming environment so you can feel relaxed and well looked after at every visit.', zh: '您的舒適是我們的首要任務。我們以為每位患者提供個性化、細心的護理為榮。我們將卓越的臨床技術與平靜、友好的環境相結合，讓您在每次就診時都能感到放鬆和安心。' },
 
   // FAQ
   'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題' },
