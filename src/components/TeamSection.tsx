@@ -69,7 +69,7 @@ const TeamSection = () => {
           {t('team.title')}
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-4 md:gap-6 md:px-0">
           {dentists.map((d) => (
             <div
               key={d.name}
@@ -88,15 +88,15 @@ const TeamSection = () => {
               </div>
               <div className="p-3 md:p-4">
                 <h3 className="font-heading text-sm md:text-base lg:text-lg font-semibold text-foreground">{d.name}</h3>
-                <p className="text-xs text-brand-green font-medium mb-1 md:mb-2">{d.title}</p>
+                <p className="text-xs md:text-sm text-brand-green font-medium mb-1 md:mb-2">{d.title}</p>
                 {d.credentials.length > 0 && (
-                  <ul className="text-[11px] md:text-xs text-muted-foreground mb-1 md:mb-2 space-y-0.5">
+                  <ul className="text-xs md:text-xs text-muted-foreground mb-1 md:mb-2 space-y-0.5">
                     {d.credentials.map((c) => (
                       <li key={c}>– {c}</li>
                     ))}
                   </ul>
                 )}
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t(d.bioKey)}</p>
+                <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">{t(d.bioKey)}</p>
               </div>
             </div>
           ))}
