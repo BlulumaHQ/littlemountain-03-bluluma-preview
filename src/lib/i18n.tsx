@@ -65,9 +65,9 @@ const translations: Record<string, Record<Lang, string>> = {
 
   // Service short descriptions
   'services.implants.short': { en: 'Stable, secure tooth replacement', zh: '穩定安全的牙齒替換方案' },
-  'services.orthodontics.short': { en: 'Align your smile beautifully', zh: '打造整齊美麗的笑容' },
+  'services.orthodontics.short': { en: 'Improve function and alignment of your smile', zh: '改善您笑容的功能與排列' },
   'services.pediatric.short': { en: 'Gentle care for young smiles', zh: '為孩子提供溫柔的牙科護理' },
-  'services.esthetics.short': { en: "Enhance your smile's appearance", zh: '提升您的笑容美感' },
+  'services.esthetics.short': { en: 'Enhance beauty of your smile', zh: '提升您笑容的美感' },
   'services.restoratives.short': { en: 'Repair and restore your teeth', zh: '修復您的牙齒健康' },
   'services.maintenance.short': { en: 'Keep your oral health on track', zh: '維持您的口腔健康' },
 
