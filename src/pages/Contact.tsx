@@ -33,17 +33,17 @@ const Contact = () => {
           {/* Contact info */}
           <div>
             <div className="space-y-6">
-              <a href="tel:6048745111" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+              <a href="tel:6048795612" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                 <Phone size={20} className="text-primary" />
-                <span>(604) 874-5111</span>
+                <span>(604) 879-5612</span>
               </a>
-              <a href="mailto:info@littlemountaindental.ca" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+              <a href="mailto:drphwu@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                 <Mail size={20} className="text-primary" />
-                <span>info@littlemountaindental.ca</span>
+                <span>drphwu@gmail.com</span>
               </a>
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary mt-0.5" />
-                <span>#208 – 4818 Main Street, Vancouver, BC</span>
+                <span>620 East Broadway, Vancouver, BC</span>
               </div>
             </div>
 
