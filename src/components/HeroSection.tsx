@@ -61,7 +61,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-foreground/25" />
 
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
-        <h1 className="font-heading text-4xl md:text-6xl lg:text-8xl font-semibold text-background max-w-4xl leading-[1.1] mb-6 uppercase tracking-wide">
+        <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-semibold text-background max-w-5xl leading-[1.1] mb-6 uppercase tracking-wide">
           {renderTitle()}
         </h1>
         <p className="text-background/90 text-base md:text-lg max-w-xl leading-relaxed mb-8">
