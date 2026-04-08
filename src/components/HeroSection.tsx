@@ -39,7 +39,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-[60vh] md:h-[85vh] overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[85vh] overflow-hidden">
       {isMobile ? (
         <img
           src={heroMobile}
