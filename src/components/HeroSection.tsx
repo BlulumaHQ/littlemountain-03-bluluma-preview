@@ -39,7 +39,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[60vh] md:min-h-[85vh] overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden">
       {isMobile ? (
         <img
           src={heroMobile}
@@ -60,8 +60,8 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-foreground/25" />
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
-        <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-background max-w-5xl leading-[1.1] mb-4 md:mb-6 uppercase tracking-wide px-2">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-5 py-12">
+        <h1 className="font-heading text-[clamp(1.5rem,5vw,4.5rem)] font-semibold text-background max-w-5xl leading-[1.15] mb-4 md:mb-6 uppercase tracking-wide px-2">
           {renderTitle()}
         </h1>
         <p className="text-background/90 text-base md:text-lg max-w-xl leading-relaxed mb-8">
