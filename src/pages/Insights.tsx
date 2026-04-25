@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import Seo from '@/components/Seo';
 import PageHeader from '@/components/PageHeader';
 import { articles } from '@/lib/insights';
 import { useI18n } from '@/lib/i18n';
@@ -8,18 +8,13 @@ import { useI18n } from '@/lib/i18n';
 const Insights = () => {
   const { t } = useI18n();
 
-  useEffect(() => {
-    document.title = 'Insights | Little Mountain Dental Centre';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta)
-      meta.setAttribute(
-        'content',
-        'Helpful insights on dental coverage, costs, and patient care in Vancouver — designed to help you make informed decisions before your visit.'
-      );
-  }, []);
-
   return (
     <>
+      <Seo
+        title="Dental Insights | Vancouver Dental Coverage, Costs & Patient Guides"
+        description="Read professional dental insights about CDCP, children's dental coverage, direct billing, dental costs, booking, and patient care in Vancouver."
+        canonicalPath="/insights"
+      />
       <PageHeader
         title={t('insights.title')}
         subtitle={t('insights.intro')}

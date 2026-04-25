@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
+import Seo from '@/components/Seo';
 import PageHeader from '@/components/PageHeader';
 import implantsImg from '@/assets/services/implants.jpg';
 import orthodonticsImg from '@/assets/services/orthodontics.jpg';
@@ -38,6 +39,11 @@ const Services = () => {
 
   return (
     <>
+      <Seo
+        title="Dental Services | Little Mountain Dental Centre Vancouver"
+        description="Implants, orthodontics, pediatric, esthetic, restorative, and preventive dental services at Little Mountain Dental Centre in Vancouver."
+        canonicalPath="/services"
+      />
       <PageHeader title={t('services.title')} subtitle={t('services.subtitle')} />
       <div className="container-site section-padding">
         <div className="space-y-20">
