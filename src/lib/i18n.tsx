@@ -1,47 +1,48 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Lang = 'en' | 'zh';
+type Lang = 'en' | 'zh' | 'ja';
 
-const translations: Record<string, Record<Lang, string>> = {
+const translations: Record<string, Partial<Record<Lang, string>>> = {
   // Nav
-  'nav.home': { en: 'Home', zh: '首頁' },
-  'nav.office': { en: 'Our Office', zh: '我們的診所' },
-  'nav.team': { en: 'Our Team', zh: '我們的團隊' },
-  'nav.services': { en: 'Our Services', zh: '我們的服務' },
-  'nav.contact': { en: 'Contact', zh: '聯絡我們' },
-  'nav.lang': { en: '中文', zh: 'EN' },
-  'nav.bookNow': { en: 'Book Online', zh: '線上預約' },
- 'nav.faq': { en: 'FAQ', zh: '常見問題' },
- 'nav.insights': { en: 'Insights', zh: '專欄文章' },
- 'cta.bookOnline': { en: 'Book Online', zh: '線上預約' },
- 'insights.title': { en: 'Insights', zh: '專欄文章' },
+  'nav.home': { en: 'Home', zh: '首頁', ja: 'ホーム' },
+  'nav.office': { en: 'Our Office', zh: '我們的診所', ja: '医院案内' },
+  'nav.team': { en: 'Our Team', zh: '我們的團隊', ja: 'スタッフ紹介' },
+  'nav.services': { en: 'Our Services', zh: '我們的服務', ja: '診療内容' },
+  'nav.contact': { en: 'Contact', zh: '聯絡我們', ja: 'お問い合わせ' },
+  'nav.lang': { en: '中文', zh: '日本語', ja: 'EN' },
+  'nav.bookNow': { en: 'Book Online', zh: '線上預約', ja: 'オンライン予約' },
+ 'nav.faq': { en: 'FAQ', zh: '常見問題', ja: 'よくあるご質問' },
+ 'nav.insights': { en: 'Insights', zh: '專欄文章', ja: 'コラム' },
+ 'cta.bookOnline': { en: 'Book Online', zh: '線上預約', ja: 'オンライン予約はこちら' },
+ 'insights.title': { en: 'Insights', zh: '專欄文章', ja: 'コラム' },
  'insights.intro': {
    en: 'Helpful insights on dental coverage, costs, and patient care — designed to help you make informed decisions before your visit.',
    zh: '有關牙科保險、收費與診療的實用資訊，幫助您在預約前做出明智的決定。',
+   ja: '保険・費用・治療に関するわかりやすい情報をまとめました。ご来院前の参考にお役立てください。',
  },
- 'insights.readMore': { en: 'Read More', zh: '閱讀更多' },
- 'insights.backToInsights': { en: 'Back to Insights', zh: '返回專欄' },
-  'cta.checkCoverage': { en: 'Check Your Coverage', zh: '查詢您的保障' },
+ 'insights.readMore': { en: 'Read More', zh: '閱讀更多', ja: '続きを読む' },
+ 'insights.backToInsights': { en: 'Back to Insights', zh: '返回專欄', ja: 'コラム一覧に戻る' },
+  'cta.checkCoverage': { en: 'Check Your Coverage', zh: '查詢您的保障', ja: '保険内容を確認する' },
 
   // Hero
-  'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的\n舒適和護理' },
-  'hero.cta1': { en: 'Book Online', zh: '線上預約' },
-  'hero.cta2': { en: 'Our Services', zh: '我們的服務' },
-  'hero.cta.line1': { en: 'New Patients Welcome', zh: '歡迎新病患' },
-  'hero.cta.line2': { en: 'Modern family dental care in Vancouver', zh: '溫哥華現代家庭牙科照護' },
-  'hero.cta.line3': { en: 'Book your visit today', zh: '立即預約看診' },
+  'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的\n舒適和護理', ja: 'バンクーバーの\nファミリー向け歯科医院' },
+  'hero.cta1': { en: 'Book Online', zh: '線上預約', ja: 'オンライン予約はこちら' },
+  'hero.cta2': { en: 'Our Services', zh: '我們的服務', ja: '診療内容' },
+  'hero.cta.line1': { en: 'New Patients Welcome', zh: '歡迎新病患', ja: '新規患者さま歓迎' },
+  'hero.cta.line2': { en: 'Modern family dental care in Vancouver', zh: '溫哥華現代家庭牙科照護', ja: '安心・丁寧な治療とわかりやすい料金説明' },
+  'hero.cta.line3': { en: 'Book your visit today', zh: '立即預約看診', ja: '今すぐご予約いただけます' },
 
   // Insurance
- 'insurance.title': { en: 'Modern Family Dental Care in Vancouver', zh: '溫哥華現代家庭牙科' },
- 'insurance.subtitle': { en: 'Clear pricing. Easy booking. No surprises.', zh: '價格透明・預約簡單・絕無隱藏費用' },
- 'insurance.cta': { en: 'Start with a simple online appointment.', zh: '從簡單的線上預約開始' },
+ 'insurance.title': { en: 'Modern Family Dental Care in Vancouver', zh: '溫哥華現代家庭牙科', ja: 'バンクーバーで信頼できる歯科治療' },
+ 'insurance.subtitle': { en: 'Clear pricing. Easy booking. No surprises.', zh: '價格透明・預約簡單・絕無隱藏費用', ja: '明確な料金・簡単な予約・安心のサポート' },
+ 'insurance.cta': { en: 'Start with a simple online appointment.', zh: '從簡單的線上預約開始', ja: 'オンラインで簡単にご予約いただけます。' },
 
   // Welcome
-  'welcome.title': { en: 'Welcome to Little Mountain Dental Centre', zh: '歡迎來到小山牙科中心' },
-  'welcome.text': { en: 'Welcome to Little Mountain Dental Centre. Our friendly team is committed to providing you with the highest level of professional services and personalized care in a warm and welcoming environment. We believe that building strong relationship with our patients is the key to exceptional dental care, and we look forward to knowing you and your unique needs. Thank you for choosing Little Mountain Dental in achieving your optimal oral health.', zh: '歡迎來到小山牙科中心。我們友善的團隊致力於在溫馨友好的環境中為您提供最高水平的專業服務和個性化護理。我們相信與患者建立牢固的關係是卓越牙科護理的關鍵，我們期待了解您和您的獨特需求。感謝您選擇小山牙科來實現您的最佳口腔健康。' },
+  'welcome.title': { en: 'Welcome to Little Mountain Dental Centre', zh: '歡迎來到小山牙科中心', ja: 'リトルマウンテン歯科へようこそ' },
+  'welcome.text': { en: 'Welcome to Little Mountain Dental Centre. Our friendly team is committed to providing you with the highest level of professional services and personalized care in a warm and welcoming environment. We believe that building strong relationship with our patients is the key to exceptional dental care, and we look forward to knowing you and your unique needs. Thank you for choosing Little Mountain Dental in achieving your optimal oral health.', zh: '歡迎來到小山牙科中心。我們友善的團隊致力於在溫馨友好的環境中為您提供最高水平的專業服務和個性化護理。我們相信與患者建立牢固的關係是卓越牙科護理的關鍵，我們期待了解您和您的獨特需求。感謝您選擇小山牙科來實現您的最佳口腔健康。', ja: 'リトルマウンテン歯科へようこそ。落ち着いた雰囲気の中で、患者さま一人ひとりに合わせた丁寧な診療を心がけています。お口の状態やご希望をしっかりと伺い、安心して通っていただける医院を目指しています。長くお付き合いできる「かかりつけ歯科」として、皆さまのお越しをお待ちしております。' },
 
   // Team
-  'team.title': { en: 'Our Dedicated Dentists', zh: '我們的專業牙醫' },
+  'team.title': { en: 'Our Dedicated Dentists', zh: '我們的專業牙醫', ja: '歯科医師のご紹介' },
 
   // Doctor bios
   'team.drwu.bio': {
@@ -66,56 +67,56 @@ const translations: Record<string, Record<Lang, string>> = {
   },
 
   // Services
-  'services.title': { en: 'Our Comprehensive Services', zh: '我們的綜合服務' },
-  'services.subtitle': { en: 'We have the knowledge and experience to achieve your optimal oral health.', zh: '我們擁有知識和經驗，為您實現最佳口腔健康。' },
-  'services.implants': { en: 'Implants', zh: '種植牙' },
-  'services.orthodontics': { en: 'Orthodontics', zh: '矯正牙科' },
-  'services.pediatric': { en: 'Pediatric', zh: '兒童牙科' },
-  'services.esthetics': { en: 'Esthetics', zh: '美容牙科' },
-  'services.restoratives': { en: 'Restoratives', zh: '修復牙科' },
-  'services.maintenance': { en: 'Maintenance', zh: '牙齒維護' },
+  'services.title': { en: 'Our Comprehensive Services', zh: '我們的綜合服務', ja: '診療内容' },
+  'services.subtitle': { en: 'We have the knowledge and experience to achieve your optimal oral health.', zh: '我們擁有知識和經驗，為您實現最佳口腔健康。', ja: '豊富な経験と確かな技術で、患者さまのお口の健康をサポートいたします。' },
+  'services.implants': { en: 'Implants', zh: '種植牙', ja: 'インプラント' },
+  'services.orthodontics': { en: 'Orthodontics', zh: '矯正牙科', ja: '矯正歯科' },
+  'services.pediatric': { en: 'Pediatric', zh: '兒童牙科', ja: '小児歯科' },
+  'services.esthetics': { en: 'Esthetics', zh: '美容牙科', ja: '審美歯科' },
+  'services.restoratives': { en: 'Restoratives', zh: '修復牙科', ja: '一般歯科' },
+  'services.maintenance': { en: 'Maintenance', zh: '牙齒維護', ja: '定期検診・クリーニング' },
 
   // Service short descriptions
-  'services.implants.short': { en: 'Stable, secure tooth replacement', zh: '穩定安全的牙齒替換方案' },
-  'services.orthodontics.short': { en: 'Improve function and alignment of your smile', zh: '改善您笑容的功能與排列' },
-  'services.pediatric.short': { en: 'Gentle care for young smiles', zh: '為孩子提供溫柔的牙科護理' },
-  'services.esthetics.short': { en: 'Enhance beauty of your smile', zh: '提升您笑容的美感' },
-  'services.restoratives.short': { en: 'Repair and restore your teeth', zh: '修復您的牙齒健康' },
-  'services.maintenance.short': { en: 'Keep your oral health on track', zh: '維持您的口腔健康' },
+  'services.implants.short': { en: 'Stable, secure tooth replacement', zh: '穩定安全的牙齒替換方案', ja: 'しっかり噛める安心の治療' },
+  'services.orthodontics.short': { en: 'Improve function and alignment of your smile', zh: '改善您笑容的功能與排列', ja: '美しく整った歯並びへ' },
+  'services.pediatric.short': { en: 'Gentle care for young smiles', zh: '為孩子提供溫柔的牙科護理', ja: 'お子さまにやさしい診療' },
+  'services.esthetics.short': { en: 'Enhance beauty of your smile', zh: '提升您笑容的美感', ja: '自然で美しい口元に' },
+  'services.restoratives.short': { en: 'Repair and restore your teeth', zh: '修復您的牙齒健康', ja: '虫歯・むし歯治療など総合的な診療' },
+  'services.maintenance.short': { en: 'Keep your oral health on track', zh: '維持您的口腔健康', ja: 'お口の健康を長く守ります' },
 
   // Reviews
-  'reviews.title': { en: 'What Our Patients Say', zh: '患者的評價' },
-  'reviews.subtitle': { en: 'Read reviews from our valued patients', zh: '閱讀我們尊貴患者的評價' },
-  'reviews.rating': { en: '5.0 Average Rating', zh: '5.0 平均評分' },
-  'reviews.based': { en: 'Based on Google Reviews', zh: '基於 Google 評論' },
-  'reviews.review1': { en: 'My first experience at Little Mountain Dental Centre was excellent. From the initial phone consultation, the staff explained everything clearly and helped arrange the appointment smoothly. Dr. Wu was very professional and the treatment process was painless. I felt completely comfortable during the visit.', zh: '我第一次到 Little Mountain Dental Centre 的體驗非常好。從電話諮詢開始，櫃檯人員就很仔細地解釋並協助安排預約。Dr. Wu 非常專業，整個治療過程幾乎沒有任何不適。整個看診過程讓人非常安心。' },
-  'reviews.review2': { en: 'Great first visit on a family recommendation. The front desk made insurance easy, and the hygienist Irene was excellent during the cleaning. After the final check from the doctor, I felt very well taken care of.', zh: '透過家人推薦第一次來這裡看診。櫃檯人員讓保險流程非常順利，洗牙的 Irene 也非常專業。醫生最後檢查後讓我感到非常安心。' },
-  'reviews.review3': { en: 'My daughter has been seeing Dr. Wu since she was very young. She is usually anxious about dental procedures, but the hygienist Anise was extremely patient and calming. The team truly cares about their patients.', zh: '我女兒從小就由 Dr. Wu 看診。她平常對牙科治療會有些緊張，但牙科衛生師 Anise 非常有耐心，也很會安撫小朋友。整個團隊都非常關心病患。' },
-  'reviews.review4': { en: "I've had a fantastic experience at Little Mountain Dental Centre. The team is professional and welcoming, and Dr. Patrick explains everything clearly so the visit feels stress-free. The clinic is modern, clean, and very well organized.", zh: '我在 Little Mountain Dental Centre 的看診體驗非常好。整個團隊非常專業又親切，Dr. Patrick 會清楚解釋每個步驟，讓人完全不緊張。診所環境現代、乾淨，而且管理得非常好。' },
-  'reviews.review5': { en: 'Our family doctor recommended this clinic and it has been a wonderful experience. The staff are friendly and professional, and the clinic environment is elegant and welcoming.', zh: '這間牙醫診所是家庭醫師推薦的。整個團隊非常友善且專業，診所環境也很優雅舒適。' },
-  'reviews.review6': { en: 'Dr. Patrick is incredibly patient and kind. He always explains everything clearly and makes sure you feel comfortable. The staff are also very friendly and never pressure patients with unnecessary treatments.', zh: 'Dr. Patrick 非常有耐心也很親切。他會清楚解釋每一個治療步驟，讓人感到很放心。診所團隊也非常友善，不會強迫推銷不必要的治療。' },
+  'reviews.title': { en: 'What Our Patients Say', zh: '患者的評價', ja: '患者さまの声' },
+  'reviews.subtitle': { en: 'Read reviews from our valued patients', zh: '閱讀我們尊貴患者的評價', ja: '実際にご来院いただいた患者さまからのご感想です' },
+  'reviews.rating': { en: '5.0 Average Rating', zh: '5.0 平均評分', ja: '平均評価 5.0' },
+  'reviews.based': { en: 'Based on Google Reviews', zh: '基於 Google 評論', ja: 'Google クチコミより' },
+  'reviews.review1': { en: 'My first experience at Little Mountain Dental Centre was excellent. From the initial phone consultation, the staff explained everything clearly and helped arrange the appointment smoothly. Dr. Wu was very professional and the treatment process was painless. I felt completely comfortable during the visit.', zh: '我第一次到 Little Mountain Dental Centre 的體驗非常好。從電話諮詢開始，櫃檯人員就很仔細地解釋並協助安排預約。Dr. Wu 非常專業，整個治療過程幾乎沒有任何不適。整個看診過程讓人非常安心。', ja: '初めてリトルマウンテン歯科にお伺いしましたが、とても良い体験でした。お電話の段階からスタッフの方が丁寧にご説明くださり、予約もスムーズに進みました。Dr. Wu はとても専門的で、治療中もほとんど痛みを感じませんでした。安心して受診することができました。' },
+  'reviews.review2': { en: 'Great first visit on a family recommendation. The front desk made insurance easy, and the hygienist Irene was excellent during the cleaning. After the final check from the doctor, I felt very well taken care of.', zh: '透過家人推薦第一次來這裡看診。櫃檯人員讓保險流程非常順利，洗牙的 Irene 也非常專業。醫生最後檢查後讓我感到非常安心。', ja: '家族の紹介で初めて伺いました。受付の方が保険手続きを丁寧にサポートしてくださり、衛生士の Irene さんのクリーニングも丁寧でした。最後に先生にも診ていただき、安心して帰ることができました。' },
+  'reviews.review3': { en: 'My daughter has been seeing Dr. Wu since she was very young. She is usually anxious about dental procedures, but the hygienist Anise was extremely patient and calming. The team truly cares about their patients.', zh: '我女兒從小就由 Dr. Wu 看診。她平常對牙科治療會有些緊張，但牙科衛生師 Anise 非常有耐心，也很會安撫小朋友。整個團隊都非常關心病患。', ja: '娘は小さい頃から Dr. Wu に診ていただいています。歯科治療が少し苦手な娘ですが、衛生士の Anise さんがとても優しく接してくださいます。スタッフの皆さまが患者さまを大切にされている医院です。' },
+  'reviews.review4': { en: "I've had a fantastic experience at Little Mountain Dental Centre. The team is professional and welcoming, and Dr. Patrick explains everything clearly so the visit feels stress-free. The clinic is modern, clean, and very well organized.", zh: '我在 Little Mountain Dental Centre 的看診體驗非常好。整個團隊非常專業又親切，Dr. Patrick 會清楚解釋每個步驟，讓人完全不緊張。診所環境現代、乾淨，而且管理得非常好。', ja: 'リトルマウンテン歯科での診療はとても良い体験でした。スタッフの皆さまは親切で、Dr. Patrick が一つひとつわかりやすく説明してくださるので、緊張せずに受診できました。院内も清潔で、現代的な設備が整っています。' },
+  'reviews.review5': { en: 'Our family doctor recommended this clinic and it has been a wonderful experience. The staff are friendly and professional, and the clinic environment is elegant and welcoming.', zh: '這間牙醫診所是家庭醫師推薦的。整個團隊非常友善且專業，診所環境也很優雅舒適。', ja: 'かかりつけ医からの紹介で伺いました。スタッフの皆さまは親しみやすく、診療も丁寧です。院内も落ち着いた雰囲気でとても居心地が良い医院です。' },
+  'reviews.review6': { en: 'Dr. Patrick is incredibly patient and kind. He always explains everything clearly and makes sure you feel comfortable. The staff are also very friendly and never pressure patients with unnecessary treatments.', zh: 'Dr. Patrick 非常有耐心也很親切。他會清楚解釋每一個治療步驟，讓人感到很放心。診所團隊也非常友善，不會強迫推銷不必要的治療。', ja: 'Dr. Patrick はとても辛抱強く、優しい先生です。治療内容を一つひとつ丁寧にご説明くださり、安心して任せられます。スタッフも親切で、不要な治療を勧められることもありません。' },
 
   // Why Trust
-  'trust.title': { en: 'Why Choose Little Mountain Dental Centre?', zh: '為什麼選擇小山牙科中心？' },
-  'trust.text': { en: 'Your comfort is our priority. We take pride in offering personalized, attentive care tailored to each patient\'s needs. We combine clinical excellence with a calm, welcoming environment so you can feel relaxed and well looked after at every visit.', zh: '您的舒適是我們的首要任務。我們以為每位患者提供個性化、細心的護理為榮。我們將卓越的臨床技術與平靜、友好的環境相結合，讓您在每次就診時都能感到放鬆和安心。' },
+  'trust.title': { en: 'Why Choose Little Mountain Dental Centre?', zh: '為什麼選擇小山牙科中心？', ja: 'リトルマウンテン歯科が選ばれる理由' },
+  'trust.text': { en: 'Your comfort is our priority. We take pride in offering personalized, attentive care tailored to each patient\'s needs. We combine clinical excellence with a calm, welcoming environment so you can feel relaxed and well looked after at every visit.', zh: '您的舒適是我們的首要任務。我們以為每位患者提供個性化、細心的護理為榮。我們將卓越的臨床技術與平靜、友好的環境相結合，讓您在每次就診時都能感到放鬆和安心。', ja: '患者さまに安心していただけることを何より大切にしています。お一人おひとりのお口の状態やご希望に合わせて、わかりやすくご説明したうえで治療を行います。落ち着いた院内で、ゆったりと診療を受けていただけます。' },
 
   // CDCP Section (high-conversion)
-  'cdcp.title': { en: 'Covered by CDCP or Children\'s Benefits?', zh: '有 CDCP 或兒童福利保障嗎？' },
-  'cdcp.desc': { en: 'Not sure what\'s covered or how much you\'ll pay? We\'ll check your coverage and explain everything before your visit — no surprises.', zh: '不確定保障範圍或自付費用？我們會在您就診前先核實保障並清楚說明，絕無意外。' },
-  'cdcp.bullet1': { en: 'We help verify your CDCP coverage before treatment', zh: '治療前協助核實您的 CDCP 保障' },
-  'cdcp.bullet2': { en: 'Children may qualify for both CDCP & Healthy Kids benefits', zh: '兒童可能同時符合 CDCP 與 Healthy Kids 福利' },
-  'cdcp.bullet3': { en: 'We clearly explain any out-of-pocket costs upfront', zh: '提前清楚說明任何自付費用' },
-  'cdcp.bullet4': { en: 'Simple online booking — no phone calls required', zh: '輕鬆線上預約，無需打電話' },
-  'cdcp.faqTitle': { en: 'Quick answers', zh: '常見疑問' },
+  'cdcp.title': { en: 'Covered by CDCP or Children\'s Benefits?', zh: '有 CDCP 或兒童福利保障嗎？', ja: 'CDCPおよびお子様向け保険に対応しています' },
+  'cdcp.desc': { en: 'Not sure what\'s covered or how much you\'ll pay? We\'ll check your coverage and explain everything before your visit — no surprises.', zh: '不確定保障範圍或自付費用？我們會在您就診前先核實保障並清楚說明，絕無意外。', ja: '保険内容や自己負担について事前にわかりやすくご説明いたします。当日になって思わぬ費用が発生することはありません。' },
+  'cdcp.bullet1': { en: 'We help verify your CDCP coverage before treatment', zh: '治療前協助核實您的 CDCP 保障', ja: 'CDCPの適用内容を事前に確認' },
+  'cdcp.bullet2': { en: 'Children may qualify for both CDCP & Healthy Kids benefits', zh: '兒童可能同時符合 CDCP 與 Healthy Kids 福利', ja: 'お子様の保険（CDCP・各種補助制度）にも対応' },
+  'cdcp.bullet3': { en: 'We clearly explain any out-of-pocket costs upfront', zh: '提前清楚說明任何自付費用', ja: '治療前に自己負担額をご説明' },
+  'cdcp.bullet4': { en: 'Simple online booking — no phone calls required', zh: '輕鬆線上預約，無需打電話', ja: 'オンラインで簡単に予約可能' },
+  'cdcp.faqTitle': { en: 'Quick answers', zh: '常見疑問', ja: 'よくあるご質問' },
 
   // FAQ (mini, on homepage)
-  'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題' },
-  'faq.q1': { en: 'Do I need to renew my CDCP every year?', zh: '我每年都要續保 CDCP 嗎？' },
-  'faq.a1': { en: 'Yes. CDCP coverage must be renewed annually to remain active.', zh: '是的。CDCP 保障必須每年續保才能保持有效。' },
-  'faq.q2': { en: 'Can children use CDCP and other programs?', zh: '兒童可以同時使用 CDCP 與其他計劃嗎？' },
-  'faq.a2': { en: 'In some cases, children may qualify for both CDCP and Healthy Kids coverage, depending on eligibility.', zh: '在某些情況下，兒童可能同時符合 CDCP 與 Healthy Kids 的資格，視乎資格條件而定。' },
-  'faq.q3': { en: 'Will I know the cost before treatment?', zh: '治療前我會知道費用嗎？' },
-  'faq.a3': { en: 'Yes. We verify your coverage and explain any estimated out-of-pocket costs before treatment.', zh: '會的。我們會在治療前先核實您的保障，並說明任何預估的自付費用。' },
+  'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題', ja: 'よくあるご質問' },
+  'faq.q1': { en: 'Do I need to renew my CDCP every year?', zh: '我每年都要續保 CDCP 嗎？', ja: 'CDCPは毎年更新が必要ですか？' },
+  'faq.a1': { en: 'Yes. CDCP coverage must be renewed annually to remain active.', zh: '是的。CDCP 保障必須每年續保才能保持有效。', ja: 'はい、CDCPは毎年の更新が必要です。' },
+  'faq.q2': { en: 'Can children use CDCP and other programs?', zh: '兒童可以同時使用 CDCP 與其他計劃嗎？', ja: '子どもは複数の保険制度を利用できますか？' },
+  'faq.a2': { en: 'In some cases, children may qualify for both CDCP and Healthy Kids coverage, depending on eligibility.', zh: '在某些情況下，兒童可能同時符合 CDCP 與 Healthy Kids 的資格，視乎資格條件而定。', ja: '条件により、複数の制度を併用できる場合があります。' },
+  'faq.q3': { en: 'Will I know the cost before treatment?', zh: '治療前我會知道費用嗎？', ja: '治療前に費用はわかりますか？' },
+  'faq.a3': { en: 'Yes. We verify your coverage and explain any estimated out-of-pocket costs before treatment.', zh: '會的。我們會在治療前先核實您的保障，並說明任何預估的自付費用。', ja: 'はい、事前に保険内容と自己負担額をご案内いたします。' },
 
   // Full FAQ page
   'faqPage.title': { en: 'Dental Coverage & Patient FAQs', zh: '牙科保障與病患常見問題' },
@@ -165,36 +166,36 @@ const translations: Record<string, Record<Lang, string>> = {
   'faqPage.stillText': { en: 'Our team can help you understand your coverage and plan your visit.', zh: '我們的團隊可協助您了解保障並安排就診。' },
 
   // Contact
-  'contact.title': { en: 'Contact Us', zh: '聯絡我們' },
-  'contact.subtitle': { en: 'Our team is happy to help you and your family achieving that perfect smile!', zh: '我們的團隊很樂意幫助您和您的家人擁有完美的笑容！' },
-  'contact.firstName': { en: 'First Name', zh: '名字' },
-  'contact.lastName': { en: 'Last Name', zh: '姓氏' },
-  'contact.name': { en: 'Full Name', zh: '全名' },
-  'contact.email': { en: 'Email', zh: '電子郵件' },
-  'contact.phone': { en: 'Phone', zh: '電話' },
-  'contact.message': { en: 'Message', zh: '留言' },
-  'contact.send': { en: 'Request a Call Back', zh: '請求回電' },
-  'contact.success': { en: 'Thank you! Your message has been sent successfully.', zh: '謝謝！您的訊息已成功發送。' },
-  'contact.address': { en: 'Address', zh: '地址' },
-  'contact.officeHours': { en: 'Office Hours', zh: '診所時間' },
+  'contact.title': { en: 'Contact Us', zh: '聯絡我們', ja: 'お問い合わせ' },
+  'contact.subtitle': { en: 'Our team is happy to help you and your family achieving that perfect smile!', zh: '我們的團隊很樂意幫助您和您的家人擁有完美的笑容！', ja: 'ご不明な点がございましたらお気軽にお問い合わせください。' },
+  'contact.firstName': { en: 'First Name', zh: '名字', ja: 'お名前（名）' },
+  'contact.lastName': { en: 'Last Name', zh: '姓氏', ja: 'お名前（姓）' },
+  'contact.name': { en: 'Full Name', zh: '全名', ja: 'お名前' },
+  'contact.email': { en: 'Email', zh: '電子郵件', ja: 'メールアドレス' },
+  'contact.phone': { en: 'Phone', zh: '電話', ja: '電話番号' },
+  'contact.message': { en: 'Message', zh: '留言', ja: 'お問い合わせ内容' },
+  'contact.send': { en: 'Request a Call Back', zh: '請求回電', ja: '折り返しのご連絡を希望する' },
+  'contact.success': { en: 'Thank you! Your message has been sent successfully.', zh: '謝謝！您的訊息已成功發送。', ja: '送信が完了しました。お問い合わせいただきありがとうございます。' },
+  'contact.address': { en: 'Address', zh: '地址', ja: '住所' },
+  'contact.officeHours': { en: 'Office Hours', zh: '診所時間', ja: '診療時間' },
 
   // Footer
-  'footer.tagline': { en: 'Providing exceptional dental care in a warm and welcoming environment.', zh: '在溫馨友好的環境中提供卓越的牙科護理。' },
-  'footer.richmond': { en: 'Also you are welcome to visit our Richmond Office –', zh: '歡迎您也前來我們的列治文診所 –' },
-  'footer.friendlyDental': { en: 'Friendly Dental Centre', zh: 'Friendly Dental Centre' },
-  'footer.links': { en: 'Links', zh: '連結' },
-  'footer.services': { en: 'Services', zh: '服務' },
-  'footer.officeHours': { en: 'Office Hours', zh: '診所時間' },
-  'footer.closed': { en: 'Closed', zh: '休息' },
-  'footer.copyright': { en: '© 2026 Little Mountain Dental Centre', zh: '© 2026 小山牙科中心' },
-  'footer.webdesign': { en: 'Web Design by', zh: '網頁設計：' },
+  'footer.tagline': { en: 'Providing exceptional dental care in a warm and welcoming environment.', zh: '在溫馨友好的環境中提供卓越的牙科護理。', ja: '落ち着いた院内で、丁寧で心のこもった歯科診療をご提供しています。' },
+  'footer.richmond': { en: 'Also you are welcome to visit our Richmond Office –', zh: '歡迎您也前來我們的列治文診所 –', ja: 'リッチモンド院もぜひご利用ください –' },
+  'footer.friendlyDental': { en: 'Friendly Dental Centre', zh: 'Friendly Dental Centre', ja: 'Friendly Dental Centre' },
+  'footer.links': { en: 'Links', zh: '連結', ja: 'リンク' },
+  'footer.services': { en: 'Services', zh: '服務', ja: '診療内容' },
+  'footer.officeHours': { en: 'Office Hours', zh: '診所時間', ja: '診療時間' },
+  'footer.closed': { en: 'Closed', zh: '休息', ja: '休診' },
+  'footer.copyright': { en: '© 2026 Little Mountain Dental Centre', zh: '© 2026 小山牙科中心', ja: '© 2026 Little Mountain Dental Centre' },
+  'footer.webdesign': { en: 'Web Design by', zh: '網頁設計：', ja: 'Web Design by' },
 
   // Loading
-  'loading': { en: 'Loading...', zh: '載入中...' },
+  'loading': { en: 'Loading...', zh: '載入中...', ja: '読み込み中...' },
 
   // Office page
-  'office.title': { en: 'Our Office', zh: '我們的診所' },
-  'office.subtitle': { en: 'Experience dental care in a modern, comfortable environment', zh: '在現代舒適的環境中體驗牙科護理' },
+  'office.title': { en: 'Our Office', zh: '我們的診所', ja: '医院案内' },
+  'office.subtitle': { en: 'Experience dental care in a modern, comfortable environment', zh: '在現代舒適的環境中體驗牙科護理', ja: '清潔で落ち着いた院内で、安心の歯科診療をご提供します' },
 
   // Service descriptions
   'service.implants.desc': { en: 'Dental implants are a stable and secure surgical option for replacing one or more missing teeth. A dental implant uses an artificial root usually made of titanium. The implant is surgically inserted into the upper or lower jawbone and an artificial tooth is attached to the implant. The implant acts as an anchor to hold the replacement tooth in place.', zh: '種植牙是替換一顆或多顆缺失牙齒的穩定且安全的手術選擇。種植牙使用通常由鈦製成的人工牙根。種植體通過手術植入上頜骨或下頜骨中，人工牙齒附著在種植體上。種植體充當錨固件，將替換牙齒固定到位。' },
@@ -217,10 +218,12 @@ const I18nContext = createContext<I18nContextType>({
   t: (key) => key,
 });
 
+const isLang = (v: unknown): v is Lang => v === 'en' || v === 'zh' || v === 'ja';
+
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
     const saved = localStorage.getItem('lm-lang');
-    return (saved === 'zh' ? 'zh' : 'en') as Lang;
+    return isLang(saved) ? saved : 'en';
   });
 
   const setLang = (l: Lang) => {
@@ -229,7 +232,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   };
 
   const t = (key: string): string => {
-    return translations[key]?.[lang] || key;
+    const entry = translations[key];
+    if (!entry) return key;
+    // Fallback chain: requested lang → English → key
+    return entry[lang] ?? entry.en ?? key;
   };
 
   return (
@@ -240,3 +246,4 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 }
 
 export const useI18n = () => useContext(I18nContext);
+
