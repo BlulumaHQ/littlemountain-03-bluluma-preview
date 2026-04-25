@@ -11,8 +11,16 @@ const translations: Record<string, Record<Lang, string>> = {
   'nav.contact': { en: 'Contact', zh: '聯絡我們' },
   'nav.lang': { en: '中文', zh: 'EN' },
   'nav.bookNow': { en: 'Book Online', zh: '線上預約' },
-  'nav.faq': { en: 'FAQ', zh: '常見問題' },
-  'cta.bookOnline': { en: 'Book Online', zh: '線上預約' },
+ 'nav.faq': { en: 'FAQ', zh: '常見問題' },
+ 'nav.insights': { en: 'Insights', zh: '專欄文章' },
+ 'cta.bookOnline': { en: 'Book Online', zh: '線上預約' },
+ 'insights.title': { en: 'Insights', zh: '專欄文章' },
+ 'insights.intro': {
+   en: 'Helpful insights on dental coverage, costs, and patient care — designed to help you make informed decisions before your visit.',
+   zh: '有關牙科保險、收費與診療的實用資訊，幫助您在預約前做出明智的決定。',
+ },
+ 'insights.readMore': { en: 'Read More', zh: '閱讀更多' },
+ 'insights.backToInsights': { en: 'Back to Insights', zh: '返回專欄' },
   'cta.checkCoverage': { en: 'Check Your Coverage', zh: '查詢您的保障' },
 
   // Hero

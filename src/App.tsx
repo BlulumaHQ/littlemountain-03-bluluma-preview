@@ -12,6 +12,8 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Faq from "./pages/Faq";
+import Insights from "./pages/Insights";
+import InsightArticle from "./pages/InsightArticle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,7 +33,9 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/services" element={<Services />} />
               <Route path="/faq" element={<Faq />} />
-              
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<InsightArticle />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
