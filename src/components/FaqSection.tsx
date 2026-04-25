@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
+const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5'];
 
 const FaqSection = () => {
   const { t } = useI18n();
@@ -23,7 +23,7 @@ const FaqSection = () => {
           type="single"
           collapsible
           defaultValue="q1"
-          className="mb-10"
+          className="mb-12"
         >
           {faqKeys.map((key) => (
             <AccordionItem key={key} value={key}>
@@ -38,14 +38,16 @@ const FaqSection = () => {
         </Accordion>
 
         <div className="text-center">
-          <p className="text-muted-foreground mb-5">{t('faq.stillHelp')}</p>
+          <p className="font-heading text-xl md:text-2xl font-semibold text-brand-green mb-5">
+            {t('faq.readyTitle')}
+          </p>
           <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase rounded hover:bg-brand-green-dark transition-colors"
           >
-            {t('cta.bookOnline')}
+            {t('faq.bookNow')}
           </a>
         </div>
       </div>

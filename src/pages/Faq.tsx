@@ -20,15 +20,12 @@ const categories: CatDef[] = [
     items: [
       { q: 'faqPage.c1q1', a: 'faqPage.c1a1' },
       { q: 'faqPage.c1q2', a: 'faqPage.c1a2' },
-      { q: 'faqPage.c1q3', a: 'faqPage.c1a3' },
-      { q: 'faqPage.c1q4', a: 'faqPage.c1a4' },
     ],
   },
   {
     titleKey: 'faqPage.cat2',
     items: [
       { q: 'faqPage.c2q1', a: 'faqPage.c2a1' },
-      { q: 'faqPage.c2q2', a: 'faqPage.c2a2' },
     ],
   },
   {
@@ -36,6 +33,7 @@ const categories: CatDef[] = [
     items: [
       { q: 'faqPage.c3q1', a: 'faqPage.c3a1' },
       { q: 'faqPage.c3q2', a: 'faqPage.c3a2' },
+      { q: 'faqPage.c3q3', a: 'faqPage.c3a3' },
     ],
   },
   {
@@ -51,12 +49,8 @@ const categories: CatDef[] = [
     items: [
       { q: 'faqPage.c5q1', a: 'faqPage.c5a1' },
       { q: 'faqPage.c5q2', a: 'faqPage.c5a2' },
-    ],
-  },
-  {
-    titleKey: 'faqPage.cat6',
-    items: [
-      { q: 'faqPage.c6q1', a: 'faqPage.c6a1' },
+      { q: 'faqPage.c5q3', a: 'faqPage.c5a3' },
+      { q: 'faqPage.c5q4', a: 'faqPage.c5a4' },
     ],
   },
 ];
@@ -108,13 +102,17 @@ const FaqPage = () => {
                 <h2 className="font-heading text-xl md:text-2xl font-semibold text-brand-green mb-4">
                   {t(cat.titleKey)}
                 </h2>
-                <Accordion type="single" collapsible>
+                <Accordion
+                  type="single"
+                  collapsible
+                  defaultValue={cat.items[0]?.q}
+                >
                   {cat.items.map((it) => (
                     <AccordionItem key={it.q} value={it.q}>
                       <AccordionTrigger className="text-left font-heading text-base md:text-lg font-medium">
                         {t(it.q)}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed">
+                      <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
                         {t(it.a)}
                       </AccordionContent>
                     </AccordionItem>
