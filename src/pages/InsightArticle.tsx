@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '@/components/Seo';
 import PageHeader from '@/components/PageHeader';
 import { BOOKING_URL } from '@/lib/booking';
 import { getArticleBySlug } from '@/lib/insights';
@@ -11,13 +11,6 @@ const InsightArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useI18n();
   const article = slug ? getArticleBySlug(slug) : undefined;
-
-  useEffect(() => {
-    if (!article) return;
-    document.title = `${article.title} | Little Mountain Dental Centre`;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', article.description);
-  }, [article]);
 
   if (!article) return <NotFound />;
 
