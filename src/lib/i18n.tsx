@@ -90,13 +90,14 @@ const translations: Record<string, Record<Lang, string>> = {
   'trust.title': { en: 'Why Choose Little Mountain Dental Centre?', zh: '為什麼選擇小山牙科中心？' },
   'trust.text': { en: 'Your comfort is our priority. We take pride in offering personalized, attentive care tailored to each patient\'s needs. We combine clinical excellence with a calm, welcoming environment so you can feel relaxed and well looked after at every visit.', zh: '您的舒適是我們的首要任務。我們以為每位患者提供個性化、細心的護理為榮。我們將卓越的臨床技術與平靜、友好的環境相結合，讓您在每次就診時都能感到放鬆和安心。' },
 
-  // CDCP Section
-  'cdcp.title': { en: 'Accepting CDCP & Children\'s Dental Coverage', zh: '接受 CDCP 與兒童牙科保障' },
-  'cdcp.desc': { en: 'We help patients understand their dental coverage and make booking simple. Whether you\'re using CDCP or children\'s benefits, our team will guide you every step of the way.', zh: '我們協助患者了解牙科保障並讓預約更簡單。無論您使用 CDCP 還是兒童福利，我們的團隊都會在每一步為您提供指引。' },
-  'cdcp.bullet1': { en: 'CDCP annual renewal support', zh: 'CDCP 年度續保協助' },
-  'cdcp.bullet2': { en: 'Children\'s dental coverage (CDCP & Healthy Kids)', zh: '兒童牙科保障（CDCP 及 Healthy Kids）' },
-  'cdcp.bullet3': { en: 'Clear explanation of any out-of-pocket costs', zh: '清楚說明任何自付費用' },
-  'cdcp.bullet4': { en: 'Easy online booking with no phone calls required', zh: '輕鬆線上預約，無需打電話' },
+  // CDCP Section (high-conversion)
+  'cdcp.title': { en: 'Covered by CDCP or Children\'s Benefits?', zh: '有 CDCP 或兒童福利保障嗎？' },
+  'cdcp.desc': { en: 'Not sure what\'s covered or how much you\'ll pay? We\'ll check your coverage and explain everything before your visit — no surprises.', zh: '不確定保障範圍或自付費用？我們會在您就診前先核實保障並清楚說明，絕無意外。' },
+  'cdcp.bullet1': { en: 'We help verify your CDCP coverage before treatment', zh: '治療前協助核實您的 CDCP 保障' },
+  'cdcp.bullet2': { en: 'Children may qualify for both CDCP & Healthy Kids benefits', zh: '兒童可能同時符合 CDCP 與 Healthy Kids 福利' },
+  'cdcp.bullet3': { en: 'We clearly explain any out-of-pocket costs upfront', zh: '提前清楚說明任何自付費用' },
+  'cdcp.bullet4': { en: 'Simple online booking — no phone calls required', zh: '輕鬆線上預約，無需打電話' },
+  'cdcp.faqTitle': { en: 'Quick answers', zh: '常見疑問' },
 
   // FAQ (mini, on homepage)
   'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題' },
