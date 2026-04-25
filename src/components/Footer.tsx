@@ -111,7 +111,7 @@ const Footer = () => {
               <a
                 href={SOCIAL_HOMEPAGE}
                 aria-label="Instagram"
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primage-foreground/30 border-primary-foreground/30 text-primary-foreground/90 hover:text-primary hover:bg-primary-foreground transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primary-foreground/30 text-primary-foreground/90 hover:text-primary hover:bg-primary-foreground transition-colors"
               >
                 <Instagram size={18} strokeWidth={1.75} />
               </a>
