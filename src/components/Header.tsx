@@ -1,8 +1,26 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Globe, ChevronDown } from 'lucide-react';
 import { useI18n } from '@/lib/i18n';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import logoColor from '@/assets/logo-color.svg';
+
+type LangCode = 'en' | 'zh' | 'ja';
+const LANG_LABELS: Record<LangCode, string> = {
+  en: 'English',
+  zh: '中文',
+  ja: '日本語',
+};
+const LANG_SHORT: Record<LangCode, string> = {
+  en: 'EN',
+  zh: '中文',
+  ja: '日本語',
+};
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -49,8 +67,34 @@ const Header = () => {
 
   const isAnchorLink = (to: string) => to === '/#our-team' || to === '/#contact-section' || to === '/#welcome-section';
 
-  const toggleLang = () =>
-    setLang(lang === 'en' ? 'zh' : lang === 'zh' ? 'ja' : 'en');
+  const currentLang = lang as LangCode;
+  const otherLangs = (['en', 'zh', 'ja'] as LangCode[]).filter(
+    (l) => l !== currentLang,
+  );
+
+  const LangSwitcher = ({ onSelect }: { onSelect?: () => void }) => (
+    <DropdownMenu>
+      <DropdownMenuTrigger className="inline-flex items-center gap-1.5 text-sm font-medium tracking-wide text-foreground/80 hover:text-primary transition-colors uppercase outline-none">
+        <Globe size={16} />
+        <span>{LANG_SHORT[currentLang]}</span>
+        <ChevronDown size={14} />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="min-w-[140px] z-[60]">
+        {otherLangs.map((l) => (
+          <DropdownMenuItem
+            key={l}
+            onClick={() => {
+              setLang(l);
+              onSelect?.();
+            }}
+            className="cursor-pointer"
+          >
+            {LANG_LABELS[l]}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 
   return (
     <>
