@@ -31,6 +31,11 @@ const InsightArticle = () => {
 
   return (
     <>
+      <Seo
+        title={`${article.title} | Little Mountain Dental Centre`}
+        description={article.description}
+        canonicalPath={`/insights/${article.slug}`}
+      />
       <PageHeader title={article.title} compact />
 
       <section className="section-padding">
@@ -94,6 +99,16 @@ const InsightArticle = () => {
             >
               {t('cta.bookOnline')}
             </a>
+            <p className="mt-5 text-sm text-muted-foreground">
+              <Link to="/faq" className="underline underline-offset-4 hover:text-primary transition-colors">
+                Read our patient FAQ
+              </Link>
+              {' '}or{' '}
+              <Link to="/#contact-section" className="underline underline-offset-4 hover:text-primary transition-colors">
+                contact our Vancouver dental clinic
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
