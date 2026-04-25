@@ -72,12 +72,14 @@ const HeroSection = () => {
           {t('hero.cta.line3')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button
-            onClick={scrollToContact}
+          <a
+            href="https://can4.recallmax.com/rsm/request/public/bookOnline/patient/layout.html?a=4I2a1Em7OEBY8Ctshkcy5vQAG_ERIToVBa1"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase rounded hover:bg-brand-green-dark transition-colors"
           >
             {t('hero.cta1')}
-          </button>
+          </a>
           <Link
             to="/services"
             className="inline-flex items-center justify-center px-8 py-3 border border-background text-background font-medium text-sm tracking-wider uppercase rounded hover:bg-background/10 transition-colors"
