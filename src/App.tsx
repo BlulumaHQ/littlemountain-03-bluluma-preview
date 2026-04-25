@@ -12,6 +12,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Faq from "./pages/Faq";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
