@@ -11,8 +11,7 @@ import ScrollToTopButton, { RouteScrollToTop } from "@/components/ScrollToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-
-import NotFound from "./pages/NotFound";
+import Faq from "./pages/Faq";
 
 const queryClient = new QueryClient();
 
