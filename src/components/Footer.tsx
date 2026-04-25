@@ -72,9 +72,11 @@ const Footer = () => {
   };
 
   const links = [
+    { label: t('nav.home'), to: '/', onClick: undefined },
     { label: t('nav.office'), to: '/#welcome-section', onClick: handleWelcomeClick },
     { label: t('nav.team'), to: '/#our-team', onClick: handleTeamClick },
-    { label: t('nav.services'), to: '/services', onClick: undefined },
+    { label: t('nav.faq'), to: '/faq', onClick: undefined },
+    { label: t('nav.insights'), to: '/insights', onClick: undefined },
     { label: t('nav.contact'), to: '/#contact-section', onClick: handleContactClick },
   ];
 
