@@ -10,11 +10,14 @@ const translations: Record<string, Record<Lang, string>> = {
   'nav.services': { en: 'Our Services', zh: '我們的服務' },
   'nav.contact': { en: 'Contact', zh: '聯絡我們' },
   'nav.lang': { en: '中文', zh: 'EN' },
-  'nav.bookNow': { en: 'Book Now', zh: '立即預約' },
+  'nav.bookNow': { en: 'Book Online', zh: '線上預約' },
+  'nav.faq': { en: 'FAQ', zh: '常見問題' },
+  'cta.bookOnline': { en: 'Book Online', zh: '線上預約' },
+  'cta.checkCoverage': { en: 'Check Your Coverage', zh: '查詢您的保障' },
 
   // Hero
   'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的\n舒適和護理' },
-  'hero.cta1': { en: 'Book Now', zh: '立即預約' },
+  'hero.cta1': { en: 'Book Online', zh: '線上預約' },
   'hero.cta2': { en: 'Our Services', zh: '我們的服務' },
   'hero.cta.line1': { en: 'New Patients Welcome', zh: '歡迎新病患' },
   'hero.cta.line2': { en: 'Modern family dental care in Vancouver', zh: '溫哥華現代家庭牙科照護' },
@@ -87,18 +90,69 @@ const translations: Record<string, Record<Lang, string>> = {
   'trust.title': { en: 'Why Choose Little Mountain Dental Centre?', zh: '為什麼選擇小山牙科中心？' },
   'trust.text': { en: 'Your comfort is our priority. We take pride in offering personalized, attentive care tailored to each patient\'s needs. We combine clinical excellence with a calm, welcoming environment so you can feel relaxed and well looked after at every visit.', zh: '您的舒適是我們的首要任務。我們以為每位患者提供個性化、細心的護理為榮。我們將卓越的臨床技術與平靜、友好的環境相結合，讓您在每次就診時都能感到放鬆和安心。' },
 
-  // FAQ
+  // CDCP Section
+  'cdcp.title': { en: 'Accepting CDCP & Children\'s Dental Coverage', zh: '接受 CDCP 與兒童牙科保障' },
+  'cdcp.desc': { en: 'We help patients understand their dental coverage and make booking simple. Whether you\'re using CDCP or children\'s benefits, our team will guide you every step of the way.', zh: '我們協助患者了解牙科保障並讓預約更簡單。無論您使用 CDCP 還是兒童福利，我們的團隊都會在每一步為您提供指引。' },
+  'cdcp.bullet1': { en: 'CDCP annual renewal support', zh: 'CDCP 年度續保協助' },
+  'cdcp.bullet2': { en: 'Children\'s dental coverage (CDCP & Healthy Kids)', zh: '兒童牙科保障（CDCP 及 Healthy Kids）' },
+  'cdcp.bullet3': { en: 'Clear explanation of any out-of-pocket costs', zh: '清楚說明任何自付費用' },
+  'cdcp.bullet4': { en: 'Easy online booking with no phone calls required', zh: '輕鬆線上預約，無需打電話' },
+
+  // FAQ (mini, on homepage)
   'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題' },
-  'faq.q1': { en: 'What services do you offer?', zh: '你們提供哪些服務？' },
-  'faq.a1': { en: 'We offer a comprehensive range of dental services including implants, orthodontics, pediatric dentistry, esthetic dentistry, restorative treatments, and regular maintenance and cleanings. Our team is equipped to handle everything from routine checkups to complex procedures.', zh: '我們提供全面的牙科服務，包括種植牙、矯正牙科、兒童牙科、美容牙科、修復治療以及定期維護和清潔。我們的團隊能夠處理從例行檢查到複雜手術的所有需求。' },
-  'faq.q2': { en: 'Do you accept new patients?', zh: '你們接受新病患嗎？' },
-  'faq.a2': { en: 'Yes! We warmly welcome new patients of all ages. You can book your first appointment by calling us at (604) 874-5111 or by filling out our contact form. We look forward to meeting you and your family.', zh: '是的！我們熱忱歡迎所有年齡層的新病患。您可以撥打 (604) 874-5111 或填寫我們的聯絡表單預約第一次看診。我們期待認識您和您的家人。' },
-  'faq.q3': { en: 'What are your office hours?', zh: '你們的診所營業時間是什麼？' },
-  'faq.a3': { en: 'We are open Monday to Friday from 9:00am to 5:30pm, and Saturday from 8:30am to 5:00pm. We are closed on Sundays. Please call ahead to confirm availability or to schedule an appointment.', zh: '我們的營業時間為週一至週五上午9:00至下午5:30，週六上午8:30至下午5:00。週日休息。請提前致電確認時間或預約看診。' },
-  'faq.q4': { en: 'Where are you located?', zh: '你們的診所在哪裡？' },
-  'faq.a4': { en: 'We are located at #208 – 4818 Main Street, Vancouver, BC. Our clinic is easily accessible by public transit and there is street parking available nearby.', zh: '我們位於 #208 – 4818 Main Street, Vancouver, BC。診所交通便利，附近有街邊停車位。' },
-  'faq.q5': { en: 'Do you offer emergency dental services?', zh: '你們提供緊急牙科服務嗎？' },
-  'faq.a5': { en: 'Yes, we do our best to accommodate dental emergencies during regular office hours. If you are experiencing a dental emergency, please call us at (604) 874-5111 and we will try to see you as soon as possible.', zh: '是的，我們盡力在正常營業時間內處理牙科緊急狀況。如果您遇到牙科緊急情況，請撥打 (604) 874-5111，我們會盡快為您安排看診。' },
+  'faq.q1': { en: 'Do I need to renew my CDCP every year?', zh: '我每年都要續保 CDCP 嗎？' },
+  'faq.a1': { en: 'Yes. CDCP coverage must be renewed annually to remain active.', zh: '是的。CDCP 保障必須每年續保才能保持有效。' },
+  'faq.q2': { en: 'Can children use CDCP and other programs?', zh: '兒童可以同時使用 CDCP 與其他計劃嗎？' },
+  'faq.a2': { en: 'In some cases, children may qualify for both CDCP and Healthy Kids coverage, depending on eligibility.', zh: '在某些情況下，兒童可能同時符合 CDCP 與 Healthy Kids 的資格，視乎資格條件而定。' },
+  'faq.q3': { en: 'Will I know the cost before treatment?', zh: '治療前我會知道費用嗎？' },
+  'faq.a3': { en: 'Yes. We verify your coverage and explain any estimated out-of-pocket costs before treatment.', zh: '會的。我們會在治療前先核實您的保障，並說明任何預估的自付費用。' },
+
+  // Full FAQ page
+  'faqPage.title': { en: 'Dental Coverage & Patient FAQs', zh: '牙科保障與病患常見問題' },
+  'faqPage.desc': { en: 'Understand your CDCP coverage, children\'s dental benefits, and what to expect before your visit.', zh: '了解您的 CDCP 保障、兒童牙科福利，以及就診前應知事項。' },
+
+  'faqPage.cat1': { en: 'CDCP Annual Renewal', zh: 'CDCP 年度續保' },
+  'faqPage.c1q1': { en: 'Do I need to renew my CDCP coverage every year?', zh: '我每年都要續保 CDCP 嗎？' },
+  'faqPage.c1a1': { en: 'Yes. CDCP requires annual renewal to remain active.', zh: '是的。CDCP 需要每年續保才能保持有效。' },
+  'faqPage.c1q2': { en: 'When should I renew my CDCP?', zh: '我應該何時續保 CDCP？' },
+  'faqPage.c1a2': { en: 'Renewal typically begins after tax filing and Notice of Assessment.', zh: '續保通常在報稅及收到評稅通知後開始。' },
+  'faqPage.c1q3': { en: 'What happens if I do not renew?', zh: '如果我不續保會怎樣？' },
+  'faqPage.c1a3': { en: 'Coverage may become inactive and you may be responsible for costs.', zh: '保障可能變為無效，您可能需要自行承擔費用。' },
+  'faqPage.c1q4': { en: 'How do I renew my CDCP?', zh: '我如何續保 CDCP？' },
+  'faqPage.c1a4': { en: 'You can renew online through the Government of Canada website.', zh: '您可以透過加拿大政府網站線上續保。' },
+
+  'faqPage.cat2': { en: 'Check-up Frequency', zh: '檢查頻率' },
+  'faqPage.c2q1': { en: 'How often are check-ups covered?', zh: '檢查的保障頻率是多少？' },
+  'faqPage.c2a1': { en: 'CDCP generally covers one exam per year unless additional visits are approved.', zh: 'CDCP 一般每年保障一次檢查，除非獲批額外就診。' },
+  'faqPage.c2q2': { en: 'Can I have more than one check-up?', zh: '我可以做多於一次檢查嗎？' },
+  'faqPage.c2a2': { en: 'Additional visits may be allowed if clinically necessary and approved.', zh: '如臨床有需要並獲批，可允許額外就診。' },
+
+  'faqPage.cat3': { en: 'Children Coverage', zh: '兒童保障' },
+  'faqPage.c3q1': { en: 'Can children use CDCP and other programs?', zh: '兒童可以同時使用 CDCP 與其他計劃嗎？' },
+  'faqPage.c3a1': { en: 'Children may also qualify for Healthy Kids depending on eligibility.', zh: '兒童亦可能視乎資格條件符合 Healthy Kids 計劃。' },
+  'faqPage.c3q2': { en: 'Can both programs be used together?', zh: '兩個計劃可以同時使用嗎？' },
+  'faqPage.c3a2': { en: 'In some cases, yes, depending on program rules.', zh: '在某些情況下可以，視乎計劃規則而定。' },
+
+  'faqPage.cat4': { en: 'Fee Difference', zh: '費用差額' },
+  'faqPage.c4q1': { en: 'Will my child have out-of-pocket costs?', zh: '我的孩子需要自付費用嗎？' },
+  'faqPage.c4a1': { en: 'There may be a fee difference depending on coverage.', zh: '視乎保障情況可能存在費用差額。' },
+  'faqPage.c4q2': { en: 'Why is there a fee difference?', zh: '為何會有費用差額？' },
+  'faqPage.c4a2': { en: 'Government programs follow their own fee schedules.', zh: '政府計劃有其本身的收費標準。' },
+  'faqPage.c4q3': { en: 'What are frequency limits?', zh: '什麼是頻率限制？' },
+  'faqPage.c4a3': { en: 'Some services are only covered a limited number of times.', zh: '部分服務只獲限定次數的保障。' },
+
+  'faqPage.cat5': { en: 'General Coverage', zh: '一般保障' },
+  'faqPage.c5q1': { en: 'Does CDCP cover all treatments?', zh: 'CDCP 涵蓋所有治療嗎？' },
+  'faqPage.c5a1': { en: 'No. Some treatments require approval or are partially covered.', zh: '不會。部分治療需要批核或只獲部分保障。' },
+  'faqPage.c5q2': { en: 'Will I be informed of costs first?', zh: '我會事先被告知費用嗎？' },
+  'faqPage.c5a2': { en: 'Yes. We explain costs before treatment.', zh: '會的。我們會在治療前說明費用。' },
+
+  'faqPage.cat6': { en: 'Next Steps', zh: '下一步' },
+  'faqPage.c6q1': { en: 'I am not sure about my coverage. What should I do?', zh: '我不確定自己的保障，該怎麼辦？' },
+  'faqPage.c6a1': { en: 'Book an appointment and we will help verify your coverage.', zh: '預約看診，我們會協助核實您的保障。' },
+
+  'faqPage.stillTitle': { en: 'Still have questions?', zh: '還有疑問嗎？' },
+  'faqPage.stillText': { en: 'Our team can help you understand your coverage and plan your visit.', zh: '我們的團隊可協助您了解保障並安排就診。' },
 
   // Contact
   'contact.title': { en: 'Contact Us', zh: '聯絡我們' },

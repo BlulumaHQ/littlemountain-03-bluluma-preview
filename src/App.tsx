@@ -11,7 +11,7 @@ import ScrollToTopButton, { RouteScrollToTop } from "@/components/ScrollToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-
+import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +30,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/faq" element={<Faq />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
