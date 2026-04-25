@@ -143,3 +143,6 @@ img, video, iframe {
     scroll-padding-top: var(--header-height-mobile);
   }
 }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

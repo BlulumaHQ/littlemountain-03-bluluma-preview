@@ -85,8 +85,72 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container-site py-12 md:py-16">
-        {/* Single row layout */}
+      {/* MOBILE — compact */}
+      <div className="md:hidden container-site py-8">
+        <div className="flex flex-col items-center text-center">
+          <img src={logoWhite} alt="Little Mountain Dental Centre" className="h-9 mb-3" />
+          <p className="text-primary-foreground/80 text-xs max-w-xs leading-relaxed">
+            {t('footer.tagline')}
+          </p>
+
+          {/* Social */}
+          <div className="flex items-center gap-3 mt-4">
+            <a
+              href={SOCIAL_HOMEPAGE}
+              aria-label="Instagram"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-primary-foreground/30 text-primary-foreground/90 hover:text-primary hover:bg-primary-foreground transition-colors"
+            >
+              <Instagram size={16} strokeWidth={1.75} />
+            </a>
+            <a
+              href={SOCIAL_HOMEPAGE}
+              aria-label="Facebook"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-primary-foreground/30 text-primary-foreground/90 hover:text-primary hover:bg-primary-foreground transition-colors"
+            >
+              <Facebook size={16} strokeWidth={1.75} />
+            </a>
+          </div>
+
+          {/* Hours — single line */}
+          <div className="mt-5 text-xs text-primary-foreground/80 space-y-0.5">
+            <p>Mon–Fri 9:00am–5:30pm</p>
+            <p>Sat 8:30am–5:00pm · Sun {t('footer.closed')}</p>
+          </div>
+
+          {/* Compact links — inline */}
+          <nav className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs text-primary-foreground/80">
+            {links.map((link, i) => (
+              <span key={link.to} className="flex items-center gap-x-3">
+                {link.onClick ? (
+                  <a href={link.to} onClick={link.onClick} className="hover:text-primary-foreground transition-colors">
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link to={link.to} className="hover:text-primary-foreground transition-colors">
+                    {link.label}
+                  </Link>
+                )}
+                {i < links.length - 1 && <span className="opacity-40">·</span>}
+              </span>
+            ))}
+          </nav>
+
+          <p className="text-primary-foreground/60 text-[11px] mt-5 leading-relaxed">
+            {t('footer.richmond')}{' '}
+            <a
+              href="https://friendlydental.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary-foreground transition-colors"
+            >
+              {t('footer.friendlyDental')}
+            </a>
+          </p>
+        </div>
+      </div>
+
+      {/* DESKTOP */}
+      <div className="hidden md:block container-site py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto_auto] gap-8 md:gap-0">
           {/* Logo column */}
           <div className="md:pr-[75px]">

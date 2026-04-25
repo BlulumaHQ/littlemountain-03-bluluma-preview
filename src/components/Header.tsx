@@ -144,14 +144,17 @@ const Header = () => {
             <LangSwitcher />
           </nav>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: lang switcher + toggle */}
+          <div className="lg:hidden flex items-center gap-1">
+            <LangSwitcher />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-foreground"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile drawer */}
@@ -181,9 +184,6 @@ const Header = () => {
                   </Link>
                 );
               })}
-              <div className="pt-1">
-                <LangSwitcher onSelect={() => setMobileOpen(false)} />
-              </div>
             </nav>
           </div>
         )}
