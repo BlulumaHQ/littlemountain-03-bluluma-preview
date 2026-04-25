@@ -109,20 +109,20 @@ const translations: Record<string, Partial<Record<Lang, string>>> = {
   'cdcp.bullet4': { en: 'Simple online booking — no phone calls required', zh: '輕鬆線上預約，無需打電話', ja: 'オンラインで簡単に予約可能' },
   'cdcp.faqTitle': { en: 'Quick answers', zh: '常見疑問', ja: 'よくあるご質問' },
 
-  // FAQ (mini, on homepage) — patient-focused, non-CDCP
+  // FAQ (mini, on homepage) — high-conversion, non-CDCP, max 5 Qs
   'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題', ja: 'よくあるご質問' },
-  'faq.q1': { en: 'How do I book an appointment?', zh: '如何預約看診？', ja: '予約はどのように取れますか？' },
-  'faq.a1': { en: 'You can book your appointment online using our booking system. It only takes a few minutes and no phone call is required.', zh: '您可以透過我們的線上預約系統輕鬆預約，只需幾分鐘，無需打電話。', ja: 'オンライン予約システムから簡単にご予約いただけます。お電話は不要で、数分で完了します。' },
-  'faq.q2': { en: 'Do you accept new patients?', zh: '你們現在接受新病患嗎？', ja: '新規患者の受付はしていますか？' },
-  'faq.a2': { en: 'Yes, we are currently accepting new patients. You can book your first visit online anytime.', zh: '是的，我們目前接受新病患。您可以隨時線上預約初診。', ja: 'はい、新規患者さまを随時受け付けております。初診のご予約もオンラインから承っております。' },
+  'faq.q1': { en: 'Can I book an appointment online?', zh: '可以線上預約看診嗎？', ja: 'オンラインで予約はできますか？' },
+  'faq.a1': { en: 'Yes, you can book your appointment online anytime. The process is simple and only takes a few minutes.', zh: '可以，您隨時都能線上預約。流程簡單，只需幾分鐘即可完成。', ja: 'はい、24時間いつでもオンラインでご予約いただけます。お手続きは簡単で、数分で完了します。' },
+  'faq.q2': { en: 'Do you accept insurance?', zh: '你們接受保險嗎？', ja: '保険は使えますか？' },
+  'faq.a2': { en: 'Yes, we direct bill most insurance plans. Patients are responsible for any remaining balance not covered by insurance.', zh: '是的，我們為大多數保險計劃直接申報。保險未涵蓋的差額由患者自付。', ja: 'はい、ほとんどの保険プランで保険会社への直接請求に対応しております。保険適用外の差額分は患者さまのご負担となります。' },
   'faq.q3': { en: 'What should I expect during my first visit?', zh: '第一次看診會包含哪些內容？', ja: '初診ではどのようなことを行いますか？' },
   'faq.a3': { en: 'Your first visit typically includes an examination, consultation, and a discussion of any recommended treatments.', zh: '初診通常包括口腔檢查、諮詢，以及與您討論建議的治療方案。', ja: '初診では、お口の検査・カウンセリング、必要に応じた治療方針のご説明を行います。' },
   'faq.q4': { en: 'How long does a dental appointment take?', zh: '一般看診大約需要多長時間？', ja: '診療にかかる時間はどのくらいですか？' },
   'faq.a4': { en: 'Most routine appointments take between 30 to 60 minutes, depending on the type of visit.', zh: '一般看診大約需要 30 至 60 分鐘，視看診內容而定。', ja: '一般的な診療はおおよそ30〜60分です。診療内容により前後いたします。' },
-  'faq.q5': { en: 'Do you offer emergency dental appointments?', zh: '你們有提供急診服務嗎？', ja: '急患の対応はしていますか？' },
+  'faq.q5': { en: 'Do you accept emergency dental appointments?', zh: '你們有提供急診服務嗎？', ja: '急患の対応はしていますか？' },
   'faq.a5': { en: 'Yes, we do our best to accommodate urgent dental needs. Please contact us or book online as soon as possible.', zh: '有的，我們會盡力安排急診需求。請盡快與我們聯絡或線上預約。', ja: 'はい、できる限り対応いたします。お早めにオンライン予約またはお問い合わせください。' },
-  'faq.q6': { en: 'Where is your clinic located?', zh: '診所位於哪裡？', ja: '医院はどこにありますか？' },
-  'faq.a6': { en: 'Our clinic is located in Vancouver. Please visit our Contact page for full address and directions.', zh: '我們的診所位於溫哥華。詳細地址與交通指引請參考「聯絡我們」頁面。', ja: '当院はバンクーバーにございます。詳しい住所・アクセスは「お問い合わせ」ページをご覧ください。' },
+  'faq.readyTitle': { en: 'Ready to book your visit?', zh: '準備好預約看診了嗎？', ja: 'ご予約の準備はできましたか？' },
+  'faq.bookNow': { en: 'Book Online Now', zh: '立即線上預約', ja: '今すぐオンライン予約' },
   'faq.stillHelp': { en: "Still have questions? We're here to help.", zh: '還有疑問嗎？我們很樂意為您解答。', ja: 'ご不明な点がございましたら、お気軽にお問い合わせください。' },
 
   // Full FAQ page
