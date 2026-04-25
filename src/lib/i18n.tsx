@@ -24,8 +24,9 @@ const translations: Record<string, Record<Lang, string>> = {
   'hero.cta.line3': { en: 'Book your visit today', zh: '立即預約看診' },
 
   // Insurance
-  'insurance.title': { en: 'We Accept Most Dental Insurance Plans', zh: '接受大部分牙科保險' },
-  'insurance.subtitle': { en: 'Direct Billing Available', zh: '可協助直接向保險公司申請理賠' },
+ 'insurance.title': { en: 'Modern Family Dental Care in Vancouver', zh: '溫哥華現代家庭牙科' },
+ 'insurance.subtitle': { en: 'Clear pricing. Easy booking. No surprises.', zh: '價格透明・預約簡單・絕無隱藏費用' },
+ 'insurance.cta': { en: 'Start with a simple online appointment.', zh: '從簡單的線上預約開始' },
 
   // Welcome
   'welcome.title': { en: 'Welcome to Little Mountain Dental Centre', zh: '歡迎來到小山牙科中心' },
