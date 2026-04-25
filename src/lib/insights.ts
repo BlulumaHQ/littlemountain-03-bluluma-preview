@@ -233,6 +233,217 @@ export const articles: Article[] = [
     ctaText:
       'Book your appointment online and we’ll walk you through your expected costs before your visit.',
   },
+  {
+    slug: 'book-dentist-vancouver',
+    title:
+      'How to Book a Dentist in Vancouver: What to Expect Before Your First Visit',
+    description:
+      'A simple guide to booking a dental appointment in Vancouver, what happens after you book, and what to expect at your first visit.',
+    image: bookImage,
+    imageAlt:
+      'patient booking a dental appointment online from a laptop in Vancouver',
+    sections: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'Booking a dental appointment for the first time can feel uncertain, especially if you’re not sure what to expect.',
+          'Many patients delay booking simply because they don’t know how the process works.',
+        ],
+      },
+      {
+        heading: 'Booking Options in Vancouver',
+        paragraphs: ['Most clinics offer:'],
+        bullets: [
+          'Online booking systems',
+          'Phone booking',
+          'Appointment requests',
+        ],
+      },
+      {
+        paragraphs: [
+          'Online booking is often the fastest and most convenient option.',
+        ],
+      },
+      {
+        heading: 'What Happens After You Book',
+        paragraphs: ['After booking, patients can expect:'],
+        bullets: [
+          'Appointment confirmation',
+          'Basic information collection',
+          'Instructions if needed',
+        ],
+      },
+      {
+        paragraphs: [
+          'Some clinics may also help review your insurance coverage in advance.',
+        ],
+      },
+      {
+        heading: 'Your First Visit',
+        paragraphs: ['A typical first visit may include:'],
+        bullets: [
+          'Examination',
+          'Consultation',
+          'Discussion of any concerns',
+        ],
+      },
+      {
+        paragraphs: [
+          'The goal is to understand your needs before recommending treatment.',
+        ],
+      },
+      {
+        heading: 'Common Concerns Before Booking',
+        paragraphs: ['Patients often worry about:'],
+        bullets: [
+          'Cost',
+          'Insurance coverage',
+          'Time commitment',
+        ],
+      },
+      {
+        paragraphs: [
+          'Understanding these in advance helps reduce hesitation.',
+        ],
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'Booking your first dental appointment doesn’t have to be complicated.',
+        ],
+      },
+    ],
+    ctaText:
+      'Book your visit online in just a few minutes — and we’ll guide you through everything else.',
+  },
+  {
+    slug: 'direct-billing-vancouver',
+    title:
+      'Direct Billing Dental Clinics in Vancouver: How It Works and What to Expect',
+    description:
+      'A clear explanation of how direct billing works at Vancouver dental clinics, what it covers, and how to prepare for your visit.',
+    image: billingImage,
+    imageAlt:
+      'patient handing insurance card to friendly dental receptionist in Vancouver clinic',
+    sections: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'Direct billing allows dental clinics to submit insurance claims on your behalf, making the process simpler for patients.',
+          'However, many people are still unsure how it works.',
+        ],
+      },
+      {
+        heading: 'What Is Direct Billing',
+        paragraphs: ['Direct billing means:'],
+        bullets: [
+          'The clinic sends claims directly to your insurance provider',
+          'You only pay the remaining balance (if any)',
+        ],
+      },
+      {
+        paragraphs: ['This reduces paperwork and upfront costs.'],
+      },
+      {
+        heading: 'What Direct Billing Does Not Mean',
+        paragraphs: ['Patients should understand:'],
+        bullets: [
+          'Not all costs are always covered',
+          'Coverage depends on your plan',
+          'You may still have co-payments',
+        ],
+      },
+      {
+        heading: 'Benefits of Direct Billing',
+        paragraphs: ['Direct billing helps patients:'],
+        bullets: [
+          'Save time',
+          'Avoid paperwork',
+          'Understand costs more clearly',
+        ],
+      },
+      {
+        heading: 'What to Prepare',
+        paragraphs: ['Before your visit:'],
+        bullets: [
+          'Bring insurance information',
+          'Confirm your coverage',
+          'Be aware of possible limits',
+        ],
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'Direct billing makes dental visits more convenient, but it’s still important to understand your coverage.',
+        ],
+      },
+    ],
+    ctaText:
+      'Book your appointment online and we’ll help guide you through the direct billing process.',
+  },
+  {
+    slug: 'dental-anxiety-vancouver',
+    title:
+      'Afraid to Visit the Dentist? What Vancouver Patients Should Know Before Booking',
+    description:
+      'Practical, reassuring guidance for patients with dental anxiety in Vancouver — what to expect and how to make your visit easier.',
+    image: anxietyImage,
+    imageAlt:
+      'calm dentist reassuring an adult patient in a bright Vancouver dental clinic',
+    sections: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'Dental anxiety is more common than many people think.',
+          'For some patients, fear or uncertainty can delay dental visits for months or even years.',
+        ],
+      },
+      {
+        heading: 'Why Patients Feel Anxious',
+        paragraphs: ['Common reasons include:'],
+        bullets: [
+          'Fear of pain',
+          'Uncertainty about procedures',
+          'Concerns about cost',
+        ],
+      },
+      {
+        heading: 'What Modern Dental Clinics Do Differently',
+        paragraphs: ['Today’s clinics focus on:'],
+        bullets: [
+          'Clear communication',
+          'Comfortable environments',
+          'Step-by-step explanations',
+        ],
+      },
+      {
+        heading: 'What to Expect During Your Visit',
+        paragraphs: ['Patients can expect:'],
+        bullets: [
+          'A calm, supportive approach',
+          'Time to ask questions',
+          'No pressure decisions',
+        ],
+      },
+      {
+        heading: 'How to Make Your Visit Easier',
+        paragraphs: ['Simple steps:'],
+        bullets: [
+          'Book a consultation first',
+          'Ask questions in advance',
+          'Communicate your concerns',
+        ],
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'Dental visits don’t have to be stressful.',
+        ],
+      },
+    ],
+    ctaText:
+      'Book your visit online and take the first step at your own pace.',
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>
