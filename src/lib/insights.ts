@@ -1,3 +1,7 @@
+import cdcpImage from '@/assets/insights/cdcp-coverage-vancouver.jpg';
+import childrenImage from '@/assets/insights/children-dental-coverage-bc.jpg';
+import costImage from '@/assets/insights/dental-visit-cost-vancouver.jpg';
+
 export interface ArticleSection {
   heading?: string;
   paragraphs?: string[];
@@ -8,6 +12,8 @@ export interface Article {
   slug: string;
   title: string;
   description: string;
+  image: string;
+  imageAlt: string;
   sections: ArticleSection[];
   ctaText: string;
 }
@@ -19,6 +25,9 @@ export const articles: Article[] = [
       'CDCP Coverage in Vancouver: What’s Covered, What’s Not, and What You May Still Pay',
     description:
       'A clear guide to what the Canadian Dental Care Plan covers, what it doesn’t, and the out-of-pocket costs Vancouver patients should expect.',
+    image: cdcpImage,
+    imageAlt:
+      'dentist explaining CDCP dental coverage to patient in Vancouver clinic',
     sections: [
       {
         heading: 'Introduction',
