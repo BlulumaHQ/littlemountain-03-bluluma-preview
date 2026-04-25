@@ -109,14 +109,21 @@ const translations: Record<string, Partial<Record<Lang, string>>> = {
   'cdcp.bullet4': { en: 'Simple online booking — no phone calls required', zh: '輕鬆線上預約，無需打電話', ja: 'オンラインで簡単に予約可能' },
   'cdcp.faqTitle': { en: 'Quick answers', zh: '常見疑問', ja: 'よくあるご質問' },
 
-  // FAQ (mini, on homepage)
+  // FAQ (mini, on homepage) — patient-focused, non-CDCP
   'faq.title': { en: 'Frequently Asked Questions', zh: '常見問題', ja: 'よくあるご質問' },
-  'faq.q1': { en: 'Do I need to renew my CDCP every year?', zh: '我每年都要續保 CDCP 嗎？', ja: 'CDCPは毎年更新が必要ですか？' },
-  'faq.a1': { en: 'Yes. CDCP coverage must be renewed annually to remain active.', zh: '是的。CDCP 保障必須每年續保才能保持有效。', ja: 'はい、CDCPは毎年の更新が必要です。' },
-  'faq.q2': { en: 'Can children use CDCP and other programs?', zh: '兒童可以同時使用 CDCP 與其他計劃嗎？', ja: '子どもは複数の保険制度を利用できますか？' },
-  'faq.a2': { en: 'In some cases, children may qualify for both CDCP and Healthy Kids coverage, depending on eligibility.', zh: '在某些情況下，兒童可能同時符合 CDCP 與 Healthy Kids 的資格，視乎資格條件而定。', ja: '条件により、複数の制度を併用できる場合があります。' },
-  'faq.q3': { en: 'Will I know the cost before treatment?', zh: '治療前我會知道費用嗎？', ja: '治療前に費用はわかりますか？' },
-  'faq.a3': { en: 'Yes. We verify your coverage and explain any estimated out-of-pocket costs before treatment.', zh: '會的。我們會在治療前先核實您的保障，並說明任何預估的自付費用。', ja: 'はい、事前に保険内容と自己負担額をご案内いたします。' },
+  'faq.q1': { en: 'How do I book an appointment?', zh: '如何預約看診？', ja: '予約はどのように取れますか？' },
+  'faq.a1': { en: 'You can book your appointment online using our booking system. It only takes a few minutes and no phone call is required.', zh: '您可以透過我們的線上預約系統輕鬆預約，只需幾分鐘，無需打電話。', ja: 'オンライン予約システムから簡単にご予約いただけます。お電話は不要で、数分で完了します。' },
+  'faq.q2': { en: 'Do you accept new patients?', zh: '你們現在接受新病患嗎？', ja: '新規患者の受付はしていますか？' },
+  'faq.a2': { en: 'Yes, we are currently accepting new patients. You can book your first visit online anytime.', zh: '是的，我們目前接受新病患。您可以隨時線上預約初診。', ja: 'はい、新規患者さまを随時受け付けております。初診のご予約もオンラインから承っております。' },
+  'faq.q3': { en: 'What should I expect during my first visit?', zh: '第一次看診會包含哪些內容？', ja: '初診ではどのようなことを行いますか？' },
+  'faq.a3': { en: 'Your first visit typically includes an examination, consultation, and a discussion of any recommended treatments.', zh: '初診通常包括口腔檢查、諮詢，以及與您討論建議的治療方案。', ja: '初診では、お口の検査・カウンセリング、必要に応じた治療方針のご説明を行います。' },
+  'faq.q4': { en: 'How long does a dental appointment take?', zh: '一般看診大約需要多長時間？', ja: '診療にかかる時間はどのくらいですか？' },
+  'faq.a4': { en: 'Most routine appointments take between 30 to 60 minutes, depending on the type of visit.', zh: '一般看診大約需要 30 至 60 分鐘，視看診內容而定。', ja: '一般的な診療はおおよそ30〜60分です。診療内容により前後いたします。' },
+  'faq.q5': { en: 'Do you offer emergency dental appointments?', zh: '你們有提供急診服務嗎？', ja: '急患の対応はしていますか？' },
+  'faq.a5': { en: 'Yes, we do our best to accommodate urgent dental needs. Please contact us or book online as soon as possible.', zh: '有的，我們會盡力安排急診需求。請盡快與我們聯絡或線上預約。', ja: 'はい、できる限り対応いたします。お早めにオンライン予約またはお問い合わせください。' },
+  'faq.q6': { en: 'Where is your clinic located?', zh: '診所位於哪裡？', ja: '医院はどこにありますか？' },
+  'faq.a6': { en: 'Our clinic is located in Vancouver. Please visit our Contact page for full address and directions.', zh: '我們的診所位於溫哥華。詳細地址與交通指引請參考「聯絡我們」頁面。', ja: '当院はバンクーバーにございます。詳しい住所・アクセスは「お問い合わせ」ページをご覧ください。' },
+  'faq.stillHelp': { en: "Still have questions? We're here to help.", zh: '還有疑問嗎？我們很樂意為您解答。', ja: 'ご不明な点がございましたら、お気軽にお問い合わせください。' },
 
   // Full FAQ page
   'faqPage.title': { en: 'Dental Coverage & Patient FAQs', zh: '牙科保障與病患常見問題' },
