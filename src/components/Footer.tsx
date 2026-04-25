@@ -1,7 +1,10 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Instagram, Facebook } from 'lucide-react';
 import { useI18n } from '@/lib/i18n';
 import logoWhite from '@/assets/logo-white.svg';
 import drWuLogo from '@/assets/dr-wu-logo.png';
+
+const SOCIAL_HOMEPAGE = 'https://littlemountain-03-bluluma-preview.lovable.app/';
 
 const Footer = () => {
   const { t } = useI18n();
