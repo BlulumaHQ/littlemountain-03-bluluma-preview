@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import Seo from '@/components/Seo';
 import PageHeader from '@/components/PageHeader';
 import { BOOKING_URL } from '@/lib/booking';
 import { getArticleBySlug } from '@/lib/insights';
@@ -11,13 +11,6 @@ const InsightArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useI18n();
   const article = slug ? getArticleBySlug(slug) : undefined;
-
-  useEffect(() => {
-    if (!article) return;
-    document.title = `${article.title} | Little Mountain Dental Centre`;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', article.description);
-  }, [article]);
 
   if (!article) return <NotFound />;
 
@@ -38,6 +31,11 @@ const InsightArticle = () => {
 
   return (
     <>
+      <Seo
+        title={`${article.title} | Little Mountain Dental Centre`}
+        description={article.description}
+        canonicalPath={`/insights/${article.slug}`}
+      />
       <PageHeader title={article.title} compact />
 
       <section className="section-padding">
@@ -101,6 +99,16 @@ const InsightArticle = () => {
             >
               {t('cta.bookOnline')}
             </a>
+            <p className="mt-5 text-sm text-muted-foreground">
+              <Link to="/faq" className="underline underline-offset-4 hover:text-primary transition-colors">
+                Read our patient FAQ
+              </Link>
+              {' '}or{' '}
+              <Link to="/#contact-section" className="underline underline-offset-4 hover:text-primary transition-colors">
+                contact our Vancouver dental clinic
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

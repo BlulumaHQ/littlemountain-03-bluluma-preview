@@ -43,7 +43,7 @@ const HeroSection = () => {
       {isMobile ? (
         <img
           src={heroMobile}
-          alt="Little Mountain Dental Centre"
+          alt="Little Mountain Dental Centre clinic interior in Vancouver"
           className="absolute inset-0 w-full h-full object-cover"
         />
       ) : (

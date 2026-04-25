@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { BOOKING_URL } from '@/lib/booking';
+import Seo from '@/components/Seo';
 import PageHeader from '@/components/PageHeader';
 import {
   Accordion,
@@ -64,12 +64,6 @@ const categories: CatDef[] = [
 const FaqPage = () => {
   const { t } = useI18n();
 
-  useEffect(() => {
-    document.title = `${t('faqPage.title')} | Little Mountain Dental Centre`;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', t('faqPage.desc'));
-  }, [t]);
-
   // JSON-LD structured data for FAQ
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -85,6 +79,11 @@ const FaqPage = () => {
 
   return (
     <>
+      <Seo
+        title="Dental FAQs | Little Mountain Dental Centre Vancouver"
+        description="Find answers about booking, first visits, emergency appointments, clinic location, and what to expect at Little Mountain Dental Centre in Vancouver."
+        canonicalPath="/faq"
+      />
       <PageHeader title={t('faqPage.title')} />
 
       <section className="section-padding">

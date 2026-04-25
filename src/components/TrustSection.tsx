@@ -12,13 +12,13 @@ const TrustSection = () => {
           <div className="grid grid-cols-2 gap-4">
             <img
               src={trustImg1}
-              alt="Dental office environment"
+              alt="Treatment room at Little Mountain Dental Centre clinic in Vancouver"
               className="rounded-lg w-full h-64 object-cover shadow-sm"
               loading="lazy"
             />
             <img
               src={trustImg2}
-              alt="Dental equipment"
+              alt="Modern dental equipment at Little Mountain Dental Centre Vancouver"
               className="rounded-lg w-full h-64 object-cover shadow-sm mt-8"
               loading="lazy"
             />
