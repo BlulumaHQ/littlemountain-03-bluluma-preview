@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
 import { BOOKING_URL } from '@/lib/booking';
 import {
@@ -8,7 +7,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const faqKeys = ['q1', 'q2', 'q3'];
+const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
 
 const FaqSection = () => {
   const { t } = useI18n();
@@ -20,7 +19,12 @@ const FaqSection = () => {
           {t('faq.title')}
         </h2>
 
-        <Accordion type="single" collapsible className="mb-8">
+        <Accordion
+          type="single"
+          collapsible
+          defaultValue="q1"
+          className="mb-10"
+        >
           {faqKeys.map((key) => (
             <AccordionItem key={key} value={key}>
               <AccordionTrigger className="text-left font-heading text-base md:text-lg font-medium">
@@ -33,7 +37,8 @@ const FaqSection = () => {
           ))}
         </Accordion>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-3">
+        <div className="text-center">
+          <p className="text-muted-foreground mb-5">{t('faq.stillHelp')}</p>
           <a
             href={BOOKING_URL}
             target="_blank"
@@ -42,12 +47,6 @@ const FaqSection = () => {
           >
             {t('cta.bookOnline')}
           </a>
-          <Link
-            to="/faq"
-            className="inline-flex items-center justify-center px-8 py-3 border border-primary text-primary font-medium text-sm tracking-wider uppercase rounded hover:bg-primary/5 transition-colors"
-          >
-            {t('nav.faq')}
-          </Link>
         </div>
       </div>
     </section>
