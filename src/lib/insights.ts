@@ -1,6 +1,9 @@
 import cdcpImage from '@/assets/insights/cdcp-coverage-vancouver.jpg';
 import childrenImage from '@/assets/insights/children-dental-coverage-bc.jpg';
 import costImage from '@/assets/insights/dental-visit-cost-vancouver.jpg';
+import bookImage from '@/assets/insights/book-dentist-vancouver.jpg';
+import billingImage from '@/assets/insights/direct-billing-vancouver.jpg';
+import anxietyImage from '@/assets/insights/dental-anxiety-vancouver.jpg';
 
 export interface ArticleSection {
   heading?: string;
