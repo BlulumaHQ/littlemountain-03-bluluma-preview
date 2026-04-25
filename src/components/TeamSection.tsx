@@ -80,7 +80,7 @@ const TeamSection = () => {
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={d.photo}
-                    alt={d.name}
+                    alt={`${d.name}, ${d.title} at Little Mountain Dental Centre in Vancouver`}
                     className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
