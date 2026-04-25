@@ -141,12 +141,7 @@ const Header = () => {
                 </Link>
               );
             })}
-            <button
-              onClick={toggleLang}
-              className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary transition-colors uppercase"
-            >
-              {t('nav.lang')}
-            </button>
+            <LangSwitcher />
           </nav>
 
           {/* Mobile toggle */}
@@ -186,12 +181,9 @@ const Header = () => {
                   </Link>
                 );
               })}
-              <button
-                onClick={() => { toggleLang(); setMobileOpen(false); }}
-                className="text-sm font-medium tracking-wide text-foreground/80 hover:text-primary py-2 text-left uppercase"
-              >
-                {t('nav.lang')}
-              </button>
+              <div className="pt-1">
+                <LangSwitcher onSelect={() => setMobileOpen(false)} />
+              </div>
             </nav>
           </div>
         )}
