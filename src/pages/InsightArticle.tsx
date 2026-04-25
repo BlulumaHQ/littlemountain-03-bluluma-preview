@@ -50,6 +50,14 @@ const InsightArticle = () => {
             {t('insights.backToInsights')}
           </Link>
 
+          <img
+            src={article.image}
+            alt={article.imageAlt}
+            width={1536}
+            height={896}
+            className="w-full h-auto rounded-lg mb-8 object-cover aspect-[16/9]"
+          />
+
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10">
             {article.description}
           </p>

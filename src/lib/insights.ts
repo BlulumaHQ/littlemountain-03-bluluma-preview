@@ -1,3 +1,7 @@
+import cdcpImage from '@/assets/insights/cdcp-coverage-vancouver.jpg';
+import childrenImage from '@/assets/insights/children-dental-coverage-bc.jpg';
+import costImage from '@/assets/insights/dental-visit-cost-vancouver.jpg';
+
 export interface ArticleSection {
   heading?: string;
   paragraphs?: string[];
@@ -8,6 +12,8 @@ export interface Article {
   slug: string;
   title: string;
   description: string;
+  image: string;
+  imageAlt: string;
   sections: ArticleSection[];
   ctaText: string;
 }
@@ -19,6 +25,9 @@ export const articles: Article[] = [
       'CDCP Coverage in Vancouver: What’s Covered, What’s Not, and What You May Still Pay',
     description:
       'A clear guide to what the Canadian Dental Care Plan covers, what it doesn’t, and the out-of-pocket costs Vancouver patients should expect.',
+    image: cdcpImage,
+    imageAlt:
+      'dentist explaining CDCP dental coverage to patient in Vancouver clinic',
     sections: [
       {
         heading: 'Introduction',
@@ -80,6 +89,9 @@ export const articles: Article[] = [
       'Children’s Dental Coverage in BC: CDCP vs Healthy Kids — What Parents Need to Know',
     description:
       'How CDCP and the BC Healthy Kids Program work for children, what they cover, and what parents should check before booking.',
+    image: childrenImage,
+    imageAlt:
+      'child dental checkup with dentist and parent in Vancouver dental clinic',
     sections: [
       {
         heading: 'Introduction',
@@ -151,6 +163,9 @@ export const articles: Article[] = [
       'How Much Does a Dental Visit Cost in Vancouver? A Realistic Breakdown with Insurance',
     description:
       'A realistic look at dental visit costs in Vancouver, how insurance and CDCP affect pricing, and how to avoid unexpected charges.',
+    image: costImage,
+    imageAlt:
+      'dental clinic consultation discussing treatment cost and insurance Vancouver',
     sections: [
       {
         heading: 'Introduction',
