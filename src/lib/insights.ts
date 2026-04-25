@@ -89,6 +89,9 @@ export const articles: Article[] = [
       'Children’s Dental Coverage in BC: CDCP vs Healthy Kids — What Parents Need to Know',
     description:
       'How CDCP and the BC Healthy Kids Program work for children, what they cover, and what parents should check before booking.',
+    image: childrenImage,
+    imageAlt:
+      'child dental checkup with dentist and parent in Vancouver dental clinic',
     sections: [
       {
         heading: 'Introduction',
@@ -160,6 +163,9 @@ export const articles: Article[] = [
       'How Much Does a Dental Visit Cost in Vancouver? A Realistic Breakdown with Insurance',
     description:
       'A realistic look at dental visit costs in Vancouver, how insurance and CDCP affect pricing, and how to avoid unexpected charges.',
+    image: costImage,
+    imageAlt:
+      'dental clinic consultation discussing treatment cost and insurance Vancouver',
     sections: [
       {
         heading: 'Introduction',
