@@ -102,13 +102,17 @@ const FaqPage = () => {
                 <h2 className="font-heading text-xl md:text-2xl font-semibold text-brand-green mb-4">
                   {t(cat.titleKey)}
                 </h2>
-                <Accordion type="single" collapsible>
+                <Accordion
+                  type="single"
+                  collapsible
+                  defaultValue={cat.items[0]?.q}
+                >
                   {cat.items.map((it) => (
                     <AccordionItem key={it.q} value={it.q}>
                       <AccordionTrigger className="text-left font-heading text-base md:text-lg font-medium">
                         {t(it.q)}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed">
+                      <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
                         {t(it.a)}
                       </AccordionContent>
                     </AccordionItem>
