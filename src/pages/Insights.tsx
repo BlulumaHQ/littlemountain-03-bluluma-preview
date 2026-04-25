@@ -55,6 +55,7 @@ const Insights = () => {
                   {t('insights.readMore')}
                   <ArrowRight size={16} />
                 </Link>
+                </div>
               </article>
             ))}
           </div>
