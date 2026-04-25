@@ -10,11 +10,14 @@ const translations: Record<string, Record<Lang, string>> = {
   'nav.services': { en: 'Our Services', zh: '我們的服務' },
   'nav.contact': { en: 'Contact', zh: '聯絡我們' },
   'nav.lang': { en: '中文', zh: 'EN' },
-  'nav.bookNow': { en: 'Book Now', zh: '立即預約' },
+  'nav.bookNow': { en: 'Book Online', zh: '線上預約' },
+  'nav.faq': { en: 'FAQ', zh: '常見問題' },
+  'cta.bookOnline': { en: 'Book Online', zh: '線上預約' },
+  'cta.checkCoverage': { en: 'Check Your Coverage', zh: '查詢您的保障' },
 
   // Hero
   'hero.title': { en: 'Enjoy a New Level of Comfort and Care', zh: '享受全新水平的\n舒適和護理' },
-  'hero.cta1': { en: 'Book Now', zh: '立即預約' },
+  'hero.cta1': { en: 'Book Online', zh: '線上預約' },
   'hero.cta2': { en: 'Our Services', zh: '我們的服務' },
   'hero.cta.line1': { en: 'New Patients Welcome', zh: '歡迎新病患' },
   'hero.cta.line2': { en: 'Modern family dental care in Vancouver', zh: '溫哥華現代家庭牙科照護' },
