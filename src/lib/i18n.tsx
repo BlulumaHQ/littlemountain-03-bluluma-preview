@@ -1,8 +1,8 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-type Lang = 'en' | 'zh';
+type Lang = 'en' | 'zh' | 'ja';
 
-const translations: Record<string, Record<Lang, string>> = {
+const translations: Record<string, Partial<Record<Lang, string>>> = {
   // Nav
   'nav.home': { en: 'Home', zh: '首頁' },
   'nav.office': { en: 'Our Office', zh: '我們的診所' },
@@ -217,10 +217,12 @@ const I18nContext = createContext<I18nContextType>({
   t: (key) => key,
 });
 
+const isLang = (v: unknown): v is Lang => v === 'en' || v === 'zh' || v === 'ja';
+
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
     const saved = localStorage.getItem('lm-lang');
-    return (saved === 'zh' ? 'zh' : 'en') as Lang;
+    return isLang(saved) ? saved : 'en';
   });
 
   const setLang = (l: Lang) => {
@@ -229,7 +231,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   };
 
   const t = (key: string): string => {
-    return translations[key]?.[lang] || key;
+    const entry = translations[key];
+    if (!entry) return key;
+    // Fallback chain: requested lang → English → key
+    return entry[lang] ?? entry.en ?? key;
   };
 
   return (
@@ -240,3 +245,4 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 }
 
 export const useI18n = () => useContext(I18nContext);
+
