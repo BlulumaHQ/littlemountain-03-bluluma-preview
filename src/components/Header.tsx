@@ -184,9 +184,6 @@ const Header = () => {
                   </Link>
                 );
               })}
-              <div className="pt-1">
-                <LangSwitcher onSelect={() => setMobileOpen(false)} />
-              </div>
             </nav>
           </div>
         )}
