@@ -31,8 +31,17 @@ const Insights = () => {
             {articles.map((article) => (
               <article
                 key={article.slug}
-                className="flex flex-col bg-card border border-border rounded-lg p-6 md:p-7 shadow-sm hover:shadow-md transition-shadow"
+                className="flex flex-col bg-card border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
+                <img
+                  src={article.image}
+                  alt={article.imageAlt}
+                  loading="lazy"
+                  width={1536}
+                  height={896}
+                  className="w-full aspect-[16/9] object-cover"
+                />
+                <div className="flex flex-col flex-1 p-6 md:p-7">
                 <h2 className="font-heading text-lg md:text-xl font-semibold text-brand-green leading-snug mb-3">
                   {article.title}
                 </h2>
