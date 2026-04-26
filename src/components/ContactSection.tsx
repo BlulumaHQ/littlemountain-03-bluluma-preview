@@ -145,7 +145,14 @@ const ContactSection = () => {
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-foreground mb-0.5">{t('contact.address')}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">620 East Broadway<br />Vancouver, BC</p>
+                  <a
+                    href="https://maps.google.com/?q=620+East+Broadway,+Vancouver,+BC"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground leading-relaxed hover:text-primary transition-colors"
+                  >
+                    620 East Broadway<br />Vancouver, BC
+                  </a>
                 </div>
               </div>
 

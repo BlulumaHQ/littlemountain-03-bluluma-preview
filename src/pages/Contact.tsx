@@ -41,10 +41,15 @@ const Contact = () => {
                 <Mail size={20} className="text-primary" />
                 <span>drphwu@gmail.com</span>
               </a>
-              <div className="flex items-start gap-3">
+              <a
+                href="https://maps.google.com/?q=620+East+Broadway,+Vancouver,+BC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 text-foreground hover:text-primary transition-colors"
+              >
                 <MapPin size={20} className="text-primary mt-0.5" />
                 <span>620 East Broadway, Vancouver, BC</span>
-              </div>
+              </a>
             </div>
 
             {/* Map embed */}

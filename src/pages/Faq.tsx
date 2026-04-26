@@ -113,7 +113,18 @@ const FaqPage = () => {
                         {t(it.q)}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                        {t(it.a)}
+                        {it.a === 'faqPage.c5a1' ? (
+                          <a
+                            href="https://maps.google.com/?q=620+East+Broadway,+Vancouver,+BC"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            {t(it.a)}
+                          </a>
+                        ) : (
+                          t(it.a)
+                        )}
                       </AccordionContent>
                     </AccordionItem>
                   ))}
