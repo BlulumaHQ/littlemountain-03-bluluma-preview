@@ -106,7 +106,14 @@ const Header = () => {
             <span>(604) 879-5612</span>
           </a>
           <span className="opacity-60">|</span>
-          <span>620 East Broadway, Vancouver, BC</span>
+          <a
+            href="https://maps.google.com/?q=620+East+Broadway,+Vancouver,+BC"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80 transition-opacity"
+          >
+            620 East Broadway, Vancouver, BC
+          </a>
         </div>
       </div>
 
