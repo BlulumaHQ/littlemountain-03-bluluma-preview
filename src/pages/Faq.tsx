@@ -26,6 +26,9 @@ const categories: CatDef[] = [
     titleKey: 'faqPage.cat2',
     items: [
       { q: 'faqPage.c2q1', a: 'faqPage.c2a1' },
+      { q: 'faqPage.c2q2', a: 'faqPage.c2a2' },
+      { q: 'faqPage.c2q3', a: 'faqPage.c2a3' },
+      { q: 'faqPage.c2q4', a: 'faqPage.c2a4' },
     ],
   },
   {
@@ -33,7 +36,6 @@ const categories: CatDef[] = [
     items: [
       { q: 'faqPage.c3q1', a: 'faqPage.c3a1' },
       { q: 'faqPage.c3q2', a: 'faqPage.c3a2' },
-      { q: 'faqPage.c3q3', a: 'faqPage.c3a3' },
     ],
   },
   {
@@ -42,6 +44,7 @@ const categories: CatDef[] = [
       { q: 'faqPage.c4q1', a: 'faqPage.c4a1' },
       { q: 'faqPage.c4q2', a: 'faqPage.c4a2' },
       { q: 'faqPage.c4q3', a: 'faqPage.c4a3' },
+      { q: 'faqPage.c4q4', a: 'faqPage.c4a4' },
     ],
   },
   {
@@ -49,8 +52,38 @@ const categories: CatDef[] = [
     items: [
       { q: 'faqPage.c5q1', a: 'faqPage.c5a1' },
       { q: 'faqPage.c5q2', a: 'faqPage.c5a2' },
-      { q: 'faqPage.c5q3', a: 'faqPage.c5a3' },
-      { q: 'faqPage.c5q4', a: 'faqPage.c5a4' },
+    ],
+  },
+  {
+    titleKey: 'faqPage.cat6',
+    items: [
+      { q: 'faqPage.c6q1', a: 'faqPage.c6a1' },
+    ],
+  },
+  {
+    titleKey: 'faqPage.cat7',
+    items: [
+      { q: 'faqPage.c7q1', a: 'faqPage.c7a1' },
+      { q: 'faqPage.c7q2', a: 'faqPage.c7a2' },
+      { q: 'faqPage.c7q3', a: 'faqPage.c7a3' },
+    ],
+  },
+  {
+    titleKey: 'faqPage.cat8',
+    items: [
+      { q: 'faqPage.c8q1', a: 'faqPage.c8a1' },
+      { q: 'faqPage.c8q2', a: 'faqPage.c8a2' },
+      { q: 'faqPage.c8q3', a: 'faqPage.c8a3' },
+      { q: 'faqPage.c8q4', a: 'faqPage.c8a4' },
+    ],
+  },
+  {
+    titleKey: 'faqPage.cat9',
+    items: [
+      { q: 'faqPage.c9q1', a: 'faqPage.c9a1' },
+      { q: 'faqPage.c9q2', a: 'faqPage.c9a2' },
+      { q: 'faqPage.c9q3', a: 'faqPage.c9a3' },
+      { q: 'faqPage.c9q4', a: 'faqPage.c9a4' },
     ],
   },
 ];
