@@ -125,50 +125,88 @@ const translations: Record<string, Partial<Record<Lang, string>>> = {
   'faq.bookNow': { en: 'Book Online Now', zh: '立即線上預約', ja: '今すぐオンライン予約' },
   'faq.stillHelp': { en: "Still have questions? We're here to help.", zh: '還有疑問嗎？我們很樂意為您解答。', ja: 'ご不明な点がございましたら、お気軽にお問い合わせください。' },
 
-  // Full FAQ page — restructured into 5 clear categories
+  // Full FAQ page — restructured into 9 clear categories
   'faqPage.title': { en: 'Dental FAQs', zh: '牙科常見問題', ja: '歯科に関するよくあるご質問' },
-  'faqPage.desc': { en: 'Find answers about booking, insurance, CDCP coverage, first visits, and general clinic information.', zh: '了解預約方式、保險、CDCP 保障、初診內容與診所一般資訊。', ja: 'ご予約・保険・CDCP・初診・医院情報など、よくいただくご質問をまとめました。' },
+  'faqPage.desc': { en: 'Find answers about booking, new patient visits, insurance, CDCP, services, policies, parking, and aftercare.', zh: '了解預約、新病患、保險、CDCP、服務、政策、停車與術後護理等資訊。', ja: 'ご予約・初診・保険・CDCP・診療内容・各種規約・駐車・アフターケアなどをまとめています。' },
 
-  // Section 1 — Booking
-  'faqPage.cat1': { en: 'Booking', zh: '預約', ja: 'ご予約について' },
-  'faqPage.c1q1': { en: 'Can I book an appointment online?', zh: '可以線上預約看診嗎？', ja: 'オンラインで予約はできますか？' },
-  'faqPage.c1a1': { en: 'Yes, online booking is available for your convenience and can be completed in just a few minutes.', zh: '可以，我們提供線上預約服務，幾分鐘內即可完成。', ja: 'はい、オンライン予約をご利用いただけます。数分でお手続きが完了します。' },
-  'faqPage.c1q2': { en: 'Do you accept new patients?', zh: '你們接受新病患嗎？', ja: '新規患者の受付はしていますか？' },
-  'faqPage.c1a2': { en: 'Yes, we are currently accepting new patients.', zh: '是的，我們目前接受新病患。', ja: 'はい、新規患者さまを随時受け付けております。' },
+  // Section 1 — Booking & Appointments
+  'faqPage.cat1': { en: 'Booking & Appointments', zh: '預約與看診', ja: 'ご予約・診療予約' },
+  'faqPage.c1q1': { en: 'How do I book an appointment? Do you accept walk-ins or emergencies?', zh: '如何預約？接受 walk-in 或急診嗎？', ja: '予約方法は？飛び込みや急患にも対応していますか？' },
+  'faqPage.c1a1': { en: 'You can book online in just a few minutes, or call us during clinic hours. Walk-ins are welcomed when availability allows, and we do our best to accommodate dental emergencies the same day.', zh: '您可以線上預約（幾分鐘即可完成），或於營業時間致電我們。如有空位，我們歡迎 walk-in，並會盡力安排當日急診。', ja: 'オンラインで数分でご予約いただけます。診療時間中はお電話でも受付しております。空きがあれば飛び込みも歓迎、急患もできる限り当日対応いたします。' },
+  'faqPage.c1q2': { en: 'Will I receive an appointment confirmation?', zh: '預約後會收到確認嗎？', ja: '予約確認の連絡はありますか？' },
+  'faqPage.c1a2': { en: 'Yes. You will receive a confirmation when booking, and a reminder before your visit by email, text, or phone call.', zh: '會。預約成功後您會收到確認，並於看診前透過電郵、簡訊或電話收到提醒。', ja: 'はい。ご予約時に確認のご連絡、診療前にはメール・SMS・お電話でリマインダーをお送りします。' },
 
-  // Section 2 — Insurance & Payment
-  'faqPage.cat2': { en: 'Insurance & Payment', zh: '保險與付款', ja: '保険・お支払いについて' },
-  'faqPage.c2q1': { en: 'Do you accept insurance?', zh: '你們接受保險嗎？', ja: '保険は使えますか？' },
-  'faqPage.c2a1': { en: 'Yes, we direct bill most insurance plans. Patients are responsible for any remaining balance.', zh: '是的，我們為大多數保險計劃直接申報。差額由患者自付。', ja: 'はい、ほとんどの保険プランで直接請求に対応しております。差額分は患者さまのご負担となります。' },
+  // Section 2 — New Patients
+  'faqPage.cat2': { en: 'New Patients', zh: '新病患', ja: '初診の方へ' },
+  'faqPage.c2q1': { en: 'Do you accept new patients?', zh: '你們接受新病患嗎？', ja: '新規患者の受付はしていますか？' },
+  'faqPage.c2a1': { en: 'Yes, we are currently welcoming new patients of all ages.', zh: '是的，我們目前歡迎所有年齡層的新病患。', ja: 'はい、年齢を問わず新規患者さまを受け付けております。' },
+  'faqPage.c2q2': { en: 'What should I bring to my first visit?', zh: '第一次看診需要帶什麼？', ja: '初診時に持参するものはありますか？' },
+  'faqPage.c2a2': { en: 'Please bring a piece of photo ID, your insurance card (if applicable), and a list of any current medications. Arriving 5–10 minutes early helps with paperwork.', zh: '請攜帶有照片的身份證件、保險卡（如有）、以及目前服用的藥物清單。建議提早 5–10 分鐘抵達以便填寫表格。', ja: '写真付き身分証、保険証（お持ちの場合）、現在服用中のお薬リストをご持参ください。書類記入のため、5〜10分前にお越しいただくとスムーズです。' },
+  'faqPage.c2q3': { en: 'Are new patient forms available in advance?', zh: '可以事先填寫新病患表格嗎？', ja: '初診の問診票は事前に記入できますか？' },
+  'faqPage.c2a3': { en: 'Yes, we can send you the new patient forms by email so you can complete them before your visit.', zh: '可以，我們可將新病患表格電郵給您，讓您在看診前先填好。', ja: 'はい、初診票をメールでお送りできますので、ご来院前にご記入いただけます。' },
+  'faqPage.c2q4': { en: 'What languages do you speak at the clinic?', zh: '診所提供哪些語言服務？', ja: '対応可能な言語は何ですか？' },
+  'faqPage.c2a4': { en: 'Our team can assist patients in English, Mandarin, Cantonese, and Japanese.', zh: '我們的團隊可以英語、國語、廣東話及日語為您提供服務。', ja: '英語・北京語・広東語・日本語での対応が可能です。' },
 
-  // Section 3 — CDCP
-  'faqPage.cat3': { en: 'CDCP', zh: 'CDCP', ja: 'CDCPについて' },
-  'faqPage.c3q1': { en: 'What is CDCP?', zh: '什麼是 CDCP？', ja: 'CDCPとは何ですか？' },
-  'faqPage.c3a1': { en: 'CDCP is a federal dental care program. Patients must renew annually and coverage may not be 100%.', zh: 'CDCP 是聯邦牙科保障計劃。需每年續保，且保障未必涵蓋全部費用。', ja: 'CDCPはカナダ連邦政府の歯科保険制度です。毎年更新が必要で、すべての費用が補償されるわけではありません。' },
-  'faqPage.c3q2': { en: 'Will CDCP cover everything?', zh: 'CDCP 會涵蓋所有費用嗎？', ja: 'CDCPですべての費用がカバーされますか？' },
-  'faqPage.c3a2': { en: 'Not always. A co-pay may apply depending on coverage and fee guide differences.', zh: '不一定。視保障範圍與收費標準差異，可能需要自付部分費用。', ja: 'いいえ。保険の適用範囲や料金基準の差により、自己負担が発生する場合があります。' },
-  'faqPage.c3q3': { en: 'How often can I come for cleaning under CDCP?', zh: 'CDCP 下我可以多久洗牙一次？', ja: 'CDCPではクリーニングはどのくらいの頻度で受けられますか？' },
-  'faqPage.c3a3': { en: 'Coverage follows specific guidelines, typically once per year unless additional treatment is approved.', zh: '保障依特定指引，通常每年一次，除非獲批准額外治療。', ja: '原則として年1回が対象です。追加の治療が必要な場合は事前承認が必要となります。' },
+  // Section 3 — Insurance & Payment
+  'faqPage.cat3': { en: 'Insurance & Payment', zh: '保險與付款', ja: '保険・お支払い' },
+  'faqPage.c3q1': { en: 'Do you accept insurance and offer direct billing?', zh: '你們接受保險並提供直接申報嗎？', ja: '保険は使えますか？直接請求は可能ですか？' },
+  'faqPage.c3a1': { en: 'Yes. We accept most major insurance plans and direct bill on your behalf whenever possible, so you only pay any remaining balance at the visit.', zh: '是的。我們接受大多數主要保險計劃，並盡可能為您直接申報，您僅需支付差額。', ja: 'はい。主要な保険プランに対応しており、可能な限り直接請求を行いますので、患者さまは差額のみのお支払いとなります。' },
+  'faqPage.c3q2': { en: 'What if I do not have insurance?', zh: '如果我沒有保險怎麼辦？', ja: '保険がない場合はどうなりますか？' },
+  'faqPage.c3a2': { en: 'No problem. We accept cash, debit, and credit cards, and we will explain all costs before any treatment begins.', zh: '沒問題。我們接受現金、扣帳卡與信用卡，並會在治療開始前清楚說明所有費用。', ja: 'ご安心ください。現金・デビット・クレジットカードでのお支払いが可能で、治療前に費用を明確にご説明します。' },
 
-  // Section 4 — Your Visit
-  'faqPage.cat4': { en: 'Your Visit', zh: '您的看診', ja: 'ご来院について' },
-  'faqPage.c4q1': { en: 'What should I expect during my first visit?', zh: '第一次看診會包含哪些內容？', ja: '初診ではどのようなことを行いますか？' },
-  'faqPage.c4a1': { en: 'Your visit typically includes an examination, consultation, and discussion of any recommended treatments.', zh: '初診通常包括口腔檢查、諮詢，以及與您討論建議的治療方案。', ja: '初診では検査・カウンセリング、必要に応じた治療方針のご説明を行います。' },
-  'faqPage.c4q2': { en: 'How long does a dental appointment take?', zh: '一般看診大約需要多長時間？', ja: '診療にかかる時間はどのくらいですか？' },
-  'faqPage.c4a2': { en: 'Most appointments take between 30 to 60 minutes.', zh: '大多數看診約需要 30 至 60 分鐘。', ja: 'ほとんどの診療は30〜60分程度です。' },
-  'faqPage.c4q3': { en: 'Do you accept emergency dental visits?', zh: '你們接受急診嗎？', ja: '急患の対応はしていますか？' },
-  'faqPage.c4a3': { en: 'Yes, we try to accommodate urgent dental needs whenever possible.', zh: '是的，我們會盡力安排緊急牙科需求。', ja: 'はい、できる限り対応するよう努めております。' },
+  // Section 4 — CDCP & Government Programs
+  'faqPage.cat4': { en: 'CDCP & Government Programs', zh: 'CDCP 與政府計劃', ja: 'CDCP・政府プログラム' },
+  'faqPage.c4q1': { en: 'What is CDCP?', zh: '什麼是 CDCP？', ja: 'CDCPとは何ですか？' },
+  'faqPage.c4a1': { en: 'CDCP is the Canadian Dental Care Plan, a federal program that helps eligible residents access dental care. Patients must renew their enrollment annually.', zh: 'CDCP 是加拿大聯邦牙科保障計劃，協助符合資格的居民獲得牙科服務，需每年續保。', ja: 'CDCPはカナダ連邦政府の歯科保険制度で、対象となる方の歯科治療を支援します。毎年更新が必要です。' },
+  'faqPage.c4q2': { en: 'Will CDCP cover everything? Is there a co-pay?', zh: 'CDCP 會涵蓋全部費用嗎？需要自付額嗎？', ja: 'CDCPですべてカバーされますか？自己負担はありますか？' },
+  'faqPage.c4a2': { en: 'Not always. CDCP follows its own fee guide, so a co-pay may apply depending on your coverage level and the specific treatment.', zh: '不一定。CDCP 有自己的收費指引，根據您的保障級別與具體治療項目，可能會有自付差額。', ja: 'すべてではありません。CDCPには独自の料金基準があり、保障レベルや治療内容によって自己負担が発生する場合があります。' },
+  'faqPage.c4q3': { en: 'Are children covered under CDCP or other programs?', zh: '兒童在 CDCP 或其他計劃下有保障嗎？', ja: 'お子様もCDCPや他のプログラムの対象ですか？' },
+  'faqPage.c4a3': { en: 'Yes. Eligible children may be covered under CDCP. We can also help you understand other available programs for children at your visit.', zh: '是的。符合資格的兒童可獲 CDCP 保障。我們亦可在看診時協助您了解其他兒童相關計劃。', ja: 'はい。対象となるお子様はCDCPの適用を受けられます。その他の小児向けプログラムについてもご来院時にご案内いたします。' },
+  'faqPage.c4q4': { en: 'How often can I come for cleaning under CDCP?', zh: 'CDCP 下多久可以洗一次牙？', ja: 'CDCPではクリーニングはどのくらいの頻度で受けられますか？' },
+  'faqPage.c4a4': { en: 'CDCP follows specific frequency guidelines, typically once per year for cleaning unless additional treatment is approved.', zh: 'CDCP 依特定頻率指引，洗牙通常每年一次，除非獲批額外治療。', ja: 'CDCPには所定の頻度基準があり、クリーニングは原則として年1回です。追加治療には事前承認が必要です。' },
 
-  // Section 5 — Clinic Information
-  'faqPage.cat5': { en: 'Clinic Information', zh: '診所資訊', ja: '医院情報' },
-  'faqPage.c5q1': { en: 'Where are you located?', zh: '診所位於哪裡？', ja: '医院はどこにありますか？' },
-  'faqPage.c5a1': { en: '620 E Broadway, Vancouver, BC V5T 1X6', zh: '620 E Broadway, Vancouver, BC V5T 1X6', ja: '620 E Broadway, Vancouver, BC V5T 1X6' },
-  'faqPage.c5q2': { en: 'What are your hours?', zh: '營業時間是？', ja: '診療時間を教えてください。' },
-  'faqPage.c5a2': { en: 'Monday–Friday: 9:00 AM – 5:30 PM\nSaturday: 8:30 AM – 5:00 PM\nSunday: Closed', zh: '週一至週五：上午 9:00 – 下午 5:30\n週六：上午 8:30 – 下午 5:00\n週日：休診', ja: '月〜金：9:00 – 17:30\n土：8:30 – 17:00\n日：休診' },
-  'faqPage.c5q3': { en: 'Is parking available?', zh: '有停車位嗎？', ja: '駐車場はありますか？' },
-  'faqPage.c5a3': { en: 'Street parking is available. Restrictions apply on Broadway during weekday daytime hours.', zh: '提供路邊停車。Broadway 平日白天有停車限制，請留意。', ja: '路上駐車をご利用いただけます。Broadway沿いは平日昼間に駐車制限がありますのでご注意ください。' },
-  'faqPage.c5q4': { en: 'What is your phone number?', zh: '電話號碼是？', ja: '電話番号を教えてください。' },
-  'faqPage.c5a4': { en: '(604) 879-5612', zh: '(604) 879-5612', ja: '(604) 879-5612' },
+  // Section 5 — Services
+  'faqPage.cat5': { en: 'Services', zh: '服務項目', ja: '診療内容' },
+  'faqPage.c5q1': { en: 'What services do you offer?', zh: '你們提供哪些服務？', ja: 'どのような治療を行っていますか？' },
+  'faqPage.c5a1': { en: 'We offer general check-ups and cleanings, fillings and restorative care, cosmetic dentistry, orthodontics, implants, pediatric dentistry, and dental emergencies.', zh: '我們提供一般檢查與洗牙、補牙與修復治療、美容牙科、齒列矯正、植牙、兒童牙科以及牙科急診服務。', ja: '一般検診・クリーニング、虫歯治療・修復治療、審美歯科、矯正、インプラント、小児歯科、急患対応に対応しております。' },
+  'faqPage.c5q2': { en: 'Is there a consultation fee?', zh: '有諮詢費嗎？', ja: '相談料はかかりますか？' },
+  'faqPage.c5a2': { en: 'Most consultations are part of an examination visit, which is typically covered by insurance or CDCP. Specialized consultations may have a separate fee, which we will always explain in advance.', zh: '大多數諮詢屬於檢查的一部分，通常可由保險或 CDCP 涵蓋。專科諮詢可能另有費用，我們會事先清楚說明。', ja: 'ほとんどのご相談は検査の一環として行われ、保険やCDCPの対象となります。専門的なご相談には別途費用が発生する場合があり、事前に必ずご案内します。' },
+
+  // Section 6 — Appointment Policies
+  'faqPage.cat6': { en: 'Appointment Policies', zh: '預約政策', ja: '予約に関する規約' },
+  'faqPage.c6q1': { en: 'What is your cancellation and no-show policy?', zh: '取消預約與失約政策為何？', ja: 'キャンセル・無断キャンセルの規約は？' },
+  'faqPage.c6a1': { en: 'Please give us at least 48 hours notice if you need to cancel or reschedule. Late cancellations or missed appointments may be subject to a no-show fee.', zh: '如需取消或改期，請至少提前 48 小時通知。逾期取消或失約可能須收取失約費。', ja: 'キャンセル・変更は48時間前までにご連絡ください。直前キャンセルや無断キャンセルの場合、所定の料金が発生することがあります。' },
+
+  // Section 7 — Visit Experience
+  'faqPage.cat7': { en: 'Visit Experience', zh: '看診體驗', ja: '診療の流れ' },
+  'faqPage.c7q1': { en: 'How long does an appointment usually take?', zh: '一般看診大約多長時間？', ja: '診療時間はどのくらいですか？' },
+  'faqPage.c7a1': { en: 'Most appointments take between 30 and 60 minutes, depending on the type of visit.', zh: '大多數看診約需 30 至 60 分鐘，視看診類型而定。', ja: '診療内容により異なりますが、通常30〜60分程度です。' },
+  'faqPage.c7q2': { en: 'Will I see a dentist at every visit?', zh: '每次看診都會由牙醫檢查嗎？', ja: '毎回歯科医師の診察はありますか？' },
+  'faqPage.c7a2': { en: 'Yes. A dentist will check on you during every visit, including hygiene appointments.', zh: '會。每次看診（包括洗牙）都會由牙醫為您檢查。', ja: 'はい。クリーニングを含むすべての診療で歯科医師が確認いたします。' },
+  'faqPage.c7q3': { en: 'How will I be reminded of my appointment, and do I need to update my medical history?', zh: '預約提醒如何發送？需要更新病歷嗎？', ja: 'リマインダーや問診票の更新はどうなりますか？' },
+  'faqPage.c7a3': { en: 'We send reminders by email, text, or phone before your visit. Please let us know about any new medications, health changes, or allergies so we can update your records.', zh: '我們會於看診前以電郵、簡訊或電話提醒您。如有新藥物、健康狀況或過敏變化，請告知我們以便更新病歷。', ja: '診療前にメール・SMS・お電話でリマインダーをお送りします。新しいお薬・健康状態・アレルギーの変化がございましたらお知らせください。' },
+
+  // Section 8 — Parking & Clinic Info
+  'faqPage.cat8': { en: 'Parking & Clinic Info', zh: '停車與診所資訊', ja: '駐車・医院情報' },
+  'faqPage.c8q1': { en: 'Where are you located?', zh: '診所位於哪裡？', ja: '医院はどこにありますか？' },
+  'faqPage.c8a1': { en: '620 E Broadway, Vancouver, BC V5T 1X6', zh: '620 E Broadway, Vancouver, BC V5T 1X6', ja: '620 E Broadway, Vancouver, BC V5T 1X6' },
+  'faqPage.c8q2': { en: 'Is parking available?', zh: '有停車位嗎？', ja: '駐車場はありますか？' },
+  'faqPage.c8a2': { en: 'Street parking is available nearby. Please note that restrictions apply on Broadway during weekday daytime hours.', zh: '附近提供路邊停車。請留意 Broadway 平日白天有停車限制。', ja: '近隣に路上駐車スペースがございます。Broadway沿いは平日昼間に駐車制限がありますのでご注意ください。' },
+  'faqPage.c8q3': { en: 'What are your hours?', zh: '營業時間是？', ja: '診療時間を教えてください。' },
+  'faqPage.c8a3': { en: 'Monday–Friday: 9:00 AM – 5:30 PM\nSaturday: 8:30 AM – 5:00 PM\nSunday: Closed', zh: '週一至週五：上午 9:00 – 下午 5:30\n週六：上午 8:30 – 下午 5:00\n週日：休診', ja: '月〜金：9:00 – 17:30\n土：8:30 – 17:00\n日：休診' },
+  'faqPage.c8q4': { en: 'How can I contact the clinic?', zh: '如何聯絡診所？', ja: '医院への連絡方法は？' },
+  'faqPage.c8a4': { en: 'Call us at (604) 879-5612 or email drphwu@gmail.com during business hours.', zh: '您可於營業時間致電 (604) 879-5612 或電郵 drphwu@gmail.com 與我們聯絡。', ja: '診療時間内にお電話 (604) 879-5612 またはメール drphwu@gmail.com までご連絡ください。' },
+
+  // Section 9 — Aftercare
+  'faqPage.cat9': { en: 'Aftercare', zh: '術後護理', ja: 'アフターケア' },
+  'faqPage.c9q1': { en: 'What should I do after a dental cleaning?', zh: '洗牙後需要注意什麼？', ja: 'クリーニング後の注意点は？' },
+  'faqPage.c9a1': { en: 'If fluoride was applied, please avoid eating or drinking for at least 30 minutes to allow it to work properly.', zh: '若有塗氟，請至少 30 分鐘內避免進食或飲水，讓氟化物充分發揮作用。', ja: 'フッ素塗布を行った場合は、効果を高めるため少なくとも30分は飲食をお控えください。' },
+  'faqPage.c9q2': { en: 'What should I do after a filling?', zh: '補牙後需要注意什麼？', ja: '虫歯治療後の注意点は？' },
+  'faqPage.c9a2': { en: 'Please avoid chewing on the treated side until any numbness fully wears off, to prevent biting your cheek or tongue.', zh: '在麻醉感完全消退前，請避免使用治療側咀嚼，以免咬傷臉頰或舌頭。', ja: '麻酔が完全に切れるまで、治療した側で噛むのはお控えください。頬や舌を噛むのを防げます。' },
+  'faqPage.c9q3': { en: 'Is sensitivity normal after treatment?', zh: '治療後出現敏感正常嗎？', ja: '治療後の知覚過敏は普通ですか？' },
+  'faqPage.c9a3': { en: 'Yes, mild sensitivity to hot, cold, or pressure is common for a few days and usually settles on its own.', zh: '是的，治療後幾天內出現輕微冷熱或壓力敏感屬於常見現象，通常會自行緩解。', ja: 'はい、数日間は冷たい・温かい・噛む刺激への軽い知覚過敏はよくあることで、通常は自然に治まります。' },
+  'faqPage.c9q4': { en: 'When should I contact the clinic after treatment?', zh: '治療後何時應聯絡診所？', ja: '治療後はどんな時に連絡すべきですか？' },
+  'faqPage.c9a4': { en: 'Please contact us right away if you experience severe pain, swelling, or bleeding that does not improve.', zh: '若出現劇烈疼痛、腫脹或持續出血未改善，請立即聯絡我們。', ja: '強い痛み・腫れ・出血が続くなどの症状がある場合は、すぐに当院までご連絡ください。' },
 
   'faqPage.stillTitle': { en: 'Still have questions?', zh: '還有疑問嗎？', ja: 'その他のご質問はございますか？' },
   'faqPage.stillText': { en: 'Our team can help you understand your coverage and plan your visit.', zh: '我們的團隊可協助您了解保障並安排就診。', ja: '当院スタッフが保険内容のご確認や、ご来院のご相談を承ります。お気軽にお問い合わせください。' },
