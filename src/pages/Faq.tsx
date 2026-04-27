@@ -50,7 +50,7 @@ const categories: CatDef[] = [
   {
     titleKey: 'faqPage.cat5',
     items: [
-      { q: 'faqPage.c5q1', a: 'faqPage.c5a1' },
+      { q: 'faqPage.c5q1', a: 'faqPage.c8a1' },
       { q: 'faqPage.c5q2', a: 'faqPage.c5a2' },
     ],
   },
@@ -146,7 +146,7 @@ const FaqPage = () => {
                         {t(it.q)}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                        {it.a === 'faqPage.c5a1' ? (
+                        {it.a === 'faqPage.c8a1' ? (
                           <a
                             href="https://maps.google.com/?q=620+East+Broadway,+Vancouver,+BC"
                             target="_blank"
