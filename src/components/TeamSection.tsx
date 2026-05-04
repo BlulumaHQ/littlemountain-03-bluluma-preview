@@ -4,6 +4,7 @@ import drOgura from '@/assets/team/dr-ogura.jpg';
 import drYip from '@/assets/team/dr-yip.jpg';
 import drHsu from '@/assets/team/dr-hsu.jpg';
 import drCheng from '@/assets/team/dr-cheng.png';
+import drWong from '@/assets/team/dr-wong.jpg';
 
 const dentists = [
   {
@@ -57,6 +58,17 @@ const dentists = [
     bioKey: 'team.drcheng.bio',
     photo: drCheng,
   },
+  {
+    name: 'Dr. Christina Wong',
+    title: 'D.D.S.',
+    credentials: [
+      'University of Alberta, Faculty of Dentistry, 1993',
+      'Fellow, International Congress of Oral Implantologists',
+      'Associate Fellow, American Academy of Implant Dentistry',
+    ],
+    bioKey: 'team.drwong.bio',
+    photo: drWong,
+  },
 ];
 
 const TeamSection = () => {
@@ -69,7 +81,7 @@ const TeamSection = () => {
           {t('team.title')}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-4 md:gap-6 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:gap-8 md:px-0">
           {dentists.map((d) => (
             <div
               key={d.name}
@@ -96,7 +108,7 @@ const TeamSection = () => {
                     ))}
                   </ul>
                 )}
-                <p className="text-sm md:text-sm text-muted-foreground leading-relaxed">{t(d.bioKey)}</p>
+                <p className="text-[16px] leading-[1.6] md:text-sm md:leading-relaxed text-muted-foreground">{t(d.bioKey)}</p>
               </div>
             </div>
           ))}
