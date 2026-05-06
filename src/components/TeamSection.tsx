@@ -81,15 +81,15 @@ const TeamSection = () => {
           {t('team.title')}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-6 px-6 sm:px-4 md:gap-8 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 px-4 sm:px-4 md:gap-8 md:px-0">
           {dentists.map((d) => (
             <div
               key={d.name}
-              className="bg-background sm:rounded-lg sm:overflow-hidden sm:shadow-sm sm:hover:shadow-md sm:transition-shadow"
+              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-5 sm:p-0"
             >
-              {/* Photo: clean on mobile, framed on desktop */}
+              {/* Unified content column: image + text share same boundaries */}
               <div className="sm:p-3 md:p-6 sm:bg-white sm:border-b" style={{ borderColor: '#e5e5e5' }}>
-                <div className="w-[70%] mx-auto sm:w-full aspect-[3/4] overflow-hidden rounded-md sm:rounded-none">
+                <div className="w-full aspect-[3/4] overflow-hidden rounded-md sm:rounded-none">
                   <img
                     src={d.photo}
                     alt={`${d.name}, ${d.title} at Little Mountain Dental Centre in Vancouver`}
@@ -98,7 +98,7 @@ const TeamSection = () => {
                   />
                 </div>
               </div>
-              <div className="pt-5 sm:pt-0 sm:p-3 md:p-4 max-w-[420px] mx-auto sm:max-w-none">
+              <div className="pt-5 sm:pt-0 sm:p-3 md:p-4">
                 <h3 className="font-heading text-[19px] sm:text-base lg:text-lg font-semibold text-foreground leading-snug">{d.name}</h3>
                 <p className="text-[14px] sm:text-sm text-brand-green font-medium mt-1 mb-3 sm:mb-2">{d.title}</p>
                 {d.credentials.length > 0 && (
