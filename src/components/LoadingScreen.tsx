@@ -31,7 +31,7 @@ const LoadingScreen = () => {
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <img src={logoColor} alt="Loading..." className="h-16 md:h-20" />
+      <img src={logoColor} alt="Loading..." className="h-32 md:h-40" />
     </div>
   );
 };
