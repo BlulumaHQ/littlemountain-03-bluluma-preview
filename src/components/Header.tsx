@@ -121,7 +121,7 @@ const Header = () => {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="container-site flex items-center justify-between h-16">
           <Link to="/" onClick={() => setMobileOpen(false)}>
-            <img src={logoColor} alt="Little Mountain Dental Centre" className="h-8 md:h-9" />
+            <img src={logoColor} alt="Little Mountain Dental Centre" className="h-16 md:h-20 py-1" />
           </Link>
 
           {/* Desktop nav */}
