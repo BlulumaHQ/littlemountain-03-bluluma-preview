@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import logoColor from '@/assets/logo-color.svg';
+import logoColor from '@/assets/logo-color.jpg';
 
 const LoadingScreen = () => {
   const [visible, setVisible] = useState(true);
