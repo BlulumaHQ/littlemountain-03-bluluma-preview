@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import logoColor from '@/assets/logo-color.svg';
+import logoColor from '@/assets/logo-color.jpg';
 
 type LangCode = 'en' | 'zh' | 'ja';
 const LANG_LABELS: Record<LangCode, string> = {
