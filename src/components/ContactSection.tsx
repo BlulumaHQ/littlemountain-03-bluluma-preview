@@ -60,10 +60,7 @@ const ContactSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="hidden" name="site_name" value="Little Mountain Dental Centre" />
-                <input type="hidden" name="client_name" value="Little Mountain Dental" />
-                <input type="hidden" name="mode" value="2" />
-                <input type="hidden" name="source_url" value="https://littlemountaindental.ca/" />
+
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
