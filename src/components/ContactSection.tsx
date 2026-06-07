@@ -1,26 +1,43 @@
 import { useState } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { Phone, MapPin, Mail } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
   const { t } = useI18n();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const fd = new FormData(form);
+    const firstName = String(fd.get('firstName') ?? '').trim();
+    const lastName = String(fd.get('lastName') ?? '').trim();
+    const payload = {
+      name: `${firstName} ${lastName}`.trim(),
+      email: String(fd.get('email') ?? '').trim(),
+      phone: String(fd.get('phone') ?? '').trim(),
+      message: String(fd.get('message') ?? '').trim(),
+      source_url: typeof window !== 'undefined' ? window.location.href : '',
+    };
 
+    setSubmitting(true);
+    setErrorMsg(null);
     try {
-      await fetch('https://formspree.io/f/mbdabbql', {
-        method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: payload,
       });
+      if (error || (data && (data as { error?: string }).error)) {
+        throw new Error(error?.message || (data as { error?: string })?.error || 'Send failed');
+      }
       setSubmitted(true);
       form.reset();
-    } catch {
-      // handle silently
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -43,10 +60,7 @@ const ContactSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="hidden" name="site_name" value="Little Mountain Dental Centre" />
-                <input type="hidden" name="client_name" value="Little Mountain Dental" />
-                <input type="hidden" name="mode" value="2" />
-                <input type="hidden" name="source_url" value="https://littlemountaindental.ca/" />
+
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -113,11 +127,16 @@ const ContactSection = () => {
                   />
                 </div>
 
+                {errorMsg && (
+                  <p className="text-sm text-destructive">{errorMsg}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase py-3 rounded-md hover:bg-brand-green-dark transition-colors"
+                  disabled={submitting}
+                  className="w-full bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase py-3 rounded-md hover:bg-brand-green-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {t('contact.send')}
+                  {submitting ? '...' : t('contact.send')}
                 </button>
               </form>
             )}
