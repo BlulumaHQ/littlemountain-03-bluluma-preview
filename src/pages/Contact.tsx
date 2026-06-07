@@ -52,9 +52,9 @@ const Contact = () => {
                 <Phone size={20} className="text-primary" />
                 <span>(604) 879-5612</span>
               </a>
-              <a href="mailto:drphwu@gmail.com" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@littlemountaindental.ca" className="flex items-center gap-3 text-foreground hover:text-primary transition-colors">
                 <Mail size={20} className="text-primary" />
-                <span>drphwu@gmail.com</span>
+                <span>info@littlemountaindental.ca</span>
               </a>
               <a
                 href="https://maps.google.com/?q=620+East+Broadway,+Vancouver,+BC"

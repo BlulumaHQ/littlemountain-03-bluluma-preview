@@ -200,7 +200,7 @@ const translations: Record<string, Partial<Record<Lang, string>>> = {
   'faqPage.c8q3': { en: 'What are your hours?', zh: '營業時間是？', ja: '診療時間を教えてください。' },
   'faqPage.c8a3': { en: 'Monday–Friday: 9:00 AM – 5:30 PM\nSaturday: 8:30 AM – 5:00 PM\nSunday: Closed', zh: '週一至週五：上午 9:00 – 下午 5:30\n週六：上午 8:30 – 下午 5:00\n週日：休診', ja: '月〜金：9:00 – 17:30\n土：8:30 – 17:00\n日：休診' },
   'faqPage.c8q4': { en: 'How can I contact the clinic?', zh: '如何聯絡診所？', ja: '医院への連絡方法は？' },
-  'faqPage.c8a4': { en: 'Call us at (604) 879-5612 or email drphwu@gmail.com during business hours.', zh: '您可於營業時間致電 (604) 879-5612 或電郵 drphwu@gmail.com 與我們聯絡。', ja: '診療時間内にお電話 (604) 879-5612 またはメール drphwu@gmail.com までご連絡ください。' },
+  'faqPage.c8a4': { en: 'Call us at (604) 879-5612 or email info@littlemountaindental.ca during business hours.', zh: '您可於營業時間致電 (604) 879-5612 或電郵 info@littlemountaindental.ca 與我們聯絡。', ja: '診療時間内にお電話 (604) 879-5612 またはメール info@littlemountaindental.ca までご連絡ください。' },
 
   // Section 9 — Aftercare
   'faqPage.cat9': { en: 'Aftercare', zh: '術後護理', ja: 'アフターケア' },
