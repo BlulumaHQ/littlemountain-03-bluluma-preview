@@ -8,7 +8,7 @@ import { I18nProvider } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyBookNow from "@/components/StickyBookNow";
-import ScrollToTopButton, { RouteScrollToTop } from "@/components/ScrollToTop";
+import { RouteScrollToTop } from "@/components/ScrollToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import { NormalizePath } from "@/components/RedirectTo";
 import Index from "./pages/Index";
@@ -54,7 +54,6 @@ const App = () => (
             </main>
             <Footer />
             <StickyBookNow />
-            <ScrollToTopButton />
           </BrowserRouter>
         </I18nProvider>
       </TooltipProvider>
