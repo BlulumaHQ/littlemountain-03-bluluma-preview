@@ -127,11 +127,16 @@ const ContactSection = () => {
                   />
                 </div>
 
+                {errorMsg && (
+                  <p className="text-sm text-destructive">{errorMsg}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase py-3 rounded-md hover:bg-brand-green-dark transition-colors"
+                  disabled={submitting}
+                  className="w-full bg-primary text-primary-foreground font-medium text-sm tracking-wider uppercase py-3 rounded-md hover:bg-brand-green-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {t('contact.send')}
+                  {submitting ? '...' : t('contact.send')}
                 </button>
               </form>
             )}
