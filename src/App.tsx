@@ -54,7 +54,6 @@ const App = () => (
             </main>
             <Footer />
             <StickyBookNow />
-            <StickyBookNow />
           </BrowserRouter>
         </I18nProvider>
       </TooltipProvider>
