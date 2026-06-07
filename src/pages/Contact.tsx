@@ -90,10 +90,7 @@ const Contact = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <input type="hidden" name="site_name" value="Little Mountain Dental Centre" />
-                <input type="hidden" name="client_name" value="Little Mountain Dental" />
-                <input type="hidden" name="mode" value="2" />
-                <input type="hidden" name="source_url" value="https://littlemountaindental.ca/" />
+
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
