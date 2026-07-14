@@ -12,7 +12,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const services = [
-    { label: t('services.implants'), href: '/services#implants' },
+    { label: t('services.implants'), href: '/services/dental-implants' },
     { label: t('services.orthodontics'), href: '/services#orthodontics' },
     { label: t('services.pediatric'), href: '/services#pediatric' },
     { label: t('services.esthetics'), href: '/services#esthetics' },

@@ -13,6 +13,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { NormalizePath } from "@/components/RedirectTo";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import DentalImplants from "./pages/DentalImplants";
 import Faq from "./pages/Faq";
 import Insights from "./pages/Insights";
 import InsightArticle from "./pages/InsightArticle";
@@ -36,6 +37,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services/dental-implants" element={<DentalImplants />} />
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/insights/:slug" element={<InsightArticle />} />
