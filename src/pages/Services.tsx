@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
 import Seo from '@/components/Seo';
 import PageHeader from '@/components/PageHeader';
@@ -60,6 +60,23 @@ const Services = () => {
                   {t(s.titleKey)}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">{t(s.descKey)}</p>
+                {s.id === 'implants' && (
+                  <Link
+                    to="/services/dental-implants"
+                    className="inline-flex items-center mt-5 text-brand-green font-medium text-sm tracking-wider uppercase border-b border-brand-green/40 hover:border-brand-green transition-colors"
+                  >
+                    {t('nav.lang') /* dummy to keep t used */ && null}
+                    {(() => {
+                      const map: Record<string, string> = {
+                        en: 'Learn More About Dental Implants',
+                        zh: '了解更多人工植牙資訊',
+                        ja: 'インプラント治療の詳細を見る',
+                      };
+                      const { lang } = useI18n();
+                      return map[lang] ?? map.en;
+                    })()}
+                  </Link>
+                )}
               </div>
               <div className={`rounded-lg overflow-hidden shadow-md ${i % 2 === 1 ? 'md:[direction:ltr]' : ''}`}>
                 <img
