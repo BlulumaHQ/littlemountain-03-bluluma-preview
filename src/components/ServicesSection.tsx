@@ -7,17 +7,30 @@ import estheticIcon from '@/assets/icons/esthetic-icon.svg';
 import restorativeIcon from '@/assets/icons/restorative-icon.svg';
 import maintenanceIcon from '@/assets/icons/maintenance-icon.svg';
 
-const services = [
-  { key: 'implants', icon: implantIcon, anchor: '#implants' },
-  { key: 'orthodontics', icon: orthodonticIcon, anchor: '#orthodontics' },
-  { key: 'pediatric', icon: pediatricIcon, anchor: '#pediatric' },
-  { key: 'esthetics', icon: estheticIcon, anchor: '#esthetics' },
-  { key: 'restoratives', icon: restorativeIcon, anchor: '#restoratives' },
-  { key: 'maintenance', icon: maintenanceIcon, anchor: '#maintenance' },
+type ServiceItem = {
+  key: string;
+  icon: string;
+  to: string;
+  ariaKey?: string;
+};
+
+const services: ServiceItem[] = [
+  { key: 'implants', icon: implantIcon, to: '/services/dental-implants', ariaKey: 'services.implants.aria' },
+  { key: 'orthodontics', icon: orthodonticIcon, to: '/services#orthodontics' },
+  { key: 'pediatric', icon: pediatricIcon, to: '/services#pediatric' },
+  { key: 'esthetics', icon: estheticIcon, to: '/services#esthetics' },
+  { key: 'restoratives', icon: restorativeIcon, to: '/services#restoratives' },
+  { key: 'maintenance', icon: maintenanceIcon, to: '/services#maintenance' },
 ];
 
+const IMPLANT_ARIA: Record<string, string> = {
+  en: 'Learn more about Dental Implants',
+  zh: '了解更多人工植牙資訊',
+  ja: 'インプラントの詳細はこちら',
+};
+
 const ServicesSection = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   return (
     <section className="py-8 md:py-10 pb-4 md:pb-6">
@@ -33,7 +46,26 @@ const ServicesSection = () => {
           {services.map((s) => (
             <Link
               key={s.key}
-              to={`/services${s.anchor}`}
+              to={s.to}
+              aria-label={s.key === 'implants' ? IMPLANT_ARIA[lang] ?? IMPLANT_ARIA.en : undefined}
+              onClick={
+                s.key === 'implants'
+                  ? () => {
+                      try {
+                        const w = window as unknown as { gtag?: (...a: unknown[]) => void; dataLayer?: unknown[] };
+                        if (typeof w.gtag === 'function') {
+                          w.gtag('event', 'implant_home_icon_click', {
+                            clinic: 'Little Mountain Dental Centre',
+                            language: lang,
+                            page_path: '/services/dental-implants',
+                          });
+                        } else if (Array.isArray(w.dataLayer)) {
+                          w.dataLayer.push({ event: 'implant_home_icon_click', clinic: 'Little Mountain Dental Centre', language: lang });
+                        }
+                      } catch { /* noop */ }
+                    }
+                  : undefined
+              }
               className="group flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-brand-cream transition-colors"
             >
               <img src={s.icon} alt={t(`services.${s.key}`)} className="w-16 h-16 md:w-20 md:h-20" />
