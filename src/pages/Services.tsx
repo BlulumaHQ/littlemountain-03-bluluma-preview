@@ -19,8 +19,14 @@ const serviceData = [
   { id: 'maintenance', titleKey: 'services.maintenance', descKey: 'service.maintenance.desc', image: maintenanceImg },
 ];
 
+const IMPLANT_CTA: Record<string, string> = {
+  en: 'Learn More About Dental Implants',
+  zh: '了解更多人工植牙資訊',
+  ja: 'インプラント治療の詳細を見る',
+};
+
 const Services = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const location = useLocation();
 
   useEffect(() => {
@@ -65,16 +71,7 @@ const Services = () => {
                     to="/services/dental-implants"
                     className="inline-flex items-center mt-5 text-brand-green font-medium text-sm tracking-wider uppercase border-b border-brand-green/40 hover:border-brand-green transition-colors"
                   >
-                    {t('nav.lang') /* dummy to keep t used */ && null}
-                    {(() => {
-                      const map: Record<string, string> = {
-                        en: 'Learn More About Dental Implants',
-                        zh: '了解更多人工植牙資訊',
-                        ja: 'インプラント治療の詳細を見る',
-                      };
-                      const { lang } = useI18n();
-                      return map[lang] ?? map.en;
-                    })()}
+                    {IMPLANT_CTA[lang] ?? IMPLANT_CTA.en}
                   </Link>
                 )}
               </div>
