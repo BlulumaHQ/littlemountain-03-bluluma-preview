@@ -65,10 +65,6 @@ const translations: Record<string, Partial<Record<Lang, string>>> = {
     en: 'Dr. Kathy Cheng has extensive experience in general dentistry and many years of expertise providing Invisalign treatment. She is committed to patient-centered care and takes time to carefully explain treatment options and communicate with each patient. Dr. Cheng\'s calm and gentle approach helps patients feel relaxed and confident throughout their dental visits.',
     zh: 'Dr. Kathy Cheng 在全科牙科方面擁有豐富的經驗，並有多年提供 Invisalign 治療的專業經驗。她致力於以患者為中心的護理，花時間仔細解釋治療方案並與每位患者溝通。Dr. Cheng 沉穩溫和的方式讓患者在整個看診過程中感到放鬆和安心。'
   },
-  'team.drwong.bio': {
-    en: 'Dr. Christina Wong earned her Doctor of Dental Surgery degree from the University of Alberta. With decades of clinical experience, she is committed to providing comprehensive dental care in a comfortable and patient-focused environment. Dr. Wong has pursued extensive continuing education, including advanced training at the Kois Center and the Misch International Implant Institute. Her professional interests include implant dentistry, restorative treatments, and preventive care for patients of all ages.',
-    zh: 'Dr. Christina Wong 於 University of Alberta 取得牙科博士學位。擁有數十年的臨床經驗，她致力於在舒適、以患者為中心的環境中提供全面的牙科護理。Dr. Wong 持續進修，包括於 Kois Center 及 Misch International Implant Institute 完成進階訓練。她的專業興趣包含種植牙、修復治療及各年齡層的預防保健。',
-    ja: 'Dr. Christina Wong はアルバータ大学歯学部を卒業。長年の臨床経験を活かし、患者さま一人ひとりに合わせた包括的な歯科治療を提供しています。Kois Center や Misch International Implant Institute での研鑽を続け、インプラント・修復治療・予防歯科を専門としています。'
   },
 
   // Services

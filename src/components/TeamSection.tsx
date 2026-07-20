@@ -4,7 +4,7 @@ import drOgura from '@/assets/team/dr-ogura.jpg';
 import drYip from '@/assets/team/dr-yip.jpg';
 import drHsu from '@/assets/team/dr-hsu.jpg';
 import drCheng from '@/assets/team/dr-cheng.png';
-import drWong from '@/assets/team/dr-wong.jpg';
+
 
 const dentists = [
   {
@@ -57,17 +57,6 @@ const dentists = [
     ],
     bioKey: 'team.drcheng.bio',
     photo: drCheng,
-  },
-  {
-    name: 'Dr. Christina Wong',
-    title: 'D.D.S.',
-    credentials: [
-      'University of Alberta, Faculty of Dentistry, 1993',
-      'Fellow, International Congress of Oral Implantologists',
-      'Associate Fellow, American Academy of Implant Dentistry',
-    ],
-    bioKey: 'team.drwong.bio',
-    photo: drWong,
   },
 ];
 
