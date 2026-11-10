@@ -1,0 +1,1 @@
+- Platform-host noindex lives in `netlify/edge-functions/platform-noindex.ts` (host-conditional X-Robots-Tag); never add global noindex to index.html, _headers or robots.txt — production custom domain must stay indexable.
