@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { sendContact } from "@/lib/send-contact";
 import { useI18n } from '@/lib/i18n';
 import { Phone, MapPin, Mail } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
   const { t } = useI18n();
@@ -26,9 +26,7 @@ const ContactSection = () => {
     setSubmitting(true);
     setErrorMsg(null);
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: payload,
-      });
+      const { data, error } = await sendContact(payload);
       if (error || (data && (data as { error?: string }).error)) {
         throw new Error(error?.message || (data as { error?: string })?.error || 'Send failed');
       }
