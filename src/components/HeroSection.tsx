@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/lib/i18n';
 import heroVideo from '@/assets/hero-video.mp4';
-import heroMobile from '@/assets/hero-mobile.jpg';
+import heroMobile from '@/assets/clinic-library-mobile-hero.webp';
 import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
@@ -43,7 +43,11 @@ const HeroSection = () => {
       {isMobile ? (
         <img
           src={heroMobile}
-          alt="Little Mountain Dental Centre clinic interior in Vancouver"
+          alt={({
+            en: 'Bookshelves and seating in the clinic waiting area',
+            zh: '診所候診區的書架與座位',
+            ja: 'クリニックの待合室にある本棚と椅子',
+          })[lang]}
           className="absolute inset-0 w-full h-full object-cover"
         />
       ) : (

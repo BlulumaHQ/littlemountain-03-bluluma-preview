@@ -71,3 +71,9 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Branded clinic map
+
+To enable the branded basemap, set `VITE_GOOGLE_MAPS_API_KEY` in the preview environment and rebuild. Use a browser key from a billing-enabled Google Cloud project with Maps JavaScript API enabled. Restrict the key to Maps JavaScript API and to the website origins that will load it. For local testing, allow your local development origin on a development key and set it in `.env.local`.
+
+When a key is missing or the styled map cannot load, the site displays the standard Google map. The directions link works in both modes.

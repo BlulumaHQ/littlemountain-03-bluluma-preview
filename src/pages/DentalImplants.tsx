@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { BOOKING_URL } from '@/lib/booking';
-import implantsImg from '@/assets/services/implants.jpg';
+import implantsImg from '@/assets/services/dental-implant-model-and-instruments.webp';
 
 const PHONE_DISPLAY = '(604) 879-5612';
 const PHONE_TEL = 'tel:6048795612';
@@ -870,8 +870,8 @@ const DentalImplants = () => {
               <img
                 src={implantsImg}
                 alt={p({
-                  en: 'Dental implant consultation at Little Mountain Dental Centre in Vancouver',
-                  zh: '溫哥華 Little Mountain Dental Centre 植牙諮詢',
+                  en: 'Dental implant model beside a tray of instruments',
+                  zh: '牙科器械托盤旁的人工植牙模型',
                 })}
                 className="w-full h-64 md:h-[420px] object-cover"
                 width={800}

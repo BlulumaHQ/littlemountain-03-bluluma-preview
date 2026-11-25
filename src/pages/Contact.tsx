@@ -1,3 +1,4 @@
+import ClinicMap from '@/components/ClinicMap';
 import { useState } from 'react';
 import { sendContact } from "@/lib/send-contact";
 import { useI18n } from '@/lib/i18n';
@@ -66,17 +67,8 @@ const Contact = () => {
             </div>
 
             {/* Map embed */}
-            <div className="mt-8 rounded-lg overflow-hidden shadow-sm">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5!2d-123.1005!3d49.2627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673d0a0b1c1c1%3A0x1!2s620+E+Broadway%2C+Vancouver%2C+BC!5e0!3m2!1sen!2sca!4v1"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Office location"
-              />
+            <div className="mt-8 h-[300px]">
+              <ClinicMap />
             </div>
           </div>
 

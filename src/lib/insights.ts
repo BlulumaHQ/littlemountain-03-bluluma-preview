@@ -1,9 +1,9 @@
-import cdcpImage from '@/assets/insights/cdcp-coverage-vancouver.jpg';
-import childrenImage from '@/assets/insights/children-dental-coverage-bc.jpg';
-import costImage from '@/assets/insights/dental-visit-cost-vancouver.jpg';
-import bookImage from '@/assets/insights/book-dentist-vancouver.jpg';
-import billingImage from '@/assets/insights/direct-billing-vancouver.jpg';
-import anxietyImage from '@/assets/insights/dental-anxiety-vancouver.jpg';
+import cdcpImage from '@/assets/insights/cdcp-coverage-vancouver.webp';
+import childrenImage from '@/assets/insights/children-dental-coverage-bc.webp';
+import costImage from '@/assets/insights/dental-visit-cost-vancouver.webp';
+import bookImage from '@/assets/insights/book-dentist-vancouver.webp';
+import billingImage from '@/assets/insights/direct-billing-vancouver.webp';
+import anxietyImage from '@/assets/insights/dental-anxiety-vancouver.webp';
 
 export interface ArticleSection {
   heading?: string;
@@ -30,7 +30,7 @@ export const articles: Article[] = [
       'A clear guide to what the Canadian Dental Care Plan covers, what it doesn’t, and the out-of-pocket costs Vancouver patients should expect.',
     image: cdcpImage,
     imageAlt:
-      'dentist explaining CDCP dental coverage to patient in Vancouver clinic',
+      'Dental professional discussing paperwork with a patient',
     sections: [
       {
         heading: 'Introduction',
@@ -168,7 +168,7 @@ export const articles: Article[] = [
       'A realistic look at dental visit costs in Vancouver, how insurance and CDCP affect pricing, and how to avoid unexpected charges.',
     image: costImage,
     imageAlt:
-      'dental clinic consultation discussing treatment cost and insurance Vancouver',
+      'Patient speaking with a receptionist at the dental clinic',
     sections: [
       {
         heading: 'Introduction',
@@ -241,7 +241,7 @@ export const articles: Article[] = [
       'A simple guide to booking a dental appointment in Vancouver, what happens after you book, and what to expect at your first visit.',
     image: bookImage,
     imageAlt:
-      'patient booking a dental appointment online from a laptop in Vancouver',
+      'Person using a laptop to book a dental appointment',
     sections: [
       {
         heading: 'Introduction',
@@ -324,7 +324,7 @@ export const articles: Article[] = [
       'A clear explanation of how direct billing works at Vancouver dental clinics, what it covers, and how to prepare for your visit.',
     image: billingImage,
     imageAlt:
-      'patient handing insurance card to friendly dental receptionist in Vancouver clinic',
+      'Patient handing a card to a dental receptionist',
     sections: [
       {
         heading: 'Introduction',

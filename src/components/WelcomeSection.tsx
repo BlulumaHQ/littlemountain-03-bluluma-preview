@@ -1,21 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
-import officeLibrary1 from '@/assets/office-library-1.webp';
-import officeLibrary2 from '@/assets/office-library-2.webp';
-import officeTreatment from '@/assets/office-treatment.webp';
-import officeWaiting1 from '@/assets/office-waiting-1.webp';
-import officeWashroom from '@/assets/office-washroom.webp';
+import officeLibrary1 from '@/assets/clinic-library-window-seating.webp';
+import officeLibrary2 from '@/assets/clinic-library-bookshelves.webp';
+import officeTreatment from '@/assets/clinic-treatment-room-dental-chair.webp';
+import officeWaiting1 from '@/assets/clinic-waiting-room-book-display.webp';
+import officeWashroom from '@/assets/clinic-washroom-vanity.webp';
 
 const images = [
-  { src: officeLibrary1, alt: 'Waiting area library' },
-  { src: officeLibrary2, alt: "Children's book library" },
-  { src: officeWaiting1, alt: 'Bookshelf area' },
-  { src: officeTreatment, alt: 'Treatment room' },
-  { src: officeWashroom, alt: 'Washroom' },
+  { src: officeLibrary1, alt: { en: 'Library seating by the waiting-room windows', zh: '候診區閱覽室的靠窗座位', ja: '待合室の読書スペースにある窓際の席' } },
+  { src: officeLibrary2, alt: { en: 'Children’s bookshelves and reading tables', zh: '兒童書架與閱讀桌', ja: '児童書の本棚と読書テーブル' } },
+  { src: officeWaiting1, alt: { en: 'Book displays on the waiting-room walls', zh: '候診區牆上的圖書展示架', ja: '待合室の壁に並ぶ本' } },
+  { src: officeTreatment, alt: { en: 'Green dental chair in a treatment room', zh: '診療室裡的綠色牙科椅', ja: '診療室にある緑色の歯科用チェア' } },
+  { src: officeWashroom, alt: { en: 'Washroom vanity with round mirrors', zh: '洗手間內有圓鏡的洗手台', ja: '丸い鏡が並ぶ洗面台' } },
 ];
 
 const WelcomeSection = () => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -53,7 +53,7 @@ const WelcomeSection = () => {
             <div className="rounded-lg overflow-hidden shadow-md mb-3">
               <img
                 src={images[activeIndex].src}
-                alt={images[activeIndex].alt}
+                alt={images[activeIndex].alt[lang]}
                 className="w-full h-auto object-cover aspect-video"
                 loading="lazy"
               />
@@ -70,7 +70,7 @@ const WelcomeSection = () => {
                 >
                   <img
                     src={img.src}
-                    alt={img.alt}
+                    alt={img.alt[lang]}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />

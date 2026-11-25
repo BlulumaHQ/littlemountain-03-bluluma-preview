@@ -1,9 +1,9 @@
 import { useI18n } from '@/lib/i18n';
-import drWu from '@/assets/team/dr-wu.png';
-import drOgura from '@/assets/team/dr-ogura.jpg';
-import drYip from '@/assets/team/dr-yip.jpg';
-import drHsu from '@/assets/team/dr-hsu.jpg';
-import drCheng from '@/assets/team/dr-cheng.png';
+import drWu from '@/assets/team/dr-patrick-wu-portrait.webp';
+import drOgura from '@/assets/team/dr-yukari-ogura-portrait.webp';
+import drYip from '@/assets/team/dr-yip-portrait.webp';
+import drHsu from '@/assets/team/dr-hsu-portrait.webp';
+import drCheng from '@/assets/team/dr-cheng-portrait.webp';
 
 
 const dentists = [
